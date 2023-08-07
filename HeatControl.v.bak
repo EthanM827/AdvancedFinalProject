@@ -1,0 +1,3 @@
+module HeatControl (input reg [9:0] currentTemp, targetTemp, output wire heat);
+
+endmodule
