@@ -12,7 +12,5 @@ module FinalProject (input clk, power, key0, key1, sw0, sw1, sw2, sw3, sw4, sw5)
 		end
 	end
 	reg cookTemp [9:0] = 0;
-	
-		
-		
+
 endmodule

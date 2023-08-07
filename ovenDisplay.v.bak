@@ -1,0 +1,11 @@
+module ovenDispay(intput power, current_temp, target_temp, input [12:0] current_time, output [0:6] display0, display1, display2, display3 display4, display5);
+	
+	
+	always@(*)begin
+		if(power == 1)begin
+			
+		end if(power == 0)begin
+			
+		end
+	end
+endmodule 
