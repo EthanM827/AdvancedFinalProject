@@ -1,6 +1,6 @@
-module timeclk(input clk, output [12:0] current_time);
-	reg [12:0] count = 0;
-	parameter max_count = 50000000; //1 sec
+module timeclk(input clk, output reg [12:0] current_time);
+	reg [31:0] count = 0;
+	parameter max_count = 50000000; //50000000 = 1 sec
 	
 	always @ (posedge clk) begin
 			if(count <= max_count) begin

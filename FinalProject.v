@@ -1,4 +1,4 @@
-module FinalProject (input clk, power, key0, key1, sw0, sw1, sw2, sw3, sw4, sw5);
+module FinalProject (input clk, pwr, key0, key1, sw0, sw1, sw2, sw3, sw4, sw5, output wire [0:6] hex0, hex1, hex2, hex3, hex4, hex5);
 	reg new_clk;
 	parameter MAX_COUNT = 25000000;
 	reg [25:0] count = 0;
@@ -11,6 +11,8 @@ module FinalProject (input clk, power, key0, key1, sw0, sw1, sw2, sw3, sw4, sw5)
 			new_clk = ~new_clk;
 		end
 	end
-	reg cookTemp [9:0] = 0;
+	wire [12:0] current_time;
+	timeclk timeclk(clk, current_time);
+	ovenDisplay display(pwr, 0, 0, current_time, hex0, hex1, hex2, hex3, hex4, hex5);
 
 endmodule
