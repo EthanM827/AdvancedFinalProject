@@ -8,6 +8,7 @@ module ovenDisplay(intput power, current_temp, target_temp, input [12:0] current
 	7_hex = 7'b0001111; //7
 	8_hex = 7'b0000000; //8
 	9_hex = 7'b0000100; //9
+	0_hex = 7'b0000001; //0
 	
 	always@(*)begin
 		if(power == 1)begin
@@ -35,6 +36,7 @@ module ovenDisplay(intput power, current_temp, target_temp, input [12:0] current
 			7: hex3 = 7_hex;
 			8: hex3 = 8_hex;
 			9: hex3 = 9_hex;
+			0: hex3 = 0_hex;
 		endcase
 		case(minutes_tens_place)
 			1: hex4 = 1_hex;
@@ -46,6 +48,7 @@ module ovenDisplay(intput power, current_temp, target_temp, input [12:0] current
 			7: hex4 = 7_hex;
 			8: hex4 = 8_hex;
 			9: hex4 = 9_hex;
+			0: hex4 = 0_hex;
 		endcase
 		case(seconds_ones_place)
 			1: hex0 = 1_hex;
@@ -57,6 +60,7 @@ module ovenDisplay(intput power, current_temp, target_temp, input [12:0] current
 			7: hex0 = 7_hex;
 			8: hex0 = 8_hex;
 			9: hex0 = 9_hex;
+			0: hex0 = 0_hex;
 		endcase
 		case(seconds_tens_place)
 			1: hex1 = 1_hex;
@@ -68,6 +72,7 @@ module ovenDisplay(intput power, current_temp, target_temp, input [12:0] current
 			7: hex1 = 7_hex;
 			8: hex1 = 8_hex;
 			9: hex1 = 9_hex;
+			0: hex1 = 0_hex;
 		endcase
 	end
 endmodule 
