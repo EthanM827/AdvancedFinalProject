@@ -1,11 +1,11 @@
-module FinalProject (input clk, pwr, key0, key1, sw5, sw4, sw3, sw2, sw1, sw0, output wire [0:6] hex0, hex1, hex2, hex3, hex4, hex5);
+module FinalProject (input clk, pwr, key0, key1, sw5, sw4, sw3, sw2, sw1, sw0, output wire [0:6] hex0, hex1, hex2, hex3, hex4, hex5, output wire preheated);
 	parameter default_temp = 300;
 	parameter max_temp = 500;
 	parameter min_temp = 65;
 	parameter max_time = 1800;	
 	
 	reg new_clk;
-	parameter MAX_COUNT = 5000000; 
+	parameter MAX_COUNT = 10000000; 
 	reg [25:0] count = 0;
 	always @ (posedge clk) begin
 		if (count <= MAX_COUNT) begin
@@ -30,18 +30,21 @@ module FinalProject (input clk, pwr, key0, key1, sw5, sw4, sw3, sw2, sw1, sw0, o
 	
 	wire [12:0] current_time;
 	wire [9:0] current_temp;
-	wire heat, preheated;
-	integer target_temp = 300;
+	wire heat;
+	integer target_temp = 65;
 	integer target_time = 0;
 	reg tempInputDone, timeInputDone;
 	timeclk timeclk(clk, current_time);
-	ovenDisplay display(pwr, tempInputDone, timeInputDone, 65, target_temp, current_time, target_time, hex0, hex1, hex2, hex3, hex4, hex5);
 	HeatControl heatcontrol(current_temp, target_temp, heat);
-	Temperature tempcontrol(target_temp, heat, current_temp, preheated);
+	Temperature tempcontrol(target_temp, heat, tempInputDone, new_clk, current_temp, preheated);
+	ovenDisplay display(pwr, tempInputDone, timeInputDone, current_temp, target_temp, current_time, target_time, hex0, hex1, hex2, hex3, hex4, hex5);
 	
 	integer tempChange, timeChange;
 	always @ (posedge clk) begin
 		if (pwr) begin
+			if (target_temp == 65) begin
+				target_temp = 300;
+			end
 			// continue looping to get target temp until both key0 and key1 pressed
 			if(~(key0 == 0 && key1 == 0)&&~tempInputDone) begin
 				case ({sw5, sw4, sw3, sw2, sw1, sw0})
