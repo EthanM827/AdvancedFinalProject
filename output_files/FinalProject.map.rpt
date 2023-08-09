@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProject
-Wed Aug  9 09:38:39 2023
+Wed Aug  9 10:36:04 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -64,13 +64,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Aug  9 09:38:39 2023          ;
+; Analysis & Synthesis Status        ; Successful - Wed Aug  9 10:36:04 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; FinalProject                                   ;
 ; Top-level Entity Name              ; FinalProject                                   ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 3,531                                          ;
-;     Total combinational functions  ; 3,529                                          ;
+; Total logic elements               ; 3,528                                          ;
+;     Total combinational functions  ; 3,526                                          ;
 ;     Dedicated logic registers      ; 81                                             ;
 ; Total registers                    ; 81                                             ;
 ; Total pins                         ; 52                                             ;
@@ -174,11 +174,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.01        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
@@ -186,49 +186,51 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 3            ;   0.2%      ;
 ;     Processor 4            ;   0.2%      ;
 ;     Processor 5            ;   0.2%      ;
-;     Processor 6            ;   0.1%      ;
+;     Processor 6            ;   0.2%      ;
+;     Processor 7            ;   0.2%      ;
+;     Processor 8            ;   0.2%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
-; timeclk.v                        ; yes             ; User Verilog HDL File        ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/timeclk.v                  ;         ;
-; ovenDisplay.v                    ; yes             ; User Verilog HDL File        ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v              ;         ;
-; FinalProject.v                   ; yes             ; User Verilog HDL File        ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v             ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                    ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                                   ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                               ;         ;
-; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                    ;         ;
-; db/lpm_divide_i3o.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_i3o.tdf      ;         ;
-; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/abs_divider_kbg.tdf     ;         ;
-; db/alt_u_div_she.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_she.tdf       ;         ;
-; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/add_sub_t3c.tdf         ;         ;
-; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/add_sub_u3c.tdf         ;         ;
-; db/lpm_abs_o99.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_abs_o99.tdf         ;         ;
-; db/lpm_abs_8b9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_abs_8b9.tdf         ;         ;
-; db/lpm_divide_lll.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_lll.tdf      ;         ;
-; db/sign_div_unsign_klh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/sign_div_unsign_klh.tdf ;         ;
-; db/alt_u_div_ihe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_ihe.tdf       ;         ;
-; db/lpm_divide_fbo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_fbo.tdf      ;         ;
-; db/lpm_divide_mtl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_mtl.tdf      ;         ;
-; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/sign_div_unsign_olh.tdf ;         ;
-; db/alt_u_div_qhe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_qhe.tdf       ;         ;
-; db/lpm_divide_ptl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_ptl.tdf      ;         ;
-; db/sign_div_unsign_rlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/sign_div_unsign_rlh.tdf ;         ;
-; db/alt_u_div_0ie.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_0ie.tdf       ;         ;
-; db/lpm_divide_otl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_otl.tdf      ;         ;
-; db/sign_div_unsign_qlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/sign_div_unsign_qlh.tdf ;         ;
-; db/alt_u_div_uhe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_uhe.tdf       ;         ;
-; db/lpm_divide_oll.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_oll.tdf      ;         ;
-; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/sign_div_unsign_nlh.tdf ;         ;
-; db/alt_u_div_ohe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_ohe.tdf       ;         ;
-; db/lpm_divide_qll.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_qll.tdf      ;         ;
-; db/sign_div_unsign_plh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/sign_div_unsign_plh.tdf ;         ;
-; db/alt_u_div_the.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_the.tdf       ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; timeclk.v                        ; yes             ; User Verilog HDL File        ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/timeclk.v                  ;         ;
+; ovenDisplay.v                    ; yes             ; User Verilog HDL File        ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v              ;         ;
+; FinalProject.v                   ; yes             ; User Verilog HDL File        ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v             ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                                                                          ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                                                                                         ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                                                                     ;         ;
+; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                                                                          ;         ;
+; db/lpm_divide_i3o.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_i3o.tdf      ;         ;
+; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/abs_divider_kbg.tdf     ;         ;
+; db/alt_u_div_she.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf       ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/add_sub_t3c.tdf         ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/add_sub_u3c.tdf         ;         ;
+; db/lpm_abs_o99.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_abs_o99.tdf         ;         ;
+; db/lpm_abs_8b9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_abs_8b9.tdf         ;         ;
+; db/lpm_divide_lll.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_lll.tdf      ;         ;
+; db/sign_div_unsign_klh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/sign_div_unsign_klh.tdf ;         ;
+; db/alt_u_div_ihe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_ihe.tdf       ;         ;
+; db/lpm_divide_fbo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_fbo.tdf      ;         ;
+; db/lpm_divide_mtl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_mtl.tdf      ;         ;
+; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/sign_div_unsign_olh.tdf ;         ;
+; db/alt_u_div_qhe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_qhe.tdf       ;         ;
+; db/lpm_divide_ptl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_ptl.tdf      ;         ;
+; db/sign_div_unsign_rlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/sign_div_unsign_rlh.tdf ;         ;
+; db/alt_u_div_0ie.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_0ie.tdf       ;         ;
+; db/lpm_divide_otl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_otl.tdf      ;         ;
+; db/sign_div_unsign_qlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/sign_div_unsign_qlh.tdf ;         ;
+; db/alt_u_div_uhe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_uhe.tdf       ;         ;
+; db/lpm_divide_oll.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_oll.tdf      ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/sign_div_unsign_nlh.tdf ;         ;
+; db/alt_u_div_ohe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_ohe.tdf       ;         ;
+; db/lpm_divide_qll.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_qll.tdf      ;         ;
+; db/sign_div_unsign_plh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/sign_div_unsign_plh.tdf ;         ;
+; db/alt_u_div_the.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_the.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------+
@@ -236,16 +238,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Estimated Total logic elements              ; 3,531                       ;
+; Estimated Total logic elements              ; 3,528                       ;
 ;                                             ;                             ;
-; Total combinational functions               ; 3529                        ;
+; Total combinational functions               ; 3526                        ;
 ; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 929                         ;
-;     -- 3 input functions                    ; 991                         ;
-;     -- <=2 input functions                  ; 1609                        ;
+;     -- 4 input functions                    ; 928                         ;
+;     -- 3 input functions                    ; 993                         ;
+;     -- <=2 input functions                  ; 1605                        ;
 ;                                             ;                             ;
 ; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 2310                        ;
+;     -- normal mode                          ; 2307                        ;
 ;     -- arithmetic mode                      ; 1219                        ;
 ;                                             ;                             ;
 ; Total registers                             ; 81                          ;
@@ -257,9 +259,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0                           ;
 ;                                             ;                             ;
 ; Maximum fan-out node                        ; ovenDisplay:display|Add5~62 ;
-; Maximum fan-out                             ; 103                         ;
-; Total fan-out                               ; 9933                        ;
-; Average fan-out                             ; 2.67                        ;
+; Maximum fan-out                             ; 101                         ;
+; Total fan-out                               ; 9927                        ;
+; Average fan-out                             ; 2.68                        ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -268,30 +270,30 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                               ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |FinalProject                             ; 3529 (201)          ; 81 (37)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 52   ; 0            ; 0          ; |FinalProject                                                                                                                     ; FinalProject        ; work         ;
-;    |ovenDisplay:display|                  ; 3249 (468)          ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display                                                                                                 ; ovenDisplay         ; work         ;
-;       |lpm_divide:Div0|                   ; 170 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_otl:auto_generated|  ; 170 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0|lpm_divide_otl:auto_generated                                                   ; lpm_divide_otl      ; work         ;
-;             |sign_div_unsign_qlh:divider| ; 170 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0|lpm_divide_otl:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh ; work         ;
-;                |alt_u_div_uhe:divider|    ; 170 (170)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0|lpm_divide_otl:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider ; alt_u_div_uhe       ; work         ;
+; |FinalProject                             ; 3526 (201)          ; 81 (37)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 52   ; 0            ; 0          ; |FinalProject                                                                                                                     ; FinalProject        ; work         ;
+;    |ovenDisplay:display|                  ; 3246 (464)          ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display                                                                                                 ; ovenDisplay         ; work         ;
+;       |lpm_divide:Div0|                   ; 173 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_otl:auto_generated|  ; 173 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0|lpm_divide_otl:auto_generated                                                   ; lpm_divide_otl      ; work         ;
+;             |sign_div_unsign_qlh:divider| ; 173 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0|lpm_divide_otl:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh ; work         ;
+;                |alt_u_div_uhe:divider|    ; 173 (173)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0|lpm_divide_otl:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider ; alt_u_div_uhe       ; work         ;
 ;       |lpm_divide:Div1|                   ; 514 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_fbo:auto_generated|  ; 514 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div1|lpm_divide_fbo:auto_generated                                                   ; lpm_divide_fbo      ; work         ;
 ;             |abs_divider_kbg:divider|     ; 514 (34)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div1|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                           ; abs_divider_kbg     ; work         ;
 ;                |alt_u_div_she:divider|    ; 449 (449)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div1|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider     ; alt_u_div_she       ; work         ;
 ;                |lpm_abs_8b9:my_abs_num|   ; 31 (31)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div1|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num    ; lpm_abs_8b9         ; work         ;
-;       |lpm_divide:Div2|                   ; 533 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_fbo:auto_generated|  ; 533 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2|lpm_divide_fbo:auto_generated                                                   ; lpm_divide_fbo      ; work         ;
-;             |abs_divider_kbg:divider|     ; 533 (34)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                           ; abs_divider_kbg     ; work         ;
+;       |lpm_divide:Div2|                   ; 528 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_fbo:auto_generated|  ; 528 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2|lpm_divide_fbo:auto_generated                                                   ; lpm_divide_fbo      ; work         ;
+;             |abs_divider_kbg:divider|     ; 528 (34)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                           ; abs_divider_kbg     ; work         ;
 ;                |alt_u_div_she:divider|    ; 449 (449)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider     ; alt_u_div_she       ; work         ;
-;                |lpm_abs_8b9:my_abs_num|   ; 50 (50)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num    ; lpm_abs_8b9         ; work         ;
+;                |lpm_abs_8b9:my_abs_num|   ; 45 (45)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num    ; lpm_abs_8b9         ; work         ;
 ;       |lpm_divide:Div6|                   ; 57 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div6                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_mtl:auto_generated|  ; 57 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div6|lpm_divide_mtl:auto_generated                                                   ; lpm_divide_mtl      ; work         ;
 ;             |sign_div_unsign_olh:divider| ; 57 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div6|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
 ;                |alt_u_div_qhe:divider|    ; 57 (57)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div6|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider ; alt_u_div_qhe       ; work         ;
-;       |lpm_divide:Div7|                   ; 529 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_ptl:auto_generated|  ; 529 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7|lpm_divide_ptl:auto_generated                                                   ; lpm_divide_ptl      ; work         ;
-;             |sign_div_unsign_rlh:divider| ; 529 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh ; work         ;
-;                |alt_u_div_0ie:divider|    ; 529 (529)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_0ie:divider ; alt_u_div_0ie       ; work         ;
+;       |lpm_divide:Div7|                   ; 532 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ptl:auto_generated|  ; 532 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7|lpm_divide_ptl:auto_generated                                                   ; lpm_divide_ptl      ; work         ;
+;             |sign_div_unsign_rlh:divider| ; 532 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh ; work         ;
+;                |alt_u_div_0ie:divider|    ; 532 (532)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_0ie:divider ; alt_u_div_0ie       ; work         ;
 ;       |lpm_divide:Mod0|                   ; 109 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_qll:auto_generated|  ; 109 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod0|lpm_divide_qll:auto_generated                                                   ; lpm_divide_qll      ; work         ;
 ;             |sign_div_unsign_plh:divider| ; 109 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod0|lpm_divide_qll:auto_generated|sign_div_unsign_plh:divider                       ; sign_div_unsign_plh ; work         ;
@@ -363,15 +365,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; timeInputDone                         ; Stuck at GND due to stuck port data_in ;
-; timeclk:timeclk|current_time[12]      ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
-+---------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; target_time[0..12]                     ; Stuck at GND due to stuck port data_in ;
+; timeInputDone                          ; Merged with tempInputDone              ;
+; timeclk:timeclk|current_time[12]       ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 15 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -421,14 +424,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 +------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Top-level Entity: |FinalProject ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; default_temp   ; 300   ; Signed Integer                                      ;
-; max_temp       ; 500   ; Signed Integer                                      ;
-; min_temp       ; 65    ; Signed Integer                                      ;
-; MAX_COUNT      ; 50000 ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
++----------------+----------+--------------------------------------------------+
+; Parameter Name ; Value    ; Type                                             ;
++----------------+----------+--------------------------------------------------+
+; default_temp   ; 300      ; Signed Integer                                   ;
+; max_temp       ; 500      ; Signed Integer                                   ;
+; min_temp       ; 65       ; Signed Integer                                   ;
+; max_time       ; 1800     ; Signed Integer                                   ;
+; MAX_COUNT      ; 25000000 ; Signed Integer                                   ;
++----------------+----------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -773,7 +777,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; current_temp[5..1] ; Input ; Info     ; Stuck at GND ;
 ; current_temp[6]    ; Input ; Info     ; Stuck at VCC ;
 ; current_temp[0]    ; Input ; Info     ; Stuck at VCC ;
-; target_time        ; Input ; Info     ; Stuck at GND ;
 +--------------------+-------+----------+--------------+
 
 
@@ -788,20 +791,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR SLD      ; 27                          ;
 ;     SCLR              ; 33                          ;
 ;     plain             ; 12                          ;
-; cycloneiii_lcell_comb ; 3530                        ;
+; cycloneiii_lcell_comb ; 3527                        ;
 ;     arith             ; 1219                        ;
 ;         1 data inputs ; 21                          ;
 ;         2 data inputs ; 331                         ;
 ;         3 data inputs ; 867                         ;
-;     normal            ; 2311                        ;
+;     normal            ; 2308                        ;
 ;         0 data inputs ; 167                         ;
 ;         1 data inputs ; 20                          ;
-;         2 data inputs ; 1071                        ;
-;         3 data inputs ; 124                         ;
-;         4 data inputs ; 929                         ;
+;         2 data inputs ; 1067                        ;
+;         3 data inputs ; 126                         ;
+;         4 data inputs ; 928                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 236.40                      ;
-; Average LUT depth     ; 158.57                      ;
+; Max LUT depth         ; 237.40                      ;
+; Average LUT depth     ; 159.24                      ;
 +-----------------------+-----------------------------+
 
 
@@ -810,7 +813,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -820,326 +823,326 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Wed Aug  9 09:38:28 2023
+    Info: Processing started: Wed Aug  9 10:35:45 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file timeclk.v
-    Info (12023): Found entity 1: timeclk File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/timeclk.v Line: 1
+    Info (12023): Found entity 1: timeclk File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/timeclk.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ovendisplay.v
-    Info (12023): Found entity 1: ovenDisplay File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 1
+    Info (12023): Found entity 1: ovenDisplay File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file finalproject.v
-    Info (12023): Found entity 1: FinalProject File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
+    Info (12023): Found entity 1: FinalProject File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file heatcontrol.v
-    Info (12023): Found entity 1: HeatControl File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/HeatControl.v Line: 1
+    Info (12023): Found entity 1: HeatControl File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/HeatControl.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file temperature.v
-    Info (12023): Found entity 1: Temperature File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/Temperature.v Line: 1
+    Info (12023): Found entity 1: Temperature File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/Temperature.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file oventimer.v
-    Info (12023): Found entity 1: OvenTimer File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/OvenTimer.v Line: 1
+    Info (12023): Found entity 1: OvenTimer File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/OvenTimer.v Line: 1
 Info (12127): Elaborating entity "FinalProject" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at FinalProject.v(11): truncated value with size 32 to match size of target (26) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 11
-Info (10264): Verilog HDL Case Statement information at FinalProject.v(42): all case item expressions in this case statement are onehot File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 42
-Info (12128): Elaborating entity "timeclk" for hierarchy "timeclk:timeclk" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 34
-Warning (10230): Verilog HDL assignment warning at timeclk.v(10): truncated value with size 32 to match size of target (13) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/timeclk.v Line: 10
-Info (12128): Elaborating entity "ovenDisplay" for hierarchy "ovenDisplay:display" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 35
-Warning (10036): Verilog HDL or VHDL warning at ovenDisplay.v(16): object "current_temp_hundreds_place" assigned a value but never read File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 16
-Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(52): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 52
-Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(52): incomplete case statement has no default case item File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 52
-Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(64): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 64
-Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(64): incomplete case statement has no default case item File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 64
-Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(76): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 76
-Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(76): incomplete case statement has no default case item File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 76
-Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(95): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 95
-Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(95): incomplete case statement has no default case item File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 95
-Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(107): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 107
-Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(107): incomplete case statement has no default case item File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 107
-Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(115): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 115
-Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(115): incomplete case statement has no default case item File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 115
-Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(127): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 127
-Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(127): incomplete case statement has no default case item File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 127
-Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(142): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 142
-Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(142): incomplete case statement has no default case item File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 142
-Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(154): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 154
-Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(154): incomplete case statement has no default case item File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 154
-Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(162): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 162
-Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(162): incomplete case statement has no default case item File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 162
-Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(174): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 174
-Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(174): incomplete case statement has no default case item File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 174
-Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex0", which holds its previous value in one or more paths through the always construct File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 50
-Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex1", which holds its previous value in one or more paths through the always construct File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 50
-Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex2", which holds its previous value in one or more paths through the always construct File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 50
-Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex3", which holds its previous value in one or more paths through the always construct File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 50
-Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex4", which holds its previous value in one or more paths through the always construct File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 50
-Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex5", which holds its previous value in one or more paths through the always construct File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 50
-Info (10041): Inferred latch for "hex5[6]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex5[5]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex5[4]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex5[3]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex5[2]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex5[1]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex5[0]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex4[6]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex4[5]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex4[4]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex4[3]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex4[2]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex4[1]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex4[0]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex3[6]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex3[5]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex3[4]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex3[3]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex3[2]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex3[1]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex3[0]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex2[6]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex2[5]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex2[4]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex2[3]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex2[2]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex2[1]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex2[0]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex1[6]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex1[5]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex1[4]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex1[3]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex1[2]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex1[1]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex1[0]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex0[6]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex0[5]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex0[4]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex0[3]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex0[2]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex0[1]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Info (10041): Inferred latch for "hex0[0]" at ovenDisplay.v(140) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
+Warning (10230): Verilog HDL assignment warning at FinalProject.v(12): truncated value with size 32 to match size of target (26) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 12
+Info (10264): Verilog HDL Case Statement information at FinalProject.v(44): all case item expressions in this case statement are onehot File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 44
+Info (12128): Elaborating entity "timeclk" for hierarchy "timeclk:timeclk" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 36
+Warning (10230): Verilog HDL assignment warning at timeclk.v(10): truncated value with size 32 to match size of target (13) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/timeclk.v Line: 10
+Info (12128): Elaborating entity "ovenDisplay" for hierarchy "ovenDisplay:display" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 37
+Warning (10036): Verilog HDL or VHDL warning at ovenDisplay.v(16): object "current_temp_hundreds_place" assigned a value but never read File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 16
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(52): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 52
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(52): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 52
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(64): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 64
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(64): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 64
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(76): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 76
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(76): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 76
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(95): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 95
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(95): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 95
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(107): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 107
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(107): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 107
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(115): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 115
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(115): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 115
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(127): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 127
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(127): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 127
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(142): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 142
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(142): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 142
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(154): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 154
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(154): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 154
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(162): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 162
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(162): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 162
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(174): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 174
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(174): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 174
+Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex0", which holds its previous value in one or more paths through the always construct File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 50
+Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex1", which holds its previous value in one or more paths through the always construct File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 50
+Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex2", which holds its previous value in one or more paths through the always construct File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 50
+Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex3", which holds its previous value in one or more paths through the always construct File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 50
+Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex4", which holds its previous value in one or more paths through the always construct File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 50
+Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex5", which holds its previous value in one or more paths through the always construct File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 50
+Info (10041): Inferred latch for "hex5[6]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex5[5]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex5[4]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex5[3]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex5[2]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex5[1]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex5[0]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex4[6]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex4[5]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex4[4]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex4[3]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex4[2]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex4[1]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex4[0]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex3[6]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex3[5]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex3[4]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex3[3]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex3[2]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex3[1]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex3[0]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex2[6]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex2[5]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex2[4]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex2[3]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex2[2]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex2[1]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex2[0]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex1[6]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex1[5]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex1[4]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex1[3]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex1[2]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex1[1]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex1[0]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex0[6]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex0[5]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex0[4]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex0[3]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex0[2]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex0[1]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Info (10041): Inferred latch for "hex0[0]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
 Info (278001): Inferred 14 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod2" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 26
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod6" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 44
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod5" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 35
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div2" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 27
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div5" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 36
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div6" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 45
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div7" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 46
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div0" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 21
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod1" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 22
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod4" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 31
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div1" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 23
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div4" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 32
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod7" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 45
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod0" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 21
-Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Mod2" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 26
-Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Mod2" with the following parameter: File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 26
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod2" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 26
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod6" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 44
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod5" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 35
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div2" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 27
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div5" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 36
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div6" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 45
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div7" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 46
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div0" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 21
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod1" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod4" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 31
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div1" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 23
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div4" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 32
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod7" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 45
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod0" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 21
+Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Mod2" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 26
+Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Mod2" with the following parameter: File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 26
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i3o.tdf
-    Info (12023): Found entity 1: lpm_divide_i3o File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_i3o.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_i3o File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_i3o.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_kbg.tdf
-    Info (12023): Found entity 1: abs_divider_kbg File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/abs_divider_kbg.tdf Line: 29
+    Info (12023): Found entity 1: abs_divider_kbg File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/abs_divider_kbg.tdf Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_she.tdf
-    Info (12023): Found entity 1: alt_u_div_she File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_she.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_she File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
-    Info (12023): Found entity 1: add_sub_t3c File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/add_sub_t3c.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_t3c File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/add_sub_t3c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
-    Info (12023): Found entity 1: add_sub_u3c File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/add_sub_u3c.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_u3c File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/add_sub_u3c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_o99.tdf
-    Info (12023): Found entity 1: lpm_abs_o99 File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_abs_o99.tdf Line: 25
+    Info (12023): Found entity 1: lpm_abs_o99 File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_abs_o99.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_8b9.tdf
-    Info (12023): Found entity 1: lpm_abs_8b9 File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_abs_8b9.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Mod6" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 44
-Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Mod6" with the following parameter: File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 44
+    Info (12023): Found entity 1: lpm_abs_8b9 File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_abs_8b9.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Mod6" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 44
+Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Mod6" with the following parameter: File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 44
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_lll.tdf
-    Info (12023): Found entity 1: lpm_divide_lll File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_lll.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_lll File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_lll.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_klh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_klh File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/sign_div_unsign_klh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_klh File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/sign_div_unsign_klh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ihe.tdf
-    Info (12023): Found entity 1: alt_u_div_ihe File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_ihe.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Mod5" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 35
-Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Mod5" with the following parameter: File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 35
+    Info (12023): Found entity 1: alt_u_div_ihe File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_ihe.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Mod5" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 35
+Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Mod5" with the following parameter: File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 35
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Div2" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 27
-Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Div2" with the following parameter: File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 27
+Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Div2" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 27
+Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Div2" with the following parameter: File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 27
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_fbo.tdf
-    Info (12023): Found entity 1: lpm_divide_fbo File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_fbo.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Div6" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 45
-Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Div6" with the following parameter: File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 45
+    Info (12023): Found entity 1: lpm_divide_fbo File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_fbo.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Div6" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 45
+Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Div6" with the following parameter: File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 45
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_mtl.tdf
-    Info (12023): Found entity 1: lpm_divide_mtl File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_mtl.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_mtl File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_mtl.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/sign_div_unsign_olh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/sign_div_unsign_olh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qhe.tdf
-    Info (12023): Found entity 1: alt_u_div_qhe File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_qhe.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Div7" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 46
-Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Div7" with the following parameter: File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 46
+    Info (12023): Found entity 1: alt_u_div_qhe File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_qhe.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Div7" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 46
+Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Div7" with the following parameter: File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 46
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ptl.tdf
-    Info (12023): Found entity 1: lpm_divide_ptl File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_ptl.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_ptl File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_ptl.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_rlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_rlh File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/sign_div_unsign_rlh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_rlh File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/sign_div_unsign_rlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_0ie.tdf
-    Info (12023): Found entity 1: alt_u_div_0ie File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_0ie.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Div0" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 21
-Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Div0" with the following parameter: File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 21
+    Info (12023): Found entity 1: alt_u_div_0ie File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_0ie.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Div0" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 21
+Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Div0" with the following parameter: File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 21
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_otl.tdf
-    Info (12023): Found entity 1: lpm_divide_otl File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_otl.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_otl File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_otl.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_qlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_qlh File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/sign_div_unsign_qlh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_qlh File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/sign_div_unsign_qlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_uhe.tdf
-    Info (12023): Found entity 1: alt_u_div_uhe File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_uhe.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Mod7" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 45
-Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Mod7" with the following parameter: File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 45
+    Info (12023): Found entity 1: alt_u_div_uhe File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_uhe.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Mod7" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 45
+Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Mod7" with the following parameter: File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 45
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_oll.tdf
-    Info (12023): Found entity 1: lpm_divide_oll File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_oll.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_oll File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_oll.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/sign_div_unsign_nlh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/sign_div_unsign_nlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ohe.tdf
-    Info (12023): Found entity 1: alt_u_div_ohe File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_ohe.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Mod0" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 21
-Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Mod0" with the following parameter: File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 21
+    Info (12023): Found entity 1: alt_u_div_ohe File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_ohe.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Mod0" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 21
+Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Mod0" with the following parameter: File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 21
     Info (12134): Parameter "LPM_WIDTHN" = "13"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_qll.tdf
-    Info (12023): Found entity 1: lpm_divide_qll File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/lpm_divide_qll.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_qll File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/lpm_divide_qll.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_plh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_plh File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/sign_div_unsign_plh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_plh File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/sign_div_unsign_plh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_the.tdf
-    Info (12023): Found entity 1: alt_u_div_the File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_the.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_the File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_the.tdf Line: 27
 Info (13014): Ignored 93 buffer(s)
     Info (13016): Ignored 93 CARRY_SUM buffer(s)
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "ovenDisplay:display|hex4[0]" merged with LATCH primitive "ovenDisplay:display|hex4[3]" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-Warning (13012): Latch ovenDisplay:display|hex0[6] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex0[5] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex0[4] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex0[3] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex0[2] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex0[1] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex0[0] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex1[6] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex1[5] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex1[4] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex1[3] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex1[2] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex1[1] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex1[0] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex2[6] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 33
-Warning (13012): Latch ovenDisplay:display|hex2[5] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 33
-Warning (13012): Latch ovenDisplay:display|hex2[4] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 33
-Warning (13012): Latch ovenDisplay:display|hex2[3] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 33
-Warning (13012): Latch ovenDisplay:display|hex2[2] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 33
-Warning (13012): Latch ovenDisplay:display|hex2[1] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 33
-Warning (13012): Latch ovenDisplay:display|hex2[0] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 33
-Warning (13012): Latch ovenDisplay:display|hex3[6] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex3[5] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex3[4] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex3[3] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex3[2] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex3[1] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex3[0] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex4[6] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex4[5] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex4[4] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex4[3] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex4[2] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-Warning (13012): Latch ovenDisplay:display|hex4[1] has unsafe behavior File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
+    Info (13026): Duplicate LATCH primitive "ovenDisplay:display|hex4[0]" merged with LATCH primitive "ovenDisplay:display|hex4[3]" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+Warning (13012): Latch ovenDisplay:display|hex0[6] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex0[5] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex0[4] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex0[3] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex0[2] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex0[1] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex0[0] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex1[6] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex1[5] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex1[4] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex1[3] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex1[2] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex1[1] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex1[0] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex2[6] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ovenDisplay:display|Equal20~synth File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 77
+Warning (13012): Latch ovenDisplay:display|hex2[5] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ovenDisplay:display|Equal20~synth File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 77
+Warning (13012): Latch ovenDisplay:display|hex2[4] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ovenDisplay:display|WideNor2 File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 76
+Warning (13012): Latch ovenDisplay:display|hex2[3] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ovenDisplay:display|Equal20~synth File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 77
+Warning (13012): Latch ovenDisplay:display|hex2[2] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ovenDisplay:display|Equal21~synth File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 78
+Warning (13012): Latch ovenDisplay:display|hex2[1] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ovenDisplay:display|Equal24~synth File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 81
+Warning (13012): Latch ovenDisplay:display|hex2[0] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ovenDisplay:display|Equal20~synth File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 77
+Warning (13012): Latch ovenDisplay:display|hex3[6] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex3[5] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+Warning (13012): Latch ovenDisplay:display|hex3[4] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+Warning (13012): Latch ovenDisplay:display|hex3[3] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+Warning (13012): Latch ovenDisplay:display|hex3[2] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+Warning (13012): Latch ovenDisplay:display|hex3[1] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+Warning (13012): Latch ovenDisplay:display|hex3[0] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+Warning (13012): Latch ovenDisplay:display|hex4[6] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+Warning (13012): Latch ovenDisplay:display|hex4[5] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+Warning (13012): Latch ovenDisplay:display|hex4[4] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+Warning (13012): Latch ovenDisplay:display|hex4[3] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+Warning (13012): Latch ovenDisplay:display|hex4[2] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+Warning (13012): Latch ovenDisplay:display|hex4[1] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "hex5[6]" is stuck at VCC File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-    Warning (13410): Pin "hex5[5]" is stuck at VCC File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-    Warning (13410): Pin "hex5[4]" is stuck at VCC File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-    Warning (13410): Pin "hex5[3]" is stuck at VCC File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-    Warning (13410): Pin "hex5[2]" is stuck at VCC File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-    Warning (13410): Pin "hex5[1]" is stuck at VCC File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
-    Warning (13410): Pin "hex5[0]" is stuck at VCC File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 1
+    Warning (13410): Pin "hex5[6]" is stuck at VCC File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+    Warning (13410): Pin "hex5[5]" is stuck at VCC File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+    Warning (13410): Pin "hex5[4]" is stuck at VCC File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+    Warning (13410): Pin "hex5[3]" is stuck at VCC File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+    Warning (13410): Pin "hex5[2]" is stuck at VCC File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+    Warning (13410): Pin "hex5[1]" is stuck at VCC File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
+    Warning (13410): Pin "hex5[0]" is stuck at VCC File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_31_result_int[0]~0" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_she.tdf Line: 152
-    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_21_result_int[0]~10" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_she.tdf Line: 97
-    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_22_result_int[0]~12" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_she.tdf Line: 102
-    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_23_result_int[0]~12" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_she.tdf Line: 107
-    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_24_result_int[0]~12" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_she.tdf Line: 112
-    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_25_result_int[0]~12" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_she.tdf Line: 117
-    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_26_result_int[0]~12" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_she.tdf Line: 122
-    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_27_result_int[0]~12" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_she.tdf Line: 127
-    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_28_result_int[0]~12" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_she.tdf Line: 132
-    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_29_result_int[0]~12" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_she.tdf Line: 137
-    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_30_result_int[0]~12" File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/db/alt_u_div_she.tdf Line: 147
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_31_result_int[0]~0" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 152
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_21_result_int[0]~10" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 97
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_22_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 102
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_23_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 107
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_24_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 112
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_25_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 117
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_26_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 122
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_27_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 127
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_28_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 132
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_29_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 137
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_30_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 147
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3610 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3607 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 3558 logic cells
+    Info (21061): Implemented 3555 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 108 warnings
-    Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Wed Aug  9 09:38:39 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 4898 megabytes
+    Info: Processing ended: Wed Aug  9 10:36:04 2023
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:28
 
 
