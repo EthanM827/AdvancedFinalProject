@@ -8,6 +8,9 @@ module Temperature (input [9:0] targetTemp, input [1:0] heat, output reg [9:0] c
 		if (nextTemp > 511) begin
 			nextTemp = 511;
 		end
+		if (nextTemp < 65) begin
+			nextTemp = 65;
+		end
 		currentTemp = nextTemp;
 		if ((currentTemp >= targetTemp - 2) && (currentTemp <= targetTemp + 2)) begin
 			preheated = 1;

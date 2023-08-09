@@ -30,11 +30,14 @@ module FinalProject (input clk, pwr, key0, key1, sw5, sw4, sw3, sw2, sw1, sw0, o
 	
 	wire [12:0] current_time;
 	wire [9:0] current_temp;
+	wire heat, preheated;
 	integer target_temp = 300;
 	integer target_time = 0;
 	reg tempInputDone, timeInputDone;
 	timeclk timeclk(clk, current_time);
 	ovenDisplay display(pwr, tempInputDone, timeInputDone, 65, target_temp, current_time, target_time, hex0, hex1, hex2, hex3, hex4, hex5);
+	HeatControl heatcontrol(current_temp, target_temp, heat);
+	Temperature tempcontrol(target_temp, heat, current_temp, preheated);
 	
 	integer tempChange, timeChange;
 	always @ (posedge clk) begin
