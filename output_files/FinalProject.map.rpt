@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProject
-Wed Aug  9 10:36:04 2023
+Wed Aug  9 10:48:58 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -29,15 +29,17 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
  21. Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Div7
  22. Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Div0
  23. Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Mod1
- 24. Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Mod4
- 25. Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Div1
- 26. Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Div4
- 27. Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Mod7
- 28. Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Mod0
- 29. Port Connectivity Checks: "ovenDisplay:display"
- 30. Post-Synthesis Netlist Statistics for Top Partition
- 31. Elapsed Time Per Partition
- 32. Analysis & Synthesis Messages
+ 24. Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Div3
+ 25. Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Mod4
+ 26. Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Div1
+ 27. Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Div4
+ 28. Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Mod7
+ 29. Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Mod0
+ 30. Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Mod3
+ 31. Port Connectivity Checks: "ovenDisplay:display"
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
 
 
 
@@ -64,15 +66,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Aug  9 10:36:04 2023          ;
+; Analysis & Synthesis Status        ; Successful - Wed Aug  9 10:48:58 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; FinalProject                                   ;
 ; Top-level Entity Name              ; FinalProject                                   ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 3,528                                          ;
-;     Total combinational functions  ; 3,526                                          ;
-;     Dedicated logic registers      ; 81                                             ;
-; Total registers                    ; 81                                             ;
+; Total logic elements               ; 5,992                                          ;
+;     Total combinational functions  ; 5,990                                          ;
+;     Dedicated logic registers      ; 114                                            ;
+; Total registers                    ; 114                                            ;
 ; Total pins                         ; 52                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -177,14 +179,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.02        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.2%      ;
+;     Processor 2            ;   0.3%      ;
+;     Processor 3            ;   0.3%      ;
+;     Processor 4            ;   0.3%      ;
 ;     Processor 5            ;   0.2%      ;
 ;     Processor 6            ;   0.2%      ;
 ;     Processor 7            ;   0.2%      ;
@@ -233,36 +235,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                               ;
-+---------------------------------------------+-----------------------------+
-; Resource                                    ; Usage                       ;
-+---------------------------------------------+-----------------------------+
-; Estimated Total logic elements              ; 3,528                       ;
-;                                             ;                             ;
-; Total combinational functions               ; 3526                        ;
-; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 928                         ;
-;     -- 3 input functions                    ; 993                         ;
-;     -- <=2 input functions                  ; 1605                        ;
-;                                             ;                             ;
-; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 2307                        ;
-;     -- arithmetic mode                      ; 1219                        ;
-;                                             ;                             ;
-; Total registers                             ; 81                          ;
-;     -- Dedicated logic registers            ; 81                          ;
-;     -- I/O registers                        ; 0                           ;
-;                                             ;                             ;
-; I/O pins                                    ; 52                          ;
-;                                             ;                             ;
-; Embedded Multiplier 9-bit elements          ; 0                           ;
-;                                             ;                             ;
-; Maximum fan-out node                        ; ovenDisplay:display|Add5~62 ;
-; Maximum fan-out                             ; 101                         ;
-; Total fan-out                               ; 9927                        ;
-; Average fan-out                             ; 2.68                        ;
-+---------------------------------------------+-----------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 5,992     ;
+;                                             ;           ;
+; Total combinational functions               ; 5990      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 1646      ;
+;     -- 3 input functions                    ; 1691      ;
+;     -- <=2 input functions                  ; 2653      ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 3909      ;
+;     -- arithmetic mode                      ; 2081      ;
+;                                             ;           ;
+; Total registers                             ; 114       ;
+;     -- Dedicated logic registers            ; 114       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 52        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 114       ;
+; Total fan-out                               ; 16901     ;
+; Average fan-out                             ; 2.72      ;
++---------------------------------------------+-----------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -270,43 +272,70 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                               ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |FinalProject                             ; 3526 (201)          ; 81 (37)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 52   ; 0            ; 0          ; |FinalProject                                                                                                                     ; FinalProject        ; work         ;
-;    |ovenDisplay:display|                  ; 3246 (464)          ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display                                                                                                 ; ovenDisplay         ; work         ;
-;       |lpm_divide:Div0|                   ; 173 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_otl:auto_generated|  ; 173 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0|lpm_divide_otl:auto_generated                                                   ; lpm_divide_otl      ; work         ;
-;             |sign_div_unsign_qlh:divider| ; 173 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0|lpm_divide_otl:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh ; work         ;
-;                |alt_u_div_uhe:divider|    ; 173 (173)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0|lpm_divide_otl:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider ; alt_u_div_uhe       ; work         ;
+; |FinalProject                             ; 5990 (369)          ; 114 (70)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 52   ; 0            ; 0          ; |FinalProject                                                                                                                     ; FinalProject        ; work         ;
+;    |ovenDisplay:display|                  ; 5542 (732)          ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display                                                                                                 ; ovenDisplay         ; work         ;
+;       |lpm_divide:Div0|                   ; 191 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_otl:auto_generated|  ; 191 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0|lpm_divide_otl:auto_generated                                                   ; lpm_divide_otl      ; work         ;
+;             |sign_div_unsign_qlh:divider| ; 191 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0|lpm_divide_otl:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh ; work         ;
+;                |alt_u_div_uhe:divider|    ; 191 (191)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div0|lpm_divide_otl:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider ; alt_u_div_uhe       ; work         ;
 ;       |lpm_divide:Div1|                   ; 514 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_fbo:auto_generated|  ; 514 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div1|lpm_divide_fbo:auto_generated                                                   ; lpm_divide_fbo      ; work         ;
 ;             |abs_divider_kbg:divider|     ; 514 (34)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div1|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                           ; abs_divider_kbg     ; work         ;
 ;                |alt_u_div_she:divider|    ; 449 (449)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div1|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider     ; alt_u_div_she       ; work         ;
 ;                |lpm_abs_8b9:my_abs_num|   ; 31 (31)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div1|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num    ; lpm_abs_8b9         ; work         ;
-;       |lpm_divide:Div2|                   ; 528 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_fbo:auto_generated|  ; 528 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2|lpm_divide_fbo:auto_generated                                                   ; lpm_divide_fbo      ; work         ;
-;             |abs_divider_kbg:divider|     ; 528 (34)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                           ; abs_divider_kbg     ; work         ;
+;       |lpm_divide:Div2|                   ; 522 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_fbo:auto_generated|  ; 522 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2|lpm_divide_fbo:auto_generated                                                   ; lpm_divide_fbo      ; work         ;
+;             |abs_divider_kbg:divider|     ; 522 (34)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                           ; abs_divider_kbg     ; work         ;
 ;                |alt_u_div_she:divider|    ; 449 (449)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider     ; alt_u_div_she       ; work         ;
-;                |lpm_abs_8b9:my_abs_num|   ; 45 (45)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num    ; lpm_abs_8b9         ; work         ;
+;                |lpm_abs_8b9:my_abs_num|   ; 39 (39)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div2|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num    ; lpm_abs_8b9         ; work         ;
+;       |lpm_divide:Div3|                   ; 164 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_otl:auto_generated|  ; 164 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div3|lpm_divide_otl:auto_generated                                                   ; lpm_divide_otl      ; work         ;
+;             |sign_div_unsign_qlh:divider| ; 164 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div3|lpm_divide_otl:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh ; work         ;
+;                |alt_u_div_uhe:divider|    ; 164 (164)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div3|lpm_divide_otl:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider ; alt_u_div_uhe       ; work         ;
+;       |lpm_divide:Div4|                   ; 514 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_fbo:auto_generated|  ; 514 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div4|lpm_divide_fbo:auto_generated                                                   ; lpm_divide_fbo      ; work         ;
+;             |abs_divider_kbg:divider|     ; 514 (34)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div4|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                           ; abs_divider_kbg     ; work         ;
+;                |alt_u_div_she:divider|    ; 449 (449)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div4|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider     ; alt_u_div_she       ; work         ;
+;                |lpm_abs_8b9:my_abs_num|   ; 31 (31)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div4|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num    ; lpm_abs_8b9         ; work         ;
+;       |lpm_divide:Div5|                   ; 530 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div5                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_fbo:auto_generated|  ; 530 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div5|lpm_divide_fbo:auto_generated                                                   ; lpm_divide_fbo      ; work         ;
+;             |abs_divider_kbg:divider|     ; 530 (34)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div5|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                           ; abs_divider_kbg     ; work         ;
+;                |alt_u_div_she:divider|    ; 449 (449)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div5|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider     ; alt_u_div_she       ; work         ;
+;                |lpm_abs_8b9:my_abs_num|   ; 47 (47)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div5|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num    ; lpm_abs_8b9         ; work         ;
 ;       |lpm_divide:Div6|                   ; 57 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div6                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_mtl:auto_generated|  ; 57 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div6|lpm_divide_mtl:auto_generated                                                   ; lpm_divide_mtl      ; work         ;
 ;             |sign_div_unsign_olh:divider| ; 57 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div6|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
 ;                |alt_u_div_qhe:divider|    ; 57 (57)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div6|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider ; alt_u_div_qhe       ; work         ;
-;       |lpm_divide:Div7|                   ; 532 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_ptl:auto_generated|  ; 532 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7|lpm_divide_ptl:auto_generated                                                   ; lpm_divide_ptl      ; work         ;
-;             |sign_div_unsign_rlh:divider| ; 532 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh ; work         ;
-;                |alt_u_div_0ie:divider|    ; 532 (532)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_0ie:divider ; alt_u_div_0ie       ; work         ;
-;       |lpm_divide:Mod0|                   ; 109 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_qll:auto_generated|  ; 109 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod0|lpm_divide_qll:auto_generated                                                   ; lpm_divide_qll      ; work         ;
-;             |sign_div_unsign_plh:divider| ; 109 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod0|lpm_divide_qll:auto_generated|sign_div_unsign_plh:divider                       ; sign_div_unsign_plh ; work         ;
-;                |alt_u_div_the:divider|    ; 109 (109)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod0|lpm_divide_qll:auto_generated|sign_div_unsign_plh:divider|alt_u_div_the:divider ; alt_u_div_the       ; work         ;
+;       |lpm_divide:Div7|                   ; 496 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ptl:auto_generated|  ; 496 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7|lpm_divide_ptl:auto_generated                                                   ; lpm_divide_ptl      ; work         ;
+;             |sign_div_unsign_rlh:divider| ; 496 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh ; work         ;
+;                |alt_u_div_0ie:divider|    ; 496 (496)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Div7|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_0ie:divider ; alt_u_div_0ie       ; work         ;
+;       |lpm_divide:Mod0|                   ; 125 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_qll:auto_generated|  ; 125 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod0|lpm_divide_qll:auto_generated                                                   ; lpm_divide_qll      ; work         ;
+;             |sign_div_unsign_plh:divider| ; 125 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod0|lpm_divide_qll:auto_generated|sign_div_unsign_plh:divider                       ; sign_div_unsign_plh ; work         ;
+;                |alt_u_div_the:divider|    ; 125 (125)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod0|lpm_divide_qll:auto_generated|sign_div_unsign_plh:divider|alt_u_div_the:divider ; alt_u_div_the       ; work         ;
 ;       |lpm_divide:Mod1|                   ; 192 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_i3o:auto_generated|  ; 192 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated                                                   ; lpm_divide_i3o      ; work         ;
 ;             |abs_divider_kbg:divider|     ; 192 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider                           ; abs_divider_kbg     ; work         ;
 ;                |alt_u_div_she:divider|    ; 192 (192)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider     ; alt_u_div_she       ; work         ;
-;       |lpm_divide:Mod2|                   ; 514 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_i3o:auto_generated|  ; 514 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod2|lpm_divide_i3o:auto_generated                                                   ; lpm_divide_i3o      ; work         ;
-;             |abs_divider_kbg:divider|     ; 514 (10)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod2|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider                           ; abs_divider_kbg     ; work         ;
+;       |lpm_divide:Mod2|                   ; 507 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_i3o:auto_generated|  ; 507 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod2|lpm_divide_i3o:auto_generated                                                   ; lpm_divide_i3o      ; work         ;
+;             |abs_divider_kbg:divider|     ; 507 (10)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod2|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider                           ; abs_divider_kbg     ; work         ;
 ;                |alt_u_div_she:divider|    ; 459 (459)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod2|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider     ; alt_u_div_she       ; work         ;
-;                |lpm_abs_8b9:my_abs_num|   ; 45 (45)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod2|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num    ; lpm_abs_8b9         ; work         ;
+;                |lpm_abs_8b9:my_abs_num|   ; 38 (38)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod2|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num    ; lpm_abs_8b9         ; work         ;
+;       |lpm_divide:Mod3|                   ; 121 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_qll:auto_generated|  ; 121 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod3|lpm_divide_qll:auto_generated                                                   ; lpm_divide_qll      ; work         ;
+;             |sign_div_unsign_plh:divider| ; 121 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod3|lpm_divide_qll:auto_generated|sign_div_unsign_plh:divider                       ; sign_div_unsign_plh ; work         ;
+;                |alt_u_div_the:divider|    ; 121 (121)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod3|lpm_divide_qll:auto_generated|sign_div_unsign_plh:divider|alt_u_div_the:divider ; alt_u_div_the       ; work         ;
+;       |lpm_divide:Mod4|                   ; 192 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_i3o:auto_generated|  ; 192 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod4|lpm_divide_i3o:auto_generated                                                   ; lpm_divide_i3o      ; work         ;
+;             |abs_divider_kbg:divider|     ; 192 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod4|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider                           ; abs_divider_kbg     ; work         ;
+;                |alt_u_div_she:divider|    ; 192 (192)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod4|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider     ; alt_u_div_she       ; work         ;
+;       |lpm_divide:Mod5|                   ; 522 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod5                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_i3o:auto_generated|  ; 522 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod5|lpm_divide_i3o:auto_generated                                                   ; lpm_divide_i3o      ; work         ;
+;             |abs_divider_kbg:divider|     ; 522 (10)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod5|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider                           ; abs_divider_kbg     ; work         ;
+;                |alt_u_div_she:divider|    ; 459 (459)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod5|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider     ; alt_u_div_she       ; work         ;
+;                |lpm_abs_8b9:my_abs_num|   ; 53 (53)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod5|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num    ; lpm_abs_8b9         ; work         ;
 ;       |lpm_divide:Mod6|                   ; 85 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod6                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_lll:auto_generated|  ; 85 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod6|lpm_divide_lll:auto_generated                                                   ; lpm_divide_lll      ; work         ;
 ;             |sign_div_unsign_klh:divider| ; 85 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FinalProject|ovenDisplay:display|lpm_divide:Mod6|lpm_divide_lll:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh ; work         ;
@@ -365,16 +394,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; target_time[0..12]                     ; Stuck at GND due to stuck port data_in ;
-; timeInputDone                          ; Merged with tempInputDone              ;
-; timeclk:timeclk|current_time[12]       ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 15 ;                                        ;
-+----------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; timeclk:timeclk|current_time[12]      ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -382,12 +409,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 81    ;
-; Number of registers using Synchronous Clear  ; 60    ;
-; Number of registers using Synchronous Load   ; 27    ;
+; Total registers                              ; 114   ;
+; Number of registers using Synchronous Clear  ; 92    ;
+; Number of registers using Synchronous Load   ; 58    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 36    ;
+; Number of registers using Clock Enable       ; 67    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -411,28 +438,28 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |FinalProject|timeclk:timeclk|current_time[0] ;
-; 5:1                ; 28 bits   ; 84 LEs        ; 56 LEs               ; 28 LEs                 ; Yes        ; |FinalProject|target_temp[12]                 ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |FinalProject|target_time[19]                 ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 56 LEs               ; 28 LEs                 ; Yes        ; |FinalProject|target_temp[23]                 ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |FinalProject|target_temp[8]                  ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |FinalProject|ovenDisplay:display|hex4[2]     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |FinalProject|ovenDisplay:display|hex4[0]     ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FinalProject|ovenDisplay:display|hex0[0]     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |FinalProject|target_time                     ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |FinalProject|target_temp                     ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FinalProject|ovenDisplay:display|hex4[4]     ;
-; 52:1               ; 2 bits    ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; No         ; |FinalProject|ovenDisplay:display|hex1[3]     ;
-; 57:1               ; 2 bits    ; 76 LEs        ; 64 LEs               ; 12 LEs                 ; No         ; |FinalProject|ovenDisplay:display|hex1[4]     ;
+; 52:1               ; 2 bits    ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; No         ; |FinalProject|ovenDisplay:display|hex1[6]     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Top-level Entity: |FinalProject ;
-+----------------+----------+--------------------------------------------------+
-; Parameter Name ; Value    ; Type                                             ;
-+----------------+----------+--------------------------------------------------+
-; default_temp   ; 300      ; Signed Integer                                   ;
-; max_temp       ; 500      ; Signed Integer                                   ;
-; min_temp       ; 65       ; Signed Integer                                   ;
-; max_time       ; 1800     ; Signed Integer                                   ;
-; MAX_COUNT      ; 25000000 ; Signed Integer                                   ;
-+----------------+----------+--------------------------------------------------+
++----------------+---------+---------------------------------------------------+
+; Parameter Name ; Value   ; Type                                              ;
++----------------+---------+---------------------------------------------------+
+; default_temp   ; 300     ; Signed Integer                                    ;
+; max_temp       ; 500     ; Signed Integer                                    ;
+; min_temp       ; 65      ; Signed Integer                                    ;
+; max_time       ; 1800    ; Signed Integer                                    ;
+; MAX_COUNT      ; 5000000 ; Signed Integer                                    ;
++----------------+---------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -654,6 +681,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Div3 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                    ;
+; LPM_WIDTHD             ; 6              ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_otl ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Mod4 ;
 +------------------------+----------------+--------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                       ;
@@ -768,6 +818,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ovenDisplay:display|lpm_divide:Mod3 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 13             ; Untyped                                    ;
+; LPM_WIDTHD             ; 6              ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_qll ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------+
 ; Port Connectivity Checks: "ovenDisplay:display"      ;
 +--------------------+-------+----------+--------------+
@@ -786,25 +859,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 52                          ;
-; cycloneiii_ff         ; 81                          ;
+; cycloneiii_ff         ; 114                         ;
 ;     ENA               ; 9                           ;
-;     ENA SCLR SLD      ; 27                          ;
-;     SCLR              ; 33                          ;
-;     plain             ; 12                          ;
-; cycloneiii_lcell_comb ; 3527                        ;
-;     arith             ; 1219                        ;
-;         1 data inputs ; 21                          ;
-;         2 data inputs ; 331                         ;
-;         3 data inputs ; 867                         ;
-;     normal            ; 2308                        ;
-;         0 data inputs ; 167                         ;
-;         1 data inputs ; 20                          ;
-;         2 data inputs ; 1067                        ;
-;         3 data inputs ; 126                         ;
-;         4 data inputs ; 928                         ;
+;     ENA SCLR SLD      ; 58                          ;
+;     SCLR              ; 34                          ;
+;     plain             ; 13                          ;
+; cycloneiii_lcell_comb ; 5992                        ;
+;     arith             ; 2081                        ;
+;         1 data inputs ; 39                          ;
+;         2 data inputs ; 527                         ;
+;         3 data inputs ; 1515                        ;
+;     normal            ; 3911                        ;
+;         0 data inputs ; 290                         ;
+;         1 data inputs ; 37                          ;
+;         2 data inputs ; 1762                        ;
+;         3 data inputs ; 176                         ;
+;         4 data inputs ; 1646                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 237.40                      ;
-; Average LUT depth     ; 159.24                      ;
+; Max LUT depth         ; 239.50                      ;
+; Average LUT depth     ; 174.01                      ;
 +-----------------------+-----------------------------+
 
 
@@ -813,7 +886,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -823,7 +896,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Wed Aug  9 10:35:45 2023
+    Info: Processing started: Wed Aug  9 10:48:48 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -842,6 +915,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file oventim
 Info (12127): Elaborating entity "FinalProject" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at FinalProject.v(12): truncated value with size 32 to match size of target (26) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 12
 Info (10264): Verilog HDL Case Statement information at FinalProject.v(44): all case item expressions in this case statement are onehot File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 44
+Info (10264): Verilog HDL Case Statement information at FinalProject.v(76): all case item expressions in this case statement are onehot File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 76
 Info (12128): Elaborating entity "timeclk" for hierarchy "timeclk:timeclk" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 36
 Warning (10230): Verilog HDL assignment warning at timeclk.v(10): truncated value with size 32 to match size of target (13) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/timeclk.v Line: 10
 Info (12128): Elaborating entity "ovenDisplay" for hierarchy "ovenDisplay:display" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 37
@@ -916,7 +990,7 @@ Info (10041): Inferred latch for "hex0[3]" at ovenDisplay.v(140) File: C:/Users/
 Info (10041): Inferred latch for "hex0[2]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
 Info (10041): Inferred latch for "hex0[1]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
 Info (10041): Inferred latch for "hex0[0]" at ovenDisplay.v(140) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-Info (278001): Inferred 14 megafunctions from design logic
+Info (278001): Inferred 16 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod2" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 26
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod6" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 44
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod5" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 35
@@ -926,11 +1000,13 @@ Info (278001): Inferred 14 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div7" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 46
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div0" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 21
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod1" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div3" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 30
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod4" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 31
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div1" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 23
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Div4" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 32
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod7" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 45
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod0" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 21
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ovenDisplay:display|Mod3" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 30
 Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Mod2" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 26
 Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Mod2" with the following parameter: File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 26
     Info (12134): Parameter "LPM_WIDTHN" = "32"
@@ -964,13 +1040,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_klh File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/sign_div_unsign_klh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ihe.tdf
     Info (12023): Found entity 1: alt_u_div_ihe File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_ihe.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Mod5" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 35
-Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Mod5" with the following parameter: File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 35
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "5"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Div2" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 27
 Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Div2" with the following parameter: File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 27
     Info (12134): Parameter "LPM_WIDTHN" = "32"
@@ -1040,8 +1109,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_plh File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/sign_div_unsign_plh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_the.tdf
     Info (12023): Found entity 1: alt_u_div_the File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_the.tdf Line: 27
-Info (13014): Ignored 93 buffer(s)
-    Info (13016): Ignored 93 CARRY_SUM buffer(s)
+Info (12130): Elaborated megafunction instantiation "ovenDisplay:display|lpm_divide:Mod3" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 30
+Info (12133): Instantiated megafunction "ovenDisplay:display|lpm_divide:Mod3" with the following parameter: File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 30
+    Info (12134): Parameter "LPM_WIDTHN" = "13"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (13014): Ignored 186 buffer(s)
+    Info (13016): Ignored 186 CARRY_SUM buffer(s)
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "ovenDisplay:display|hex4[0]" merged with LATCH primitive "ovenDisplay:display|hex4[3]" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
 Warning (13012): Latch ovenDisplay:display|hex0[6] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
@@ -1073,45 +1148,45 @@ Warning (13012): Latch ovenDisplay:display|hex1[1] has unsafe behavior File: C:/
 Warning (13012): Latch ovenDisplay:display|hex1[0] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
     Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Warning (13012): Latch ovenDisplay:display|hex2[6] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ovenDisplay:display|Equal20~synth File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 77
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
 Warning (13012): Latch ovenDisplay:display|hex2[5] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ovenDisplay:display|Equal20~synth File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 77
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
 Warning (13012): Latch ovenDisplay:display|hex2[4] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ovenDisplay:display|WideNor2 File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 76
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
 Warning (13012): Latch ovenDisplay:display|hex2[3] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ovenDisplay:display|Equal20~synth File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 77
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
 Warning (13012): Latch ovenDisplay:display|hex2[2] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ovenDisplay:display|Equal21~synth File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 78
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
 Warning (13012): Latch ovenDisplay:display|hex2[1] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ovenDisplay:display|Equal24~synth File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 81
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
 Warning (13012): Latch ovenDisplay:display|hex2[0] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ovenDisplay:display|Equal20~synth File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 77
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
 Warning (13012): Latch ovenDisplay:display|hex3[6] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
     Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Warning (13012): Latch ovenDisplay:display|hex3[5] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Warning (13012): Latch ovenDisplay:display|hex3[4] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Warning (13012): Latch ovenDisplay:display|hex3[3] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Warning (13012): Latch ovenDisplay:display|hex3[2] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Warning (13012): Latch ovenDisplay:display|hex3[1] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Warning (13012): Latch ovenDisplay:display|hex3[0] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Warning (13012): Latch ovenDisplay:display|hex4[6] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
     Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Warning (13012): Latch ovenDisplay:display|hex4[5] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Warning (13012): Latch ovenDisplay:display|hex4[4] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Warning (13012): Latch ovenDisplay:display|hex4[3] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Warning (13012): Latch ovenDisplay:display|hex4[2] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Warning (13012): Latch ovenDisplay:display|hex4[1] has unsafe behavior File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInputDone File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pwr File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "hex5[6]" is stuck at VCC File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
     Warning (13410): Pin "hex5[5]" is stuck at VCC File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
@@ -1122,6 +1197,18 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "hex5[0]" is stuck at VCC File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 1
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Div0|lpm_divide_otl:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_21_result_int[1]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_uhe.tdf Line: 97
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod4|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_31_result_int[0]~0" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 152
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod4|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_21_result_int[0]~10" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 97
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod4|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_22_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 102
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod4|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_23_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 107
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod4|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_24_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 112
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod4|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_25_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 117
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod4|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_26_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 122
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod4|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_27_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 127
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod4|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_28_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 132
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod4|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_29_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 137
+    Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod4|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_30_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 147
     Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_31_result_int[0]~0" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 152
     Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_21_result_int[0]~10" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 97
     Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_22_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 102
@@ -1135,14 +1222,14 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "ovenDisplay:display|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_30_result_int[0]~12" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/db/alt_u_div_she.tdf Line: 147
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3607 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 6104 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 3555 logic cells
+    Info (21061): Implemented 6052 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 108 warnings
-    Info: Peak virtual memory: 4898 megabytes
-    Info: Processing ended: Wed Aug  9 10:36:04 2023
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 4890 megabytes
+    Info: Processing ended: Wed Aug  9 10:48:58 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:13
 
 

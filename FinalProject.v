@@ -5,7 +5,7 @@ module FinalProject (input clk, pwr, key0, key1, sw5, sw4, sw3, sw2, sw1, sw0, o
 	parameter max_time = 1800;	
 	
 	reg new_clk;
-	parameter MAX_COUNT = 25000000; 
+	parameter MAX_COUNT = 5000000; 
 	reg [25:0] count = 0;
 	always @ (posedge clk) begin
 		if (count <= MAX_COUNT) begin
@@ -72,7 +72,7 @@ module FinalProject (input clk, pwr, key0, key1, sw5, sw4, sw3, sw2, sw1, sw0, o
 			end else begin
 				
 				tempInputDone = 1;
-				if(~(key0 == 0 && key1 == 0)&&~tempInputDone) begin
+				if((~(key0 == 0 && key1 == 0)&&~timeInputDone)||target_time <= 0) begin
 					case ({sw5, sw4, sw3, sw2, sw1, sw0})
 						5'b00001: timeChange = 5;
 						5'b00010: timeChange = 10;
@@ -102,6 +102,7 @@ module FinalProject (input clk, pwr, key0, key1, sw5, sw4, sw3, sw2, sw1, sw0, o
 					end
 				end else begin
 					timeInputDone = 1;
+					
 				end
 			end
 
