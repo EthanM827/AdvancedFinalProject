@@ -1,5 +1,9 @@
 Analysis & Elaboration report for FinalProject
+<<<<<<< HEAD
 Wed Aug  9 10:59:31 2023
+=======
+Wed Aug  9 11:02:54 2023
+>>>>>>> b61ea61ccec7147db65105895c3fe05e6bc5c397
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -12,10 +16,15 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
   4. Parameter Settings for User Entity Instance: Top-level Entity: |FinalProject
   5. Parameter Settings for User Entity Instance: timeclk:timeclk
   6. Analysis & Elaboration Settings
+<<<<<<< HEAD
   7. Port Connectivity Checks: "Temperature:tempcontrol"
   8. Port Connectivity Checks: "HeatControl:heatcontrol"
   9. Port Connectivity Checks: "ovenDisplay:display"
  10. Analysis & Elaboration Messages
+=======
+  7. Port Connectivity Checks: "ovenDisplay:display"
+  8. Analysis & Elaboration Messages
+>>>>>>> b61ea61ccec7147db65105895c3fe05e6bc5c397
 
 
 
@@ -42,7 +51,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                      ;
 +------------------------------------+------------------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Elaboration Status      ; Successful - Wed Aug  9 10:59:31 2023          ;
+=======
+; Analysis & Elaboration Status      ; Successful - Wed Aug  9 11:02:54 2023          ;
+>>>>>>> b61ea61ccec7147db65105895c3fe05e6bc5c397
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; FinalProject                                   ;
 ; Top-level Entity Name              ; FinalProject                                   ;
@@ -66,8 +79,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
+<<<<<<< HEAD
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
+=======
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
+>>>>>>> b61ea61ccec7147db65105895c3fe05e6bc5c397
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -187,6 +205,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
+<<<<<<< HEAD
 +---------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Temperature:tempcontrol"                                                                 ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -206,6 +225,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
+=======
+>>>>>>> b61ea61ccec7147db65105895c3fe05e6bc5c397
 +------------------------------------------------------+
 ; Port Connectivity Checks: "ovenDisplay:display"      ;
 +--------------------+-------+----------+--------------+
@@ -224,7 +245,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Wed Aug  9 10:59:25 2023
+=======
+    Info: Processing started: Wed Aug  9 11:02:48 2023
+>>>>>>> b61ea61ccec7147db65105895c3fe05e6bc5c397
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProject --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -241,6 +266,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file tempera
 Info (12021): Found 1 design units, including 1 entities, in source file oventimer.v
     Info (12023): Found entity 1: OvenTimer File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/OvenTimer.v Line: 1
 Info (12127): Elaborating entity "FinalProject" for the top level hierarchy
+<<<<<<< HEAD
 Warning (10230): Verilog HDL assignment warning at FinalProject.v(12): truncated value with size 32 to match size of target (26) File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 12
 Info (10264): Verilog HDL Case Statement information at FinalProject.v(47): all case item expressions in this case statement are onehot File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 47
 Info (10264): Verilog HDL Case Statement information at FinalProject.v(79): all case item expressions in this case statement are onehot File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 79
@@ -337,5 +363,100 @@ Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 34 warnings
     Info: Processing ended: Wed Aug  9 10:59:31 2023
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:16
+=======
+Warning (10230): Verilog HDL assignment warning at FinalProject.v(12): truncated value with size 32 to match size of target (26) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 12
+Info (10264): Verilog HDL Case Statement information at FinalProject.v(44): all case item expressions in this case statement are onehot File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 44
+Info (10264): Verilog HDL Case Statement information at FinalProject.v(76): all case item expressions in this case statement are onehot File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 76
+Info (12128): Elaborating entity "timeclk" for hierarchy "timeclk:timeclk" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 36
+Warning (10230): Verilog HDL assignment warning at timeclk.v(10): truncated value with size 32 to match size of target (13) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/timeclk.v Line: 10
+Info (12128): Elaborating entity "ovenDisplay" for hierarchy "ovenDisplay:display" File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/FinalProject.v Line: 37
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(52): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 52
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(52): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 52
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(64): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 64
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(64): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 64
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(76): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 76
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(76): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 76
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(95): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 95
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(95): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 95
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(107): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 107
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(107): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 107
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(115): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 115
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(115): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 115
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(127): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 127
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(127): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 127
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(136): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 136
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(136): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 136
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(148): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 148
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(148): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 148
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(160): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 160
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(160): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 160
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(172): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 172
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(172): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 172
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(184): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 184
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(184): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 184
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(196): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 196
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(196): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 196
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(213): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 213
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(213): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 213
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(225): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 225
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(225): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 225
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(233): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 233
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(233): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 233
+Warning (10762): Verilog HDL Case Statement warning at ovenDisplay.v(245): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 245
+Warning (10270): Verilog HDL Case Statement warning at ovenDisplay.v(245): incomplete case statement has no default case item File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 245
+Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex0", which holds its previous value in one or more paths through the always construct File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 50
+Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex1", which holds its previous value in one or more paths through the always construct File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 50
+Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex2", which holds its previous value in one or more paths through the always construct File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 50
+Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex3", which holds its previous value in one or more paths through the always construct File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 50
+Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex4", which holds its previous value in one or more paths through the always construct File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 50
+Warning (10240): Verilog HDL Always Construct warning at ovenDisplay.v(50): inferring latch(es) for variable "hex5", which holds its previous value in one or more paths through the always construct File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 50
+Info (10041): Inferred latch for "hex5[6]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex5[5]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex5[4]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex5[3]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex5[2]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex5[1]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex5[0]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex4[6]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex4[5]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex4[4]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex4[3]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex4[2]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex4[1]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex4[0]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex3[6]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex3[5]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex3[4]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex3[3]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex3[2]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex3[1]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex3[0]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex2[6]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex2[5]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex2[4]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex2[3]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex2[2]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex2[1]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex2[0]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex1[6]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex1[5]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex1[4]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex1[3]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex1[2]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex1[1]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex1[0]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex0[6]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex0[5]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex0[4]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex0[3]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex0[2]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex0[1]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info (10041): Inferred latch for "hex0[0]" at ovenDisplay.v(211) File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/ovenDisplay.v Line: 211
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 4735 megabytes
+    Info: Processing ended: Wed Aug  9 11:02:54 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:08
+>>>>>>> b61ea61ccec7147db65105895c3fe05e6bc5c397
 
 
