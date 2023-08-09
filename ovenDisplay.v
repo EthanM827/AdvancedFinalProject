@@ -133,7 +133,78 @@ module ovenDisplay(input power, tempInputDone, timeInputDone, input [9:0] curren
 						0: hex4 = hex_0;
 					endcase
 				end else begin
-				
+					case (current_temp_ones_place)
+						1: hex0 = hex_1;
+						2: hex0 = hex_2;
+						3: hex0 = hex_3;
+						4: hex0 = hex_4;
+						5: hex0 = hex_5;
+						6: hex0 = hex_6;
+						7: hex0 = hex_7;
+						8: hex0 = hex_8;
+						9: hex0 = hex_9;
+						0: hex0 = hex_0;
+					endcase
+					case (current_temp_tens_place)
+						1: hex1 = hex_1;
+						2: hex1 = hex_2;
+						3: hex1 = hex_3;
+						4: hex1 = hex_4;
+						5: hex1 = hex_5;
+						6: hex1 = hex_6;
+						7: hex1 = hex_7;
+						8: hex1 = hex_8;
+						9: hex1 = hex_9;
+						0: hex1 = hex_0;
+					endcase
+					case (current_temp_hundreds_place)
+						1: hex2 = hex_1;
+						2: hex2 = hex_2;
+						3: hex2 = hex_3;
+						4: hex2 = hex_4;
+						5: hex2 = hex_5;
+						6: hex2 = hex_6;
+						7: hex2 = hex_7;
+						8: hex2 = hex_8;
+						9: hex2 = hex_9;
+						0: hex2 = hex_0;
+					endcase
+					case (target_temp_ones_place)
+						1: hex3 = hex_1;
+						2: hex3 = hex_2;
+						3: hex3 = hex_3;
+						4: hex3 = hex_4;
+						5: hex3 = hex_5;
+						6: hex3 = hex_6;
+						7: hex3 = hex_7;
+						8: hex3 = hex_8;
+						9: hex3 = hex_9;
+						0: hex3 = hex_0;
+					endcase
+					case (target_temp_tens_place)
+						1: hex4 = hex_1;
+						2: hex4 = hex_2;
+						3: hex4 = hex_3;
+						4: hex4 = hex_4;
+						5: hex4 = hex_5;
+						6: hex4 = hex_6;
+						7: hex4 = hex_7;
+						8: hex4 = hex_8;
+						9: hex4 = hex_9;
+						0: hex4 = hex_0;
+					endcase
+					case (target_temp_hundreds_place)
+						1: hex5 = hex_1;
+						2: hex5 = hex_2;
+						3: hex5 = hex_3;
+						4: hex5 = hex_4;
+						5: hex5 = hex_5;
+						6: hex5 = hex_6;
+						7: hex5 = hex_7;
+						8: hex5 = hex_8;
+						9: hex5 = hex_9;
+						0: hex5 = hex_0;
+					endcase
 				end
 			end
 		end else begin
