@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at FinalProject.v(20): always construct contains both blocking and non-blocking assignments File: C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/FinalProject.v Line: 20
+Warning (10268): Verilog HDL information at OvenTimer.v(6): always construct contains both blocking and non-blocking assignments File: C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/OvenTimer.v Line: 6

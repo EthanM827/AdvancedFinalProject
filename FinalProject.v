@@ -1,4 +1,4 @@
-module FinalProject (input clk, pwr, key0, key1, sw5, sw4, sw3, sw2, sw1, sw0, output wire [0:6] hex0, hex1, hex2, hex3, hex4, hex5, output wire done);
+module FinalProject (input clk, pwr, key0, key1, sw5, sw4, sw3, sw2, sw1, sw0, output wire [0:6] hex0, hex1, hex2, hex3, hex4, hex5, output wire done, output wire [8:0] led);
 	parameter default_temp = 300;
 	parameter max_temp = 500;
 	parameter min_temp = 65;
@@ -38,7 +38,7 @@ module FinalProject (input clk, pwr, key0, key1, sw5, sw4, sw3, sw2, sw1, sw0, o
 	HeatControl heatcontrol(current_temp, target_temp, heat);
 	Temperature tempcontrol(target_temp, heat, tempInputDone, new_clk, current_temp, preheated);
 	ovenDisplay display(pwr, tempInputDone, timeInputDone, current_temp, target_temp, current_time, target_time, hex0, hex1, hex2, hex3, hex4, hex5);
-	OvenTimer timer(current_time, target_time, preheated, timeInputDone, done);
+	OvenTimer timer(current_time, target_time, preheated, timeInputDone,clk, done,led);
 	
 	integer tempChange, timeChange;
 	always @ (posedge clk) begin
