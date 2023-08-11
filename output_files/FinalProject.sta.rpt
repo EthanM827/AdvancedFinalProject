@@ -1,5 +1,5 @@
 Timing Analyzer report for FinalProject
-Fri Aug 11 11:21:28 2023
+Fri Aug 11 11:55:34 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -94,15 +94,15 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 3.25        ;
+; Average used               ; 3.33        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  33.7%      ;
-;     Processor 3            ;  33.4%      ;
-;     Processor 4            ;  33.2%      ;
-;     Processors 5-8         ;  31.3%      ;
+;     Processor 2            ;  35.2%      ;
+;     Processor 3            ;  34.8%      ;
+;     Processor 4            ;  34.6%      ;
+;     Processors 5-8         ;  32.2%      ;
 +----------------------------+-------------+
 
 
@@ -124,11 +124,11 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+----------------------------------------+-------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                             ; Note                    ;
 +------------+-----------------+----------------------------------------+-------------------------+
-; 3.27 MHz   ; 3.27 MHz        ; clk                                    ;                         ;
-; 5.48 MHz   ; 5.05 MHz        ; Temperature:tempcontrol|currentTemp[1] ; limit due to hold check ;
-; 5.56 MHz   ; 5.31 MHz        ; target_temp[1]                         ; limit due to hold check ;
-; 47.5 MHz   ; 47.5 MHz        ; pwr                                    ;                         ;
-; 104.44 MHz ; 104.44 MHz      ; new_clk                                ;                         ;
+; 3.35 MHz   ; 3.35 MHz        ; clk                                    ;                         ;
+; 4.65 MHz   ; 4.65 MHz        ; target_temp[1]                         ;                         ;
+; 5.52 MHz   ; 4.98 MHz        ; Temperature:tempcontrol|currentTemp[1] ; limit due to hold check ;
+; 38.99 MHz  ; 38.99 MHz       ; pwr                                    ;                         ;
+; 102.92 MHz ; 102.92 MHz      ; new_clk                                ;                         ;
 +------------+-----------------+----------------------------------------+-------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -138,25 +138,25 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------+----------+---------------+
 ; Clock                                  ; Slack    ; End Point TNS ;
 +----------------------------------------+----------+---------------+
-; clk                                    ; -305.258 ; -8372.202     ;
-; Temperature:tempcontrol|currentTemp[1] ; -257.388 ; -3644.724     ;
-; target_temp[1]                         ; -257.062 ; -6138.593     ;
-; pwr                                    ; -255.021 ; -4581.390     ;
-; new_clk                                ; -8.575   ; -79.653       ;
+; clk                                    ; -297.725 ; -6738.727     ;
+; target_temp[1]                         ; -256.102 ; -6441.513     ;
+; Temperature:tempcontrol|currentTemp[1] ; -255.468 ; -3751.782     ;
+; pwr                                    ; -254.769 ; -4633.283     ;
+; new_clk                                ; -8.716   ; -89.885       ;
 +----------------------------------------+----------+---------------+
 
 
-+------------------------------------------------------------------+
-; Slow 1200mV 85C Model Hold Summary                               ;
-+----------------------------------------+---------+---------------+
-; Clock                                  ; Slack   ; End Point TNS ;
-+----------------------------------------+---------+---------------+
-; Temperature:tempcontrol|currentTemp[1] ; -99.600 ; -793.125      ;
-; target_temp[1]                         ; -94.653 ; -1500.485     ;
-; pwr                                    ; -6.668  ; -76.760       ;
-; clk                                    ; -2.065  ; -3.800        ;
-; new_clk                                ; -0.685  ; -0.685        ;
-+----------------------------------------+---------+---------------+
++-------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                                ;
++----------------------------------------+----------+---------------+
+; Clock                                  ; Slack    ; End Point TNS ;
++----------------------------------------+----------+---------------+
+; Temperature:tempcontrol|currentTemp[1] ; -100.663 ; -786.066      ;
+; target_temp[1]                         ; -98.575  ; -1556.707     ;
+; pwr                                    ; -5.506   ; -49.719       ;
+; new_clk                                ; -1.272   ; -1.586        ;
+; clk                                    ; -0.959   ; -1.610        ;
++----------------------------------------+----------+---------------+
 
 
 +----------------------------------------------------------------+
@@ -164,19 +164,19 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------+-------+---------------+
 ; Clock                                  ; Slack ; End Point TNS ;
 +----------------------------------------+-------+---------------+
-; target_temp[1]                         ; 3.408 ; 0.000         ;
-; Temperature:tempcontrol|currentTemp[1] ; 5.101 ; 0.000         ;
+; target_temp[1]                         ; 3.385 ; 0.000         ;
+; Temperature:tempcontrol|currentTemp[1] ; 6.337 ; 0.000         ;
 +----------------------------------------+-------+---------------+
 
 
-+------------------------------------------------------------------+
-; Slow 1200mV 85C Model Removal Summary                            ;
-+----------------------------------------+---------+---------------+
-; Clock                                  ; Slack   ; End Point TNS ;
-+----------------------------------------+---------+---------------+
-; Temperature:tempcontrol|currentTemp[1] ; -99.966 ; -699.509      ;
-; target_temp[1]                         ; -94.950 ; -1320.414     ;
-+----------------------------------------+---------+---------------+
++-------------------------------------------------------------------+
+; Slow 1200mV 85C Model Removal Summary                             ;
++----------------------------------------+----------+---------------+
+; Clock                                  ; Slack    ; End Point TNS ;
++----------------------------------------+----------+---------------+
+; Temperature:tempcontrol|currentTemp[1] ; -101.669 ; -711.010      ;
+; target_temp[1]                         ; -98.752  ; -1361.846     ;
++----------------------------------------+----------+---------------+
 
 
 +------------------------------------------------------------------+
@@ -184,10 +184,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------+---------+---------------+
 ; Clock                                  ; Slack   ; End Point TNS ;
 +----------------------------------------+---------+---------------+
-; Temperature:tempcontrol|currentTemp[1] ; -93.159 ; -480188.946   ;
-; target_temp[1]                         ; -88.644 ; -449577.090   ;
-; clk                                    ; -3.000  ; -273.779      ;
-; pwr                                    ; -3.000  ; -23.256       ;
+; Temperature:tempcontrol|currentTemp[1] ; -93.586 ; -472462.268   ;
+; target_temp[1]                         ; -90.853 ; -464354.762   ;
+; clk                                    ; -3.000  ; -276.585      ;
+; pwr                                    ; -3.000  ; -21.727       ;
 ; new_clk                                ; -1.403  ; -15.433       ;
 +----------------------------------------+---------+---------------+
 
@@ -203,11 +203,11 @@ No synchronizer chains to report.
 +------------+-----------------+----------------------------------------+-------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                             ; Note                    ;
 +------------+-----------------+----------------------------------------+-------------------------+
-; 3.58 MHz   ; 3.58 MHz        ; clk                                    ;                         ;
-; 6.02 MHz   ; 5.56 MHz        ; Temperature:tempcontrol|currentTemp[1] ; limit due to hold check ;
-; 6.11 MHz   ; 5.84 MHz        ; target_temp[1]                         ; limit due to hold check ;
-; 52.12 MHz  ; 52.12 MHz       ; pwr                                    ;                         ;
-; 112.41 MHz ; 112.41 MHz      ; new_clk                                ;                         ;
+; 3.67 MHz   ; 3.67 MHz        ; clk                                    ;                         ;
+; 5.08 MHz   ; 5.08 MHz        ; target_temp[1]                         ;                         ;
+; 6.07 MHz   ; 5.49 MHz        ; Temperature:tempcontrol|currentTemp[1] ; limit due to hold check ;
+; 41.09 MHz  ; 41.09 MHz       ; pwr                                    ;                         ;
+; 111.74 MHz ; 111.74 MHz      ; new_clk                                ;                         ;
 +------------+-----------------+----------------------------------------+-------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -217,11 +217,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------+----------+---------------+
 ; Clock                                  ; Slack    ; End Point TNS ;
 +----------------------------------------+----------+---------------+
-; clk                                    ; -278.068 ; -7624.167     ;
-; Temperature:tempcontrol|currentTemp[1] ; -234.597 ; -3324.149     ;
-; target_temp[1]                         ; -234.292 ; -5602.970     ;
-; pwr                                    ; -232.479 ; -4187.034     ;
-; new_clk                                ; -7.896   ; -72.149       ;
+; clk                                    ; -271.190 ; -6139.004     ;
+; target_temp[1]                         ; -233.307 ; -5883.902     ;
+; Temperature:tempcontrol|currentTemp[1] ; -232.744 ; -3422.861     ;
+; pwr                                    ; -232.131 ; -4231.234     ;
+; new_clk                                ; -7.949   ; -81.771       ;
 +----------------------------------------+----------+---------------+
 
 
@@ -230,11 +230,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------+---------+---------------+
 ; Clock                                  ; Slack   ; End Point TNS ;
 +----------------------------------------+---------+---------------+
-; Temperature:tempcontrol|currentTemp[1] ; -90.404 ; -719.628      ;
-; target_temp[1]                         ; -85.896 ; -1361.740     ;
-; pwr                                    ; -5.979  ; -68.210       ;
-; clk                                    ; -1.867  ; -3.684        ;
-; new_clk                                ; -0.635  ; -0.635        ;
+; Temperature:tempcontrol|currentTemp[1] ; -91.495 ; -714.302      ;
+; target_temp[1]                         ; -89.641 ; -1414.744     ;
+; pwr                                    ; -4.896  ; -43.668       ;
+; new_clk                                ; -1.221  ; -1.633        ;
+; clk                                    ; -0.942  ; -1.595        ;
 +----------------------------------------+---------+---------------+
 
 
@@ -243,8 +243,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------+-------+---------------+
 ; Clock                                  ; Slack ; End Point TNS ;
 +----------------------------------------+-------+---------------+
-; target_temp[1]                         ; 2.899 ; 0.000         ;
-; Temperature:tempcontrol|currentTemp[1] ; 4.720 ; 0.000         ;
+; target_temp[1]                         ; 2.963 ; 0.000         ;
+; Temperature:tempcontrol|currentTemp[1] ; 5.834 ; 0.000         ;
 +----------------------------------------+-------+---------------+
 
 
@@ -253,8 +253,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------+---------+---------------+
 ; Clock                                  ; Slack   ; End Point TNS ;
 +----------------------------------------+---------+---------------+
-; Temperature:tempcontrol|currentTemp[1] ; -90.918 ; -636.230      ;
-; target_temp[1]                         ; -86.248 ; -1199.400     ;
+; Temperature:tempcontrol|currentTemp[1] ; -92.350 ; -645.874      ;
+; target_temp[1]                         ; -89.810 ; -1238.767     ;
 +----------------------------------------+---------+---------------+
 
 
@@ -263,10 +263,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------+---------+---------------+
 ; Clock                                  ; Slack   ; End Point TNS ;
 +----------------------------------------+---------+---------------+
-; Temperature:tempcontrol|currentTemp[1] ; -84.757 ; -436355.868   ;
-; target_temp[1]                         ; -80.679 ; -408382.589   ;
-; clk                                    ; -3.000  ; -273.779      ;
-; pwr                                    ; -3.000  ; -17.394       ;
+; Temperature:tempcontrol|currentTemp[1] ; -84.999 ; -429165.481   ;
+; target_temp[1]                         ; -82.694 ; -421680.607   ;
+; clk                                    ; -3.000  ; -276.585      ;
+; pwr                                    ; -3.000  ; -16.632       ;
 ; new_clk                                ; -1.403  ; -15.433       ;
 +----------------------------------------+---------+---------------+
 
@@ -282,11 +282,11 @@ No synchronizer chains to report.
 +----------------------------------------+----------+---------------+
 ; Clock                                  ; Slack    ; End Point TNS ;
 +----------------------------------------+----------+---------------+
-; clk                                    ; -124.814 ; -3383.819     ;
-; Temperature:tempcontrol|currentTemp[1] ; -105.731 ; -1480.174     ;
-; target_temp[1]                         ; -105.551 ; -2497.086     ;
-; pwr                                    ; -104.184 ; -1865.756     ;
-; new_clk                                ; -3.030   ; -29.282       ;
+; clk                                    ; -121.501 ; -2695.636     ;
+; target_temp[1]                         ; -105.340 ; -2651.837     ;
+; Temperature:tempcontrol|currentTemp[1] ; -104.989 ; -1537.519     ;
+; pwr                                    ; -104.292 ; -1890.225     ;
+; new_clk                                ; -3.307   ; -33.462       ;
 +----------------------------------------+----------+---------------+
 
 
@@ -295,11 +295,11 @@ No synchronizer chains to report.
 +----------------------------------------+---------+---------------+
 ; Clock                                  ; Slack   ; End Point TNS ;
 +----------------------------------------+---------+---------------+
-; Temperature:tempcontrol|currentTemp[1] ; -40.605 ; -323.668      ;
-; target_temp[1]                         ; -38.556 ; -613.170      ;
-; pwr                                    ; -3.668  ; -41.676       ;
-; clk                                    ; -1.136  ; -2.988        ;
-; new_clk                                ; -0.541  ; -0.541        ;
+; Temperature:tempcontrol|currentTemp[1] ; -41.299 ; -323.292      ;
+; target_temp[1]                         ; -40.465 ; -639.647      ;
+; pwr                                    ; -3.090  ; -30.196       ;
+; new_clk                                ; -0.768  ; -1.344        ;
+; clk                                    ; -0.562  ; -1.463        ;
 +----------------------------------------+---------+---------------+
 
 
@@ -308,8 +308,8 @@ No synchronizer chains to report.
 +----------------------------------------+-------+---------------+
 ; Clock                                  ; Slack ; End Point TNS ;
 +----------------------------------------+-------+---------------+
-; target_temp[1]                         ; 1.425 ; 0.000         ;
-; Temperature:tempcontrol|currentTemp[1] ; 2.148 ; 0.000         ;
+; target_temp[1]                         ; 1.361 ; 0.000         ;
+; Temperature:tempcontrol|currentTemp[1] ; 2.824 ; 0.000         ;
 +----------------------------------------+-------+---------------+
 
 
@@ -318,8 +318,8 @@ No synchronizer chains to report.
 +----------------------------------------+---------+---------------+
 ; Clock                                  ; Slack   ; End Point TNS ;
 +----------------------------------------+---------+---------------+
-; Temperature:tempcontrol|currentTemp[1] ; -40.633 ; -284.247      ;
-; target_temp[1]                         ; -38.584 ; -537.025      ;
+; Temperature:tempcontrol|currentTemp[1] ; -41.673 ; -291.399      ;
+; target_temp[1]                         ; -40.353 ; -555.585      ;
 +----------------------------------------+---------+---------------+
 
 
@@ -328,10 +328,10 @@ No synchronizer chains to report.
 +----------------------------------------+---------+---------------+
 ; Clock                                  ; Slack   ; End Point TNS ;
 +----------------------------------------+---------+---------------+
-; Temperature:tempcontrol|currentTemp[1] ; -37.543 ; -189100.449   ;
-; target_temp[1]                         ; -35.605 ; -177195.455   ;
-; clk                                    ; -3.000  ; -204.177      ;
-; pwr                                    ; -3.000  ; -25.121       ;
+; Temperature:tempcontrol|currentTemp[1] ; -37.946 ; -187521.931   ;
+; target_temp[1]                         ; -36.691 ; -183424.103   ;
+; clk                                    ; -3.000  ; -207.222      ;
+; pwr                                    ; -3.000  ; -26.751       ;
 ; new_clk                                ; -1.000  ; -11.000       ;
 +----------------------------------------+---------+---------------+
 
@@ -342,24 +342,24 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                           ;
-+-----------------------------------------+------------+-----------+----------+-----------+---------------------+
-; Clock                                   ; Setup      ; Hold      ; Recovery ; Removal   ; Minimum Pulse Width ;
-+-----------------------------------------+------------+-----------+----------+-----------+---------------------+
-; Worst-case Slack                        ; -305.258   ; -99.600   ; 1.425    ; -99.966   ; -93.159             ;
-;  Temperature:tempcontrol|currentTemp[1] ; -257.388   ; -99.600   ; 2.148    ; -99.966   ; -93.159             ;
-;  clk                                    ; -305.258   ; -2.065    ; N/A      ; N/A       ; -3.000              ;
-;  new_clk                                ; -8.575     ; -0.685    ; N/A      ; N/A       ; -1.403              ;
-;  pwr                                    ; -255.021   ; -6.668    ; N/A      ; N/A       ; -3.000              ;
-;  target_temp[1]                         ; -257.062   ; -94.653   ; 1.425    ; -94.950   ; -88.644             ;
-; Design-wide TNS                         ; -22816.562 ; -2374.855 ; 0.0      ; -2019.923 ; -930078.504         ;
-;  Temperature:tempcontrol|currentTemp[1] ; -3644.724  ; -793.125  ; 0.000    ; -699.509  ; -480188.946         ;
-;  clk                                    ; -8372.202  ; -3.800    ; N/A      ; N/A       ; -273.779            ;
-;  new_clk                                ; -79.653    ; -0.685    ; N/A      ; N/A       ; -15.433             ;
-;  pwr                                    ; -4581.390  ; -76.760   ; N/A      ; N/A       ; -25.121             ;
-;  target_temp[1]                         ; -6138.593  ; -1500.485 ; 0.000    ; -1320.414 ; -449577.090         ;
-+-----------------------------------------+------------+-----------+----------+-----------+---------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                          ;
++-----------------------------------------+-----------+-----------+----------+-----------+---------------------+
+; Clock                                   ; Setup     ; Hold      ; Recovery ; Removal   ; Minimum Pulse Width ;
++-----------------------------------------+-----------+-----------+----------+-----------+---------------------+
+; Worst-case Slack                        ; -297.725  ; -100.663  ; 1.361    ; -101.669  ; -93.586             ;
+;  Temperature:tempcontrol|currentTemp[1] ; -255.468  ; -100.663  ; 2.824    ; -101.669  ; -93.586             ;
+;  clk                                    ; -297.725  ; -0.959    ; N/A      ; N/A       ; -3.000              ;
+;  new_clk                                ; -8.716    ; -1.272    ; N/A      ; N/A       ; -1.403              ;
+;  pwr                                    ; -254.769  ; -5.506    ; N/A      ; N/A       ; -3.000              ;
+;  target_temp[1]                         ; -256.102  ; -98.575   ; 1.361    ; -98.752   ; -90.853             ;
+; Design-wide TNS                         ; -21655.19 ; -2395.688 ; 0.0      ; -2072.856 ; -937130.775         ;
+;  Temperature:tempcontrol|currentTemp[1] ; -3751.782 ; -786.066  ; 0.000    ; -711.010  ; -472462.268         ;
+;  clk                                    ; -6738.727 ; -1.610    ; N/A      ; N/A       ; -276.585            ;
+;  new_clk                                ; -89.885   ; -1.633    ; N/A      ; N/A       ; -15.433             ;
+;  pwr                                    ; -4633.283 ; -49.719   ; N/A      ; N/A       ; -26.751             ;
+;  target_temp[1]                         ; -6441.513 ; -1556.707 ; 0.000    ; -1361.846 ; -464354.762         ;
++-----------------------------------------+-----------+-----------+----------+-----------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -638,7 +638,7 @@ No synchronizer chains to report.
 +----------------------------------------+----------------------------------------+--------------+--------------+--------------+--------------+
 ; clk                                    ; clk                                    ; > 2147483647 ; 0            ; 0            ; 0            ;
 ; new_clk                                ; clk                                    ; > 2147483647 ; 1            ; 0            ; 0            ;
-; pwr                                    ; clk                                    ; 99           ; 99           ; 0            ; 0            ;
+; pwr                                    ; clk                                    ; 98           ; 98           ; 0            ; 0            ;
 ; target_temp[1]                         ; clk                                    ; 3455905      ; 3455905      ; 0            ; 0            ;
 ; clk                                    ; new_clk                                ; 377          ; 0            ; 0            ; 0            ;
 ; new_clk                                ; new_clk                                ; 14505        ; 0            ; 0            ; 0            ;
@@ -646,17 +646,17 @@ No synchronizer chains to report.
 ; Temperature:tempcontrol|currentTemp[1] ; new_clk                                ; 1722         ; 1722         ; 0            ; 0            ;
 ; clk                                    ; pwr                                    ; 0            ; 0            ; > 2147483647 ; 0            ;
 ; new_clk                                ; pwr                                    ; 0            ; 0            ; > 2147483647 ; 0            ;
-; pwr                                    ; pwr                                    ; 0            ; 0            ; 61           ; 61           ;
-; target_temp[1]                         ; pwr                                    ; 0            ; 0            ; 3482510      ; 3482510      ;
-; Temperature:tempcontrol|currentTemp[1] ; pwr                                    ; 0            ; 0            ; 1741363      ; 1741363      ;
+; pwr                                    ; pwr                                    ; 0            ; 0            ; 56           ; 56           ;
+; target_temp[1]                         ; pwr                                    ; 0            ; 0            ; 3482606      ; 3482606      ;
+; Temperature:tempcontrol|currentTemp[1] ; pwr                                    ; 0            ; 0            ; 1741355      ; 1741355      ;
 ; clk                                    ; target_temp[1]                         ; > 2147483647 ; 0            ; > 2147483647 ; 0            ;
 ; new_clk                                ; target_temp[1]                         ; > 2147483647 ; 0            ; > 2147483647 ; 0            ;
-; pwr                                    ; target_temp[1]                         ; 122          ; 122          ; 122          ; 122          ;
+; pwr                                    ; target_temp[1]                         ; 112          ; 112          ; 112          ; 112          ;
 ; target_temp[1]                         ; target_temp[1]                         ; > 2147483647 ; > 2147483647 ; > 2147483647 ; > 2147483647 ;
 ; Temperature:tempcontrol|currentTemp[1] ; target_temp[1]                         ; > 2147483647 ; > 2147483647 ; > 2147483647 ; > 2147483647 ;
 ; clk                                    ; Temperature:tempcontrol|currentTemp[1] ; > 2147483647 ; 0            ; > 2147483647 ; 0            ;
 ; new_clk                                ; Temperature:tempcontrol|currentTemp[1] ; > 2147483647 ; 0            ; > 2147483647 ; 0            ;
-; pwr                                    ; Temperature:tempcontrol|currentTemp[1] ; 70           ; 70           ; 70           ; 70           ;
+; pwr                                    ; Temperature:tempcontrol|currentTemp[1] ; 60           ; 60           ; 60           ; 60           ;
 ; target_temp[1]                         ; Temperature:tempcontrol|currentTemp[1] ; > 2147483647 ; > 2147483647 ; > 2147483647 ; > 2147483647 ;
 ; Temperature:tempcontrol|currentTemp[1] ; Temperature:tempcontrol|currentTemp[1] ; > 2147483647 ; > 2147483647 ; > 2147483647 ; > 2147483647 ;
 +----------------------------------------+----------------------------------------+--------------+--------------+--------------+--------------+
@@ -670,7 +670,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +----------------------------------------+----------------------------------------+--------------+--------------+--------------+--------------+
 ; clk                                    ; clk                                    ; > 2147483647 ; 0            ; 0            ; 0            ;
 ; new_clk                                ; clk                                    ; > 2147483647 ; 1            ; 0            ; 0            ;
-; pwr                                    ; clk                                    ; 99           ; 99           ; 0            ; 0            ;
+; pwr                                    ; clk                                    ; 98           ; 98           ; 0            ; 0            ;
 ; target_temp[1]                         ; clk                                    ; 3455905      ; 3455905      ; 0            ; 0            ;
 ; clk                                    ; new_clk                                ; 377          ; 0            ; 0            ; 0            ;
 ; new_clk                                ; new_clk                                ; 14505        ; 0            ; 0            ; 0            ;
@@ -678,17 +678,17 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; Temperature:tempcontrol|currentTemp[1] ; new_clk                                ; 1722         ; 1722         ; 0            ; 0            ;
 ; clk                                    ; pwr                                    ; 0            ; 0            ; > 2147483647 ; 0            ;
 ; new_clk                                ; pwr                                    ; 0            ; 0            ; > 2147483647 ; 0            ;
-; pwr                                    ; pwr                                    ; 0            ; 0            ; 61           ; 61           ;
-; target_temp[1]                         ; pwr                                    ; 0            ; 0            ; 3482510      ; 3482510      ;
-; Temperature:tempcontrol|currentTemp[1] ; pwr                                    ; 0            ; 0            ; 1741363      ; 1741363      ;
+; pwr                                    ; pwr                                    ; 0            ; 0            ; 56           ; 56           ;
+; target_temp[1]                         ; pwr                                    ; 0            ; 0            ; 3482606      ; 3482606      ;
+; Temperature:tempcontrol|currentTemp[1] ; pwr                                    ; 0            ; 0            ; 1741355      ; 1741355      ;
 ; clk                                    ; target_temp[1]                         ; > 2147483647 ; 0            ; > 2147483647 ; 0            ;
 ; new_clk                                ; target_temp[1]                         ; > 2147483647 ; 0            ; > 2147483647 ; 0            ;
-; pwr                                    ; target_temp[1]                         ; 122          ; 122          ; 122          ; 122          ;
+; pwr                                    ; target_temp[1]                         ; 112          ; 112          ; 112          ; 112          ;
 ; target_temp[1]                         ; target_temp[1]                         ; > 2147483647 ; > 2147483647 ; > 2147483647 ; > 2147483647 ;
 ; Temperature:tempcontrol|currentTemp[1] ; target_temp[1]                         ; > 2147483647 ; > 2147483647 ; > 2147483647 ; > 2147483647 ;
 ; clk                                    ; Temperature:tempcontrol|currentTemp[1] ; > 2147483647 ; 0            ; > 2147483647 ; 0            ;
 ; new_clk                                ; Temperature:tempcontrol|currentTemp[1] ; > 2147483647 ; 0            ; > 2147483647 ; 0            ;
-; pwr                                    ; Temperature:tempcontrol|currentTemp[1] ; 70           ; 70           ; 70           ; 70           ;
+; pwr                                    ; Temperature:tempcontrol|currentTemp[1] ; 60           ; 60           ; 60           ; 60           ;
 ; target_temp[1]                         ; Temperature:tempcontrol|currentTemp[1] ; > 2147483647 ; > 2147483647 ; > 2147483647 ; > 2147483647 ;
 ; Temperature:tempcontrol|currentTemp[1] ; Temperature:tempcontrol|currentTemp[1] ; > 2147483647 ; > 2147483647 ; > 2147483647 ; > 2147483647 ;
 +----------------------------------------+----------------------------------------+--------------+--------------+--------------+--------------+
@@ -916,7 +916,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Fri Aug 11 11:21:23 2023
+    Info: Processing started: Fri Aug 11 11:55:30 2023
 Info: Command: quartus_sta FinalProject -c FinalProject
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -937,7 +937,7 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add12~0  from: datab  to: combout
     Info (332098): Cell: display|Add12~10  from: cin  to: combout
     Info (332098): Cell: display|Add12~2  from: cin  to: combout
-    Info (332098): Cell: display|Add12~2  from: datab  to: combout
+    Info (332098): Cell: display|Add12~2  from: dataa  to: combout
     Info (332098): Cell: display|Add12~4  from: cin  to: combout
     Info (332098): Cell: display|Add12~4  from: datab  to: combout
     Info (332098): Cell: display|Add12~6  from: cin  to: combout
@@ -963,7 +963,7 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add13~26  from: cin  to: combout
     Info (332098): Cell: display|Add13~26  from: dataa  to: combout
     Info (332098): Cell: display|Add13~28  from: cin  to: combout
-    Info (332098): Cell: display|Add13~28  from: datab  to: combout
+    Info (332098): Cell: display|Add13~28  from: dataa  to: combout
     Info (332098): Cell: display|Add13~2  from: cin  to: combout
     Info (332098): Cell: display|Add13~2  from: dataa  to: combout
     Info (332098): Cell: display|Add13~2  from: datab  to: combout
@@ -974,15 +974,15 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add13~34  from: cin  to: combout
     Info (332098): Cell: display|Add13~34  from: dataa  to: combout
     Info (332098): Cell: display|Add13~36  from: cin  to: combout
-    Info (332098): Cell: display|Add13~36  from: datab  to: combout
+    Info (332098): Cell: display|Add13~36  from: dataa  to: combout
     Info (332098): Cell: display|Add13~38  from: cin  to: combout
     Info (332098): Cell: display|Add13~38  from: datab  to: combout
     Info (332098): Cell: display|Add13~40  from: cin  to: combout
-    Info (332098): Cell: display|Add13~40  from: datab  to: combout
+    Info (332098): Cell: display|Add13~40  from: dataa  to: combout
     Info (332098): Cell: display|Add13~42  from: cin  to: combout
-    Info (332098): Cell: display|Add13~42  from: dataa  to: combout
+    Info (332098): Cell: display|Add13~42  from: datab  to: combout
     Info (332098): Cell: display|Add13~44  from: cin  to: combout
-    Info (332098): Cell: display|Add13~44  from: dataa  to: combout
+    Info (332098): Cell: display|Add13~44  from: datab  to: combout
     Info (332098): Cell: display|Add13~46  from: cin  to: combout
     Info (332098): Cell: display|Add13~46  from: dataa  to: combout
     Info (332098): Cell: display|Add13~48  from: cin  to: combout
@@ -991,67 +991,67 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add13~4  from: dataa  to: combout
     Info (332098): Cell: display|Add13~4  from: datab  to: combout
     Info (332098): Cell: display|Add13~50  from: cin  to: combout
-    Info (332098): Cell: display|Add13~50  from: dataa  to: combout
+    Info (332098): Cell: display|Add13~50  from: datab  to: combout
     Info (332098): Cell: display|Add13~52  from: cin  to: combout
-    Info (332098): Cell: display|Add13~52  from: dataa  to: combout
+    Info (332098): Cell: display|Add13~52  from: datab  to: combout
     Info (332098): Cell: display|Add13~54  from: cin  to: combout
-    Info (332098): Cell: display|Add13~54  from: datab  to: combout
+    Info (332098): Cell: display|Add13~54  from: dataa  to: combout
     Info (332098): Cell: display|Add13~56  from: cin  to: combout
     Info (332098): Cell: display|Add13~56  from: datad  to: combout
     Info (332098): Cell: display|Add13~6  from: cin  to: combout
     Info (332098): Cell: display|Add13~6  from: datab  to: combout
     Info (332098): Cell: display|Add13~8  from: cin  to: combout
-    Info (332098): Cell: display|Add13~8  from: datab  to: combout
+    Info (332098): Cell: display|Add13~8  from: dataa  to: combout
     Info (332098): Cell: display|Add14~0  from: dataa  to: combout
     Info (332098): Cell: display|Add14~0  from: datab  to: combout
     Info (332098): Cell: display|Add14~10  from: cin  to: combout
-    Info (332098): Cell: display|Add14~10  from: datab  to: combout
+    Info (332098): Cell: display|Add14~10  from: dataa  to: combout
     Info (332098): Cell: display|Add14~12  from: cin  to: combout
-    Info (332098): Cell: display|Add14~12  from: datab  to: combout
+    Info (332098): Cell: display|Add14~12  from: dataa  to: combout
     Info (332098): Cell: display|Add14~14  from: cin  to: combout
-    Info (332098): Cell: display|Add14~14  from: datab  to: combout
+    Info (332098): Cell: display|Add14~14  from: dataa  to: combout
     Info (332098): Cell: display|Add14~16  from: cin  to: combout
-    Info (332098): Cell: display|Add14~16  from: datab  to: combout
+    Info (332098): Cell: display|Add14~16  from: dataa  to: combout
     Info (332098): Cell: display|Add14~18  from: cin  to: combout
     Info (332098): Cell: display|Add14~18  from: datab  to: combout
     Info (332098): Cell: display|Add14~20  from: cin  to: combout
-    Info (332098): Cell: display|Add14~20  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~20  from: datab  to: combout
     Info (332098): Cell: display|Add14~22  from: cin  to: combout
     Info (332098): Cell: display|Add14~22  from: datab  to: combout
     Info (332098): Cell: display|Add14~24  from: cin  to: combout
-    Info (332098): Cell: display|Add14~24  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~24  from: datab  to: combout
     Info (332098): Cell: display|Add14~26  from: cin  to: combout
-    Info (332098): Cell: display|Add14~26  from: datab  to: combout
+    Info (332098): Cell: display|Add14~26  from: dataa  to: combout
     Info (332098): Cell: display|Add14~28  from: cin  to: combout
     Info (332098): Cell: display|Add14~28  from: datab  to: combout
     Info (332098): Cell: display|Add14~2  from: cin  to: combout
     Info (332098): Cell: display|Add14~2  from: datab  to: combout
     Info (332098): Cell: display|Add14~30  from: cin  to: combout
-    Info (332098): Cell: display|Add14~30  from: datab  to: combout
+    Info (332098): Cell: display|Add14~30  from: dataa  to: combout
     Info (332098): Cell: display|Add14~32  from: cin  to: combout
-    Info (332098): Cell: display|Add14~32  from: datab  to: combout
+    Info (332098): Cell: display|Add14~32  from: dataa  to: combout
     Info (332098): Cell: display|Add14~34  from: cin  to: combout
     Info (332098): Cell: display|Add14~34  from: dataa  to: combout
     Info (332098): Cell: display|Add14~36  from: cin  to: combout
-    Info (332098): Cell: display|Add14~36  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~36  from: datab  to: combout
     Info (332098): Cell: display|Add14~38  from: cin  to: combout
-    Info (332098): Cell: display|Add14~38  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~38  from: datab  to: combout
     Info (332098): Cell: display|Add14~40  from: cin  to: combout
-    Info (332098): Cell: display|Add14~40  from: datab  to: combout
+    Info (332098): Cell: display|Add14~40  from: dataa  to: combout
     Info (332098): Cell: display|Add14~42  from: cin  to: combout
-    Info (332098): Cell: display|Add14~42  from: datab  to: combout
+    Info (332098): Cell: display|Add14~42  from: dataa  to: combout
     Info (332098): Cell: display|Add14~44  from: cin  to: combout
-    Info (332098): Cell: display|Add14~44  from: datab  to: combout
+    Info (332098): Cell: display|Add14~44  from: dataa  to: combout
     Info (332098): Cell: display|Add14~46  from: cin  to: combout
-    Info (332098): Cell: display|Add14~46  from: datab  to: combout
+    Info (332098): Cell: display|Add14~46  from: dataa  to: combout
     Info (332098): Cell: display|Add14~48  from: cin  to: combout
-    Info (332098): Cell: display|Add14~48  from: datab  to: combout
+    Info (332098): Cell: display|Add14~48  from: dataa  to: combout
     Info (332098): Cell: display|Add14~4  from: cin  to: combout
-    Info (332098): Cell: display|Add14~4  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~4  from: datab  to: combout
     Info (332098): Cell: display|Add14~50  from: cin  to: combout
     Info (332098): Cell: display|Add14~50  from: datab  to: combout
     Info (332098): Cell: display|Add14~52  from: cin  to: combout
-    Info (332098): Cell: display|Add14~52  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~52  from: datab  to: combout
     Info (332098): Cell: display|Add14~54  from: cin  to: combout
     Info (332098): Cell: display|Add14~54  from: datab  to: combout
     Info (332098): Cell: display|Add14~56  from: cin  to: combout
@@ -1061,19 +1061,19 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add14~60  from: cin  to: combout
     Info (332098): Cell: display|Add14~60  from: datad  to: combout
     Info (332098): Cell: display|Add14~6  from: cin  to: combout
-    Info (332098): Cell: display|Add14~6  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~6  from: datab  to: combout
     Info (332098): Cell: display|Add14~8  from: cin  to: combout
-    Info (332098): Cell: display|Add14~8  from: datab  to: combout
+    Info (332098): Cell: display|Add14~8  from: dataa  to: combout
     Info (332098): Cell: display|Add15~10  from: cin  to: combout
-    Info (332098): Cell: display|Add15~10  from: datab  to: combout
+    Info (332098): Cell: display|Add15~10  from: dataa  to: combout
     Info (332098): Cell: display|Add15~12  from: cin  to: combout
-    Info (332098): Cell: display|Add15~12  from: datab  to: combout
+    Info (332098): Cell: display|Add15~12  from: dataa  to: combout
     Info (332098): Cell: display|Add15~14  from: cin  to: combout
-    Info (332098): Cell: display|Add15~14  from: datab  to: combout
+    Info (332098): Cell: display|Add15~14  from: dataa  to: combout
     Info (332098): Cell: display|Add15~16  from: cin  to: combout
     Info (332098): Cell: display|Add15~16  from: datab  to: combout
     Info (332098): Cell: display|Add15~18  from: cin  to: combout
-    Info (332098): Cell: display|Add15~18  from: dataa  to: combout
+    Info (332098): Cell: display|Add15~18  from: datab  to: combout
     Info (332098): Cell: display|Add15~20  from: cin  to: combout
     Info (332098): Cell: display|Add15~20  from: datab  to: combout
     Info (332098): Cell: display|Add15~22  from: cin  to: combout
@@ -1083,35 +1083,35 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add15~26  from: cin  to: combout
     Info (332098): Cell: display|Add15~26  from: datab  to: combout
     Info (332098): Cell: display|Add15~28  from: cin  to: combout
-    Info (332098): Cell: display|Add15~28  from: dataa  to: combout
+    Info (332098): Cell: display|Add15~28  from: datab  to: combout
     Info (332098): Cell: display|Add15~2  from: cin  to: combout
     Info (332098): Cell: display|Add15~2  from: dataa  to: combout
     Info (332098): Cell: display|Add15~2  from: datab  to: combout
     Info (332098): Cell: display|Add15~30  from: cin  to: combout
-    Info (332098): Cell: display|Add15~30  from: datab  to: combout
+    Info (332098): Cell: display|Add15~30  from: dataa  to: combout
     Info (332098): Cell: display|Add15~32  from: cin  to: combout
     Info (332098): Cell: display|Add15~32  from: dataa  to: combout
     Info (332098): Cell: display|Add15~34  from: cin  to: combout
-    Info (332098): Cell: display|Add15~34  from: dataa  to: combout
+    Info (332098): Cell: display|Add15~34  from: datab  to: combout
     Info (332098): Cell: display|Add15~36  from: cin  to: combout
-    Info (332098): Cell: display|Add15~36  from: dataa  to: combout
+    Info (332098): Cell: display|Add15~36  from: datab  to: combout
     Info (332098): Cell: display|Add15~38  from: cin  to: combout
-    Info (332098): Cell: display|Add15~38  from: datab  to: combout
+    Info (332098): Cell: display|Add15~38  from: dataa  to: combout
     Info (332098): Cell: display|Add15~40  from: cin  to: combout
-    Info (332098): Cell: display|Add15~40  from: datab  to: combout
+    Info (332098): Cell: display|Add15~40  from: dataa  to: combout
     Info (332098): Cell: display|Add15~42  from: cin  to: combout
-    Info (332098): Cell: display|Add15~42  from: datab  to: combout
+    Info (332098): Cell: display|Add15~42  from: dataa  to: combout
     Info (332098): Cell: display|Add15~44  from: cin  to: combout
-    Info (332098): Cell: display|Add15~44  from: datab  to: combout
+    Info (332098): Cell: display|Add15~44  from: dataa  to: combout
     Info (332098): Cell: display|Add15~46  from: cin  to: combout
-    Info (332098): Cell: display|Add15~46  from: datab  to: combout
+    Info (332098): Cell: display|Add15~46  from: dataa  to: combout
     Info (332098): Cell: display|Add15~48  from: cin  to: combout
     Info (332098): Cell: display|Add15~48  from: datab  to: combout
     Info (332098): Cell: display|Add15~4  from: cin  to: combout
     Info (332098): Cell: display|Add15~4  from: dataa  to: combout
     Info (332098): Cell: display|Add15~4  from: datab  to: combout
     Info (332098): Cell: display|Add15~50  from: cin  to: combout
-    Info (332098): Cell: display|Add15~50  from: dataa  to: combout
+    Info (332098): Cell: display|Add15~50  from: datab  to: combout
     Info (332098): Cell: display|Add15~52  from: cin  to: combout
     Info (332098): Cell: display|Add15~52  from: datab  to: combout
     Info (332098): Cell: display|Add15~54  from: cin  to: combout
@@ -1123,14 +1123,14 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add15~60  from: cin  to: combout
     Info (332098): Cell: display|Add15~60  from: datad  to: combout
     Info (332098): Cell: display|Add15~6  from: cin  to: combout
-    Info (332098): Cell: display|Add15~6  from: datab  to: combout
+    Info (332098): Cell: display|Add15~6  from: dataa  to: combout
     Info (332098): Cell: display|Add15~8  from: cin  to: combout
-    Info (332098): Cell: display|Add15~8  from: datab  to: combout
+    Info (332098): Cell: display|Add15~8  from: dataa  to: combout
     Info (332098): Cell: display|Add16~0  from: dataa  to: combout
     Info (332098): Cell: display|Add16~0  from: datab  to: combout
     Info (332098): Cell: display|Add16~10  from: cin  to: combout
     Info (332098): Cell: display|Add16~2  from: cin  to: combout
-    Info (332098): Cell: display|Add16~2  from: dataa  to: combout
+    Info (332098): Cell: display|Add16~2  from: datab  to: combout
     Info (332098): Cell: display|Add16~4  from: cin  to: combout
     Info (332098): Cell: display|Add16~4  from: datab  to: combout
     Info (332098): Cell: display|Add16~6  from: cin  to: combout
@@ -1138,53 +1138,53 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add17~0  from: dataa  to: combout
     Info (332098): Cell: display|Add17~0  from: datab  to: combout
     Info (332098): Cell: display|Add17~10  from: cin  to: combout
-    Info (332098): Cell: display|Add17~10  from: datab  to: combout
+    Info (332098): Cell: display|Add17~10  from: dataa  to: combout
     Info (332098): Cell: display|Add17~12  from: cin  to: combout
-    Info (332098): Cell: display|Add17~12  from: datab  to: combout
+    Info (332098): Cell: display|Add17~12  from: dataa  to: combout
     Info (332098): Cell: display|Add17~14  from: cin  to: combout
-    Info (332098): Cell: display|Add17~14  from: datab  to: combout
+    Info (332098): Cell: display|Add17~14  from: dataa  to: combout
     Info (332098): Cell: display|Add17~16  from: cin  to: combout
-    Info (332098): Cell: display|Add17~16  from: datab  to: combout
+    Info (332098): Cell: display|Add17~16  from: dataa  to: combout
     Info (332098): Cell: display|Add17~18  from: cin  to: combout
-    Info (332098): Cell: display|Add17~18  from: datab  to: combout
+    Info (332098): Cell: display|Add17~18  from: dataa  to: combout
     Info (332098): Cell: display|Add17~20  from: cin  to: combout
-    Info (332098): Cell: display|Add17~20  from: datab  to: combout
+    Info (332098): Cell: display|Add17~20  from: dataa  to: combout
     Info (332098): Cell: display|Add17~22  from: cin  to: combout
-    Info (332098): Cell: display|Add17~22  from: datab  to: combout
+    Info (332098): Cell: display|Add17~22  from: dataa  to: combout
     Info (332098): Cell: display|Add17~24  from: cin  to: combout
-    Info (332098): Cell: display|Add17~24  from: datab  to: combout
+    Info (332098): Cell: display|Add17~24  from: dataa  to: combout
     Info (332098): Cell: display|Add17~26  from: cin  to: combout
-    Info (332098): Cell: display|Add17~26  from: datab  to: combout
+    Info (332098): Cell: display|Add17~26  from: dataa  to: combout
     Info (332098): Cell: display|Add17~28  from: cin  to: combout
-    Info (332098): Cell: display|Add17~28  from: datab  to: combout
+    Info (332098): Cell: display|Add17~28  from: dataa  to: combout
     Info (332098): Cell: display|Add17~2  from: cin  to: combout
     Info (332098): Cell: display|Add17~2  from: dataa  to: combout
     Info (332098): Cell: display|Add17~2  from: datab  to: combout
     Info (332098): Cell: display|Add17~30  from: cin  to: combout
-    Info (332098): Cell: display|Add17~30  from: dataa  to: combout
+    Info (332098): Cell: display|Add17~30  from: datab  to: combout
     Info (332098): Cell: display|Add17~32  from: cin  to: combout
     Info (332098): Cell: display|Add17~32  from: datab  to: combout
     Info (332098): Cell: display|Add17~34  from: cin  to: combout
-    Info (332098): Cell: display|Add17~34  from: datab  to: combout
+    Info (332098): Cell: display|Add17~34  from: dataa  to: combout
     Info (332098): Cell: display|Add17~36  from: cin  to: combout
     Info (332098): Cell: display|Add17~36  from: dataa  to: combout
     Info (332098): Cell: display|Add17~38  from: cin  to: combout
     Info (332098): Cell: display|Add17~38  from: datab  to: combout
     Info (332098): Cell: display|Add17~40  from: cin  to: combout
-    Info (332098): Cell: display|Add17~40  from: datab  to: combout
+    Info (332098): Cell: display|Add17~40  from: dataa  to: combout
     Info (332098): Cell: display|Add17~42  from: cin  to: combout
-    Info (332098): Cell: display|Add17~42  from: dataa  to: combout
+    Info (332098): Cell: display|Add17~42  from: datab  to: combout
     Info (332098): Cell: display|Add17~44  from: cin  to: combout
-    Info (332098): Cell: display|Add17~44  from: dataa  to: combout
+    Info (332098): Cell: display|Add17~44  from: datab  to: combout
     Info (332098): Cell: display|Add17~46  from: cin  to: combout
     Info (332098): Cell: display|Add17~46  from: dataa  to: combout
     Info (332098): Cell: display|Add17~48  from: cin  to: combout
-    Info (332098): Cell: display|Add17~48  from: datab  to: combout
+    Info (332098): Cell: display|Add17~48  from: dataa  to: combout
     Info (332098): Cell: display|Add17~4  from: cin  to: combout
     Info (332098): Cell: display|Add17~4  from: dataa  to: combout
     Info (332098): Cell: display|Add17~4  from: datab  to: combout
     Info (332098): Cell: display|Add17~50  from: cin  to: combout
-    Info (332098): Cell: display|Add17~50  from: dataa  to: combout
+    Info (332098): Cell: display|Add17~50  from: datab  to: combout
     Info (332098): Cell: display|Add17~52  from: cin  to: combout
     Info (332098): Cell: display|Add17~52  from: datab  to: combout
     Info (332098): Cell: display|Add17~54  from: cin  to: combout
@@ -1194,31 +1194,31 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add17~6  from: cin  to: combout
     Info (332098): Cell: display|Add17~6  from: datab  to: combout
     Info (332098): Cell: display|Add17~8  from: cin  to: combout
-    Info (332098): Cell: display|Add17~8  from: datab  to: combout
+    Info (332098): Cell: display|Add17~8  from: dataa  to: combout
     Info (332098): Cell: display|Add18~0  from: dataa  to: combout
     Info (332098): Cell: display|Add18~0  from: datab  to: combout
     Info (332098): Cell: display|Add18~10  from: cin  to: combout
     Info (332098): Cell: display|Add18~10  from: dataa  to: combout
     Info (332098): Cell: display|Add18~12  from: cin  to: combout
-    Info (332098): Cell: display|Add18~12  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~12  from: datab  to: combout
     Info (332098): Cell: display|Add18~14  from: cin  to: combout
-    Info (332098): Cell: display|Add18~14  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~14  from: datab  to: combout
     Info (332098): Cell: display|Add18~16  from: cin  to: combout
-    Info (332098): Cell: display|Add18~16  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~16  from: datab  to: combout
     Info (332098): Cell: display|Add18~18  from: cin  to: combout
-    Info (332098): Cell: display|Add18~18  from: datab  to: combout
+    Info (332098): Cell: display|Add18~18  from: dataa  to: combout
     Info (332098): Cell: display|Add18~20  from: cin  to: combout
-    Info (332098): Cell: display|Add18~20  from: datab  to: combout
+    Info (332098): Cell: display|Add18~20  from: dataa  to: combout
     Info (332098): Cell: display|Add18~22  from: cin  to: combout
-    Info (332098): Cell: display|Add18~22  from: datab  to: combout
+    Info (332098): Cell: display|Add18~22  from: dataa  to: combout
     Info (332098): Cell: display|Add18~24  from: cin  to: combout
     Info (332098): Cell: display|Add18~24  from: datab  to: combout
     Info (332098): Cell: display|Add18~26  from: cin  to: combout
-    Info (332098): Cell: display|Add18~26  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~26  from: datab  to: combout
     Info (332098): Cell: display|Add18~28  from: cin  to: combout
-    Info (332098): Cell: display|Add18~28  from: datab  to: combout
+    Info (332098): Cell: display|Add18~28  from: dataa  to: combout
     Info (332098): Cell: display|Add18~2  from: cin  to: combout
-    Info (332098): Cell: display|Add18~2  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~2  from: datab  to: combout
     Info (332098): Cell: display|Add18~30  from: cin  to: combout
     Info (332098): Cell: display|Add18~30  from: dataa  to: combout
     Info (332098): Cell: display|Add18~32  from: cin  to: combout
@@ -1230,31 +1230,31 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add18~38  from: cin  to: combout
     Info (332098): Cell: display|Add18~38  from: datab  to: combout
     Info (332098): Cell: display|Add18~40  from: cin  to: combout
-    Info (332098): Cell: display|Add18~40  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~40  from: datab  to: combout
     Info (332098): Cell: display|Add18~42  from: cin  to: combout
-    Info (332098): Cell: display|Add18~42  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~42  from: datab  to: combout
     Info (332098): Cell: display|Add18~44  from: cin  to: combout
-    Info (332098): Cell: display|Add18~44  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~44  from: datab  to: combout
     Info (332098): Cell: display|Add18~46  from: cin  to: combout
     Info (332098): Cell: display|Add18~46  from: dataa  to: combout
     Info (332098): Cell: display|Add18~48  from: cin  to: combout
     Info (332098): Cell: display|Add18~48  from: dataa  to: combout
     Info (332098): Cell: display|Add18~4  from: cin  to: combout
-    Info (332098): Cell: display|Add18~4  from: datab  to: combout
+    Info (332098): Cell: display|Add18~4  from: dataa  to: combout
     Info (332098): Cell: display|Add18~50  from: cin  to: combout
-    Info (332098): Cell: display|Add18~50  from: datab  to: combout
+    Info (332098): Cell: display|Add18~50  from: dataa  to: combout
     Info (332098): Cell: display|Add18~52  from: cin  to: combout
-    Info (332098): Cell: display|Add18~52  from: datab  to: combout
+    Info (332098): Cell: display|Add18~52  from: dataa  to: combout
     Info (332098): Cell: display|Add18~54  from: cin  to: combout
-    Info (332098): Cell: display|Add18~54  from: datab  to: combout
+    Info (332098): Cell: display|Add18~54  from: dataa  to: combout
     Info (332098): Cell: display|Add18~56  from: cin  to: combout
-    Info (332098): Cell: display|Add18~56  from: datab  to: combout
+    Info (332098): Cell: display|Add18~56  from: dataa  to: combout
     Info (332098): Cell: display|Add18~58  from: cin  to: combout
     Info (332098): Cell: display|Add18~58  from: dataa  to: combout
     Info (332098): Cell: display|Add18~60  from: cin  to: combout
     Info (332098): Cell: display|Add18~60  from: datad  to: combout
     Info (332098): Cell: display|Add18~6  from: cin  to: combout
-    Info (332098): Cell: display|Add18~6  from: datab  to: combout
+    Info (332098): Cell: display|Add18~6  from: dataa  to: combout
     Info (332098): Cell: display|Add18~8  from: cin  to: combout
     Info (332098): Cell: display|Add18~8  from: dataa  to: combout
     Info (332098): Cell: display|Add19~10  from: cin  to: combout
@@ -1319,15 +1319,15 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add19~6  from: dataa  to: combout
     Info (332098): Cell: display|Add19~8  from: cin  to: combout
     Info (332098): Cell: display|Add19~8  from: dataa  to: combout
-    Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[142]~65  from: datab  to: combout
+    Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[142]~65  from: dataa  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[143]~64  from: dataa  to: combout
-    Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[147]~66  from: datab  to: combout
+    Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[147]~66  from: datac  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[152]~67  from: datab  to: combout
-    Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[1]~0  from: datab  to: combout
+    Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[2]~2  from: cin  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[2]~2  from: dataa  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: dataa  to: combout
+    Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: datab  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_28_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_28_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_28_result_int[2]~2  from: cin  to: combout
@@ -1352,34 +1352,33 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: cin  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: dataa  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[107]~746  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[115]~747  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[122]~729  from: datab  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[123]~748  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[130]~730  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[138]~731  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[146]~732  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[154]~733  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[162]~734  from: datad  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[170]~735  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[186]~737  from: datab  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[187]~749  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[203]~750  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[211]~751  from: datab  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[219]~752  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[226]~742  from: datad  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[227]~753  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[234]~743  from: datab  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[242]~744  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[59]~720  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[60]~719  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[61]~718  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[62]~717  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[66]~722  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[67]~721  from: datad  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[74]~723  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[90]~725  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[91]~745  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[114]~727  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[115]~746  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[122]~728  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[139]~747  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[146]~731  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[147]~748  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[154]~732  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[162]~733  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[178]~735  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[179]~749  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[186]~736  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[194]~737  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[202]~738  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[218]~740  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[219]~750  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[234]~742  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[235]~751  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[59]~719  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[60]~718  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[61]~717  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[62]~716  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[66]~721  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[67]~720  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[74]~722  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[91]~744  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[98]~725  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[99]~745  from: datab  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_10_result_int[2]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_10_result_int[2]~0  from: datab  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_10_result_int[3]~2  from: cin  to: combout
@@ -1682,7 +1681,7 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_6_result_int[5]~6  from: cin  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_6_result_int[5]~6  from: datab  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_6_result_int[6]~8  from: cin  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_6_result_int[6]~8  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_6_result_int[6]~8  from: datab  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_7_result_int[2]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_7_result_int[2]~0  from: datab  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_7_result_int[3]~2  from: cin  to: combout
@@ -1725,15 +1724,15 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_9_result_int[6]~8  from: cin  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_9_result_int[6]~8  from: dataa  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_9_result_int[6]~8  from: datab  to: combout
-    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[142]~65  from: datab  to: combout
-    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[143]~64  from: datab  to: combout
+    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[142]~65  from: dataa  to: combout
+    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[143]~64  from: dataa  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[147]~66  from: datad  to: combout
-    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[152]~67  from: datac  to: combout
+    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[152]~67  from: datad  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[2]~2  from: dataa  to: combout
+    Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[2]~2  from: datab  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: datab  to: combout
+    Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: dataa  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_28_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_28_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_28_result_int[2]~2  from: cin  to: combout
@@ -1758,32 +1757,33 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: cin  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: dataa  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[107]~748  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[114]~730  from: datad  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[115]~749  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[122]~731  from: datad  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[130]~732  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[138]~733  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[146]~734  from: dataa  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[154]~735  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[162]~736  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[178]~738  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[179]~750  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[186]~739  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[194]~740  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[202]~741  from: dataa  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[210]~742  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[218]~743  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[226]~744  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[59]~722  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[60]~721  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[61]~720  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[62]~719  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[66]~724  from: datad  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[67]~723  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[74]~725  from: dataa  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[82]~726  from: dataa  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[99]~747  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[106]~731  from: datad  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[114]~732  from: datab  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[122]~733  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[130]~734  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[138]~735  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[146]~736  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[154]~737  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[170]~739  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[171]~750  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[178]~740  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[195]~751  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[202]~743  from: datab  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[203]~752  from: datab  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[218]~745  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[219]~753  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[226]~746  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[234]~747  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[59]~724  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[60]~723  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[61]~722  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[62]~721  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[66]~726  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[67]~725  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[74]~727  from: datad  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[82]~728  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[98]~730  from: datad  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[99]~749  from: datad  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_10_result_int[2]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_10_result_int[2]~0  from: datab  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_10_result_int[3]~2  from: cin  to: combout
@@ -2078,7 +2078,7 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_30_result_int[6]~8  from: cin  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_30_result_int[6]~8  from: dataa  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_30_result_int[6]~8  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_6_result_int[2]~0  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_6_result_int[2]~0  from: datab  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_6_result_int[3]~2  from: cin  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_6_result_int[3]~2  from: dataa  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_6_result_int[4]~4  from: cin  to: combout
@@ -2143,57 +2143,57 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Mod8|auto_generated|divider|divider|add_sub_9_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: display|Mod8|auto_generated|divider|divider|add_sub_9_result_int[2]~2  from: cin  to: combout
     Info (332098): Cell: display|Mod8|auto_generated|divider|divider|add_sub_9_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: display|WideNor9~0  from: datac  to: combout
-    Info (332098): Cell: display|hex0[0]~3  from: dataa  to: combout
-    Info (332098): Cell: display|hex0[0]~3  from: datac  to: combout
-    Info (332098): Cell: display|hex0[0]~4  from: datac  to: combout
-    Info (332098): Cell: display|hex0[0]~4  from: datad  to: combout
-    Info (332098): Cell: display|hex1[0]~17  from: dataa  to: combout
-    Info (332098): Cell: display|hex1[0]~17  from: datab  to: combout
-    Info (332098): Cell: display|hex1[0]~18  from: dataa  to: combout
-    Info (332098): Cell: display|hex1[0]~18  from: datad  to: combout
-    Info (332098): Cell: display|hex2[4]~3  from: datac  to: combout
-    Info (332098): Cell: display|hex3[0]~7  from: dataa  to: combout
-    Info (332098): Cell: display|hex4[0]~7  from: datad  to: combout
+    Info (332098): Cell: display|WideNor9~0  from: datab  to: combout
+    Info (332098): Cell: display|hex0[0]~5  from: dataa  to: combout
+    Info (332098): Cell: display|hex0[0]~5  from: datad  to: combout
+    Info (332098): Cell: display|hex0[0]~6  from: dataa  to: combout
+    Info (332098): Cell: display|hex0[0]~6  from: datad  to: combout
+    Info (332098): Cell: display|hex1[0]~15  from: dataa  to: combout
+    Info (332098): Cell: display|hex1[0]~15  from: datad  to: combout
+    Info (332098): Cell: display|hex1[0]~16  from: dataa  to: combout
+    Info (332098): Cell: display|hex1[0]~16  from: datac  to: combout
+    Info (332098): Cell: display|hex2[4]~3  from: datab  to: combout
+    Info (332098): Cell: display|hex3[0]~7  from: datac  to: combout
+    Info (332098): Cell: display|hex4[0]~9  from: datad  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -305.258
+Info (332146): Worst-case setup slack is -297.725
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):  -305.258           -8372.202 clk 
-    Info (332119):  -257.388           -3644.724 Temperature:tempcontrol|currentTemp[1] 
-    Info (332119):  -257.062           -6138.593 target_temp[1] 
-    Info (332119):  -255.021           -4581.390 pwr 
-    Info (332119):    -8.575             -79.653 new_clk 
-Info (332146): Worst-case hold slack is -99.600
+    Info (332119):  -297.725           -6738.727 clk 
+    Info (332119):  -256.102           -6441.513 target_temp[1] 
+    Info (332119):  -255.468           -3751.782 Temperature:tempcontrol|currentTemp[1] 
+    Info (332119):  -254.769           -4633.283 pwr 
+    Info (332119):    -8.716             -89.885 new_clk 
+Info (332146): Worst-case hold slack is -100.663
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -99.600            -793.125 Temperature:tempcontrol|currentTemp[1] 
-    Info (332119):   -94.653           -1500.485 target_temp[1] 
-    Info (332119):    -6.668             -76.760 pwr 
-    Info (332119):    -2.065              -3.800 clk 
-    Info (332119):    -0.685              -0.685 new_clk 
-Info (332146): Worst-case recovery slack is 3.408
+    Info (332119):  -100.663            -786.066 Temperature:tempcontrol|currentTemp[1] 
+    Info (332119):   -98.575           -1556.707 target_temp[1] 
+    Info (332119):    -5.506             -49.719 pwr 
+    Info (332119):    -1.272              -1.586 new_clk 
+    Info (332119):    -0.959              -1.610 clk 
+Info (332146): Worst-case recovery slack is 3.385
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     3.408               0.000 target_temp[1] 
-    Info (332119):     5.101               0.000 Temperature:tempcontrol|currentTemp[1] 
-Info (332146): Worst-case removal slack is -99.966
+    Info (332119):     3.385               0.000 target_temp[1] 
+    Info (332119):     6.337               0.000 Temperature:tempcontrol|currentTemp[1] 
+Info (332146): Worst-case removal slack is -101.669
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -99.966            -699.509 Temperature:tempcontrol|currentTemp[1] 
-    Info (332119):   -94.950           -1320.414 target_temp[1] 
-Info (332146): Worst-case minimum pulse width slack is -93.159
+    Info (332119):  -101.669            -711.010 Temperature:tempcontrol|currentTemp[1] 
+    Info (332119):   -98.752           -1361.846 target_temp[1] 
+Info (332146): Worst-case minimum pulse width slack is -93.586
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -93.159         -480188.946 Temperature:tempcontrol|currentTemp[1] 
-    Info (332119):   -88.644         -449577.090 target_temp[1] 
-    Info (332119):    -3.000            -273.779 clk 
-    Info (332119):    -3.000             -23.256 pwr 
+    Info (332119):   -93.586         -472462.268 Temperature:tempcontrol|currentTemp[1] 
+    Info (332119):   -90.853         -464354.762 target_temp[1] 
+    Info (332119):    -3.000            -276.585 clk 
+    Info (332119):    -3.000             -21.727 pwr 
     Info (332119):    -1.403             -15.433 new_clk 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
@@ -2203,7 +2203,7 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add12~0  from: datab  to: combout
     Info (332098): Cell: display|Add12~10  from: cin  to: combout
     Info (332098): Cell: display|Add12~2  from: cin  to: combout
-    Info (332098): Cell: display|Add12~2  from: datab  to: combout
+    Info (332098): Cell: display|Add12~2  from: dataa  to: combout
     Info (332098): Cell: display|Add12~4  from: cin  to: combout
     Info (332098): Cell: display|Add12~4  from: datab  to: combout
     Info (332098): Cell: display|Add12~6  from: cin  to: combout
@@ -2229,7 +2229,7 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add13~26  from: cin  to: combout
     Info (332098): Cell: display|Add13~26  from: dataa  to: combout
     Info (332098): Cell: display|Add13~28  from: cin  to: combout
-    Info (332098): Cell: display|Add13~28  from: datab  to: combout
+    Info (332098): Cell: display|Add13~28  from: dataa  to: combout
     Info (332098): Cell: display|Add13~2  from: cin  to: combout
     Info (332098): Cell: display|Add13~2  from: dataa  to: combout
     Info (332098): Cell: display|Add13~2  from: datab  to: combout
@@ -2240,15 +2240,15 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add13~34  from: cin  to: combout
     Info (332098): Cell: display|Add13~34  from: dataa  to: combout
     Info (332098): Cell: display|Add13~36  from: cin  to: combout
-    Info (332098): Cell: display|Add13~36  from: datab  to: combout
+    Info (332098): Cell: display|Add13~36  from: dataa  to: combout
     Info (332098): Cell: display|Add13~38  from: cin  to: combout
     Info (332098): Cell: display|Add13~38  from: datab  to: combout
     Info (332098): Cell: display|Add13~40  from: cin  to: combout
-    Info (332098): Cell: display|Add13~40  from: datab  to: combout
+    Info (332098): Cell: display|Add13~40  from: dataa  to: combout
     Info (332098): Cell: display|Add13~42  from: cin  to: combout
-    Info (332098): Cell: display|Add13~42  from: dataa  to: combout
+    Info (332098): Cell: display|Add13~42  from: datab  to: combout
     Info (332098): Cell: display|Add13~44  from: cin  to: combout
-    Info (332098): Cell: display|Add13~44  from: dataa  to: combout
+    Info (332098): Cell: display|Add13~44  from: datab  to: combout
     Info (332098): Cell: display|Add13~46  from: cin  to: combout
     Info (332098): Cell: display|Add13~46  from: dataa  to: combout
     Info (332098): Cell: display|Add13~48  from: cin  to: combout
@@ -2257,67 +2257,67 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add13~4  from: dataa  to: combout
     Info (332098): Cell: display|Add13~4  from: datab  to: combout
     Info (332098): Cell: display|Add13~50  from: cin  to: combout
-    Info (332098): Cell: display|Add13~50  from: dataa  to: combout
+    Info (332098): Cell: display|Add13~50  from: datab  to: combout
     Info (332098): Cell: display|Add13~52  from: cin  to: combout
-    Info (332098): Cell: display|Add13~52  from: dataa  to: combout
+    Info (332098): Cell: display|Add13~52  from: datab  to: combout
     Info (332098): Cell: display|Add13~54  from: cin  to: combout
-    Info (332098): Cell: display|Add13~54  from: datab  to: combout
+    Info (332098): Cell: display|Add13~54  from: dataa  to: combout
     Info (332098): Cell: display|Add13~56  from: cin  to: combout
     Info (332098): Cell: display|Add13~56  from: datad  to: combout
     Info (332098): Cell: display|Add13~6  from: cin  to: combout
     Info (332098): Cell: display|Add13~6  from: datab  to: combout
     Info (332098): Cell: display|Add13~8  from: cin  to: combout
-    Info (332098): Cell: display|Add13~8  from: datab  to: combout
+    Info (332098): Cell: display|Add13~8  from: dataa  to: combout
     Info (332098): Cell: display|Add14~0  from: dataa  to: combout
     Info (332098): Cell: display|Add14~0  from: datab  to: combout
     Info (332098): Cell: display|Add14~10  from: cin  to: combout
-    Info (332098): Cell: display|Add14~10  from: datab  to: combout
+    Info (332098): Cell: display|Add14~10  from: dataa  to: combout
     Info (332098): Cell: display|Add14~12  from: cin  to: combout
-    Info (332098): Cell: display|Add14~12  from: datab  to: combout
+    Info (332098): Cell: display|Add14~12  from: dataa  to: combout
     Info (332098): Cell: display|Add14~14  from: cin  to: combout
-    Info (332098): Cell: display|Add14~14  from: datab  to: combout
+    Info (332098): Cell: display|Add14~14  from: dataa  to: combout
     Info (332098): Cell: display|Add14~16  from: cin  to: combout
-    Info (332098): Cell: display|Add14~16  from: datab  to: combout
+    Info (332098): Cell: display|Add14~16  from: dataa  to: combout
     Info (332098): Cell: display|Add14~18  from: cin  to: combout
     Info (332098): Cell: display|Add14~18  from: datab  to: combout
     Info (332098): Cell: display|Add14~20  from: cin  to: combout
-    Info (332098): Cell: display|Add14~20  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~20  from: datab  to: combout
     Info (332098): Cell: display|Add14~22  from: cin  to: combout
     Info (332098): Cell: display|Add14~22  from: datab  to: combout
     Info (332098): Cell: display|Add14~24  from: cin  to: combout
-    Info (332098): Cell: display|Add14~24  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~24  from: datab  to: combout
     Info (332098): Cell: display|Add14~26  from: cin  to: combout
-    Info (332098): Cell: display|Add14~26  from: datab  to: combout
+    Info (332098): Cell: display|Add14~26  from: dataa  to: combout
     Info (332098): Cell: display|Add14~28  from: cin  to: combout
     Info (332098): Cell: display|Add14~28  from: datab  to: combout
     Info (332098): Cell: display|Add14~2  from: cin  to: combout
     Info (332098): Cell: display|Add14~2  from: datab  to: combout
     Info (332098): Cell: display|Add14~30  from: cin  to: combout
-    Info (332098): Cell: display|Add14~30  from: datab  to: combout
+    Info (332098): Cell: display|Add14~30  from: dataa  to: combout
     Info (332098): Cell: display|Add14~32  from: cin  to: combout
-    Info (332098): Cell: display|Add14~32  from: datab  to: combout
+    Info (332098): Cell: display|Add14~32  from: dataa  to: combout
     Info (332098): Cell: display|Add14~34  from: cin  to: combout
     Info (332098): Cell: display|Add14~34  from: dataa  to: combout
     Info (332098): Cell: display|Add14~36  from: cin  to: combout
-    Info (332098): Cell: display|Add14~36  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~36  from: datab  to: combout
     Info (332098): Cell: display|Add14~38  from: cin  to: combout
-    Info (332098): Cell: display|Add14~38  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~38  from: datab  to: combout
     Info (332098): Cell: display|Add14~40  from: cin  to: combout
-    Info (332098): Cell: display|Add14~40  from: datab  to: combout
+    Info (332098): Cell: display|Add14~40  from: dataa  to: combout
     Info (332098): Cell: display|Add14~42  from: cin  to: combout
-    Info (332098): Cell: display|Add14~42  from: datab  to: combout
+    Info (332098): Cell: display|Add14~42  from: dataa  to: combout
     Info (332098): Cell: display|Add14~44  from: cin  to: combout
-    Info (332098): Cell: display|Add14~44  from: datab  to: combout
+    Info (332098): Cell: display|Add14~44  from: dataa  to: combout
     Info (332098): Cell: display|Add14~46  from: cin  to: combout
-    Info (332098): Cell: display|Add14~46  from: datab  to: combout
+    Info (332098): Cell: display|Add14~46  from: dataa  to: combout
     Info (332098): Cell: display|Add14~48  from: cin  to: combout
-    Info (332098): Cell: display|Add14~48  from: datab  to: combout
+    Info (332098): Cell: display|Add14~48  from: dataa  to: combout
     Info (332098): Cell: display|Add14~4  from: cin  to: combout
-    Info (332098): Cell: display|Add14~4  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~4  from: datab  to: combout
     Info (332098): Cell: display|Add14~50  from: cin  to: combout
     Info (332098): Cell: display|Add14~50  from: datab  to: combout
     Info (332098): Cell: display|Add14~52  from: cin  to: combout
-    Info (332098): Cell: display|Add14~52  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~52  from: datab  to: combout
     Info (332098): Cell: display|Add14~54  from: cin  to: combout
     Info (332098): Cell: display|Add14~54  from: datab  to: combout
     Info (332098): Cell: display|Add14~56  from: cin  to: combout
@@ -2327,19 +2327,19 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add14~60  from: cin  to: combout
     Info (332098): Cell: display|Add14~60  from: datad  to: combout
     Info (332098): Cell: display|Add14~6  from: cin  to: combout
-    Info (332098): Cell: display|Add14~6  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~6  from: datab  to: combout
     Info (332098): Cell: display|Add14~8  from: cin  to: combout
-    Info (332098): Cell: display|Add14~8  from: datab  to: combout
+    Info (332098): Cell: display|Add14~8  from: dataa  to: combout
     Info (332098): Cell: display|Add15~10  from: cin  to: combout
-    Info (332098): Cell: display|Add15~10  from: datab  to: combout
+    Info (332098): Cell: display|Add15~10  from: dataa  to: combout
     Info (332098): Cell: display|Add15~12  from: cin  to: combout
-    Info (332098): Cell: display|Add15~12  from: datab  to: combout
+    Info (332098): Cell: display|Add15~12  from: dataa  to: combout
     Info (332098): Cell: display|Add15~14  from: cin  to: combout
-    Info (332098): Cell: display|Add15~14  from: datab  to: combout
+    Info (332098): Cell: display|Add15~14  from: dataa  to: combout
     Info (332098): Cell: display|Add15~16  from: cin  to: combout
     Info (332098): Cell: display|Add15~16  from: datab  to: combout
     Info (332098): Cell: display|Add15~18  from: cin  to: combout
-    Info (332098): Cell: display|Add15~18  from: dataa  to: combout
+    Info (332098): Cell: display|Add15~18  from: datab  to: combout
     Info (332098): Cell: display|Add15~20  from: cin  to: combout
     Info (332098): Cell: display|Add15~20  from: datab  to: combout
     Info (332098): Cell: display|Add15~22  from: cin  to: combout
@@ -2349,35 +2349,35 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add15~26  from: cin  to: combout
     Info (332098): Cell: display|Add15~26  from: datab  to: combout
     Info (332098): Cell: display|Add15~28  from: cin  to: combout
-    Info (332098): Cell: display|Add15~28  from: dataa  to: combout
+    Info (332098): Cell: display|Add15~28  from: datab  to: combout
     Info (332098): Cell: display|Add15~2  from: cin  to: combout
     Info (332098): Cell: display|Add15~2  from: dataa  to: combout
     Info (332098): Cell: display|Add15~2  from: datab  to: combout
     Info (332098): Cell: display|Add15~30  from: cin  to: combout
-    Info (332098): Cell: display|Add15~30  from: datab  to: combout
+    Info (332098): Cell: display|Add15~30  from: dataa  to: combout
     Info (332098): Cell: display|Add15~32  from: cin  to: combout
     Info (332098): Cell: display|Add15~32  from: dataa  to: combout
     Info (332098): Cell: display|Add15~34  from: cin  to: combout
-    Info (332098): Cell: display|Add15~34  from: dataa  to: combout
+    Info (332098): Cell: display|Add15~34  from: datab  to: combout
     Info (332098): Cell: display|Add15~36  from: cin  to: combout
-    Info (332098): Cell: display|Add15~36  from: dataa  to: combout
+    Info (332098): Cell: display|Add15~36  from: datab  to: combout
     Info (332098): Cell: display|Add15~38  from: cin  to: combout
-    Info (332098): Cell: display|Add15~38  from: datab  to: combout
+    Info (332098): Cell: display|Add15~38  from: dataa  to: combout
     Info (332098): Cell: display|Add15~40  from: cin  to: combout
-    Info (332098): Cell: display|Add15~40  from: datab  to: combout
+    Info (332098): Cell: display|Add15~40  from: dataa  to: combout
     Info (332098): Cell: display|Add15~42  from: cin  to: combout
-    Info (332098): Cell: display|Add15~42  from: datab  to: combout
+    Info (332098): Cell: display|Add15~42  from: dataa  to: combout
     Info (332098): Cell: display|Add15~44  from: cin  to: combout
-    Info (332098): Cell: display|Add15~44  from: datab  to: combout
+    Info (332098): Cell: display|Add15~44  from: dataa  to: combout
     Info (332098): Cell: display|Add15~46  from: cin  to: combout
-    Info (332098): Cell: display|Add15~46  from: datab  to: combout
+    Info (332098): Cell: display|Add15~46  from: dataa  to: combout
     Info (332098): Cell: display|Add15~48  from: cin  to: combout
     Info (332098): Cell: display|Add15~48  from: datab  to: combout
     Info (332098): Cell: display|Add15~4  from: cin  to: combout
     Info (332098): Cell: display|Add15~4  from: dataa  to: combout
     Info (332098): Cell: display|Add15~4  from: datab  to: combout
     Info (332098): Cell: display|Add15~50  from: cin  to: combout
-    Info (332098): Cell: display|Add15~50  from: dataa  to: combout
+    Info (332098): Cell: display|Add15~50  from: datab  to: combout
     Info (332098): Cell: display|Add15~52  from: cin  to: combout
     Info (332098): Cell: display|Add15~52  from: datab  to: combout
     Info (332098): Cell: display|Add15~54  from: cin  to: combout
@@ -2389,14 +2389,14 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add15~60  from: cin  to: combout
     Info (332098): Cell: display|Add15~60  from: datad  to: combout
     Info (332098): Cell: display|Add15~6  from: cin  to: combout
-    Info (332098): Cell: display|Add15~6  from: datab  to: combout
+    Info (332098): Cell: display|Add15~6  from: dataa  to: combout
     Info (332098): Cell: display|Add15~8  from: cin  to: combout
-    Info (332098): Cell: display|Add15~8  from: datab  to: combout
+    Info (332098): Cell: display|Add15~8  from: dataa  to: combout
     Info (332098): Cell: display|Add16~0  from: dataa  to: combout
     Info (332098): Cell: display|Add16~0  from: datab  to: combout
     Info (332098): Cell: display|Add16~10  from: cin  to: combout
     Info (332098): Cell: display|Add16~2  from: cin  to: combout
-    Info (332098): Cell: display|Add16~2  from: dataa  to: combout
+    Info (332098): Cell: display|Add16~2  from: datab  to: combout
     Info (332098): Cell: display|Add16~4  from: cin  to: combout
     Info (332098): Cell: display|Add16~4  from: datab  to: combout
     Info (332098): Cell: display|Add16~6  from: cin  to: combout
@@ -2404,53 +2404,53 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add17~0  from: dataa  to: combout
     Info (332098): Cell: display|Add17~0  from: datab  to: combout
     Info (332098): Cell: display|Add17~10  from: cin  to: combout
-    Info (332098): Cell: display|Add17~10  from: datab  to: combout
+    Info (332098): Cell: display|Add17~10  from: dataa  to: combout
     Info (332098): Cell: display|Add17~12  from: cin  to: combout
-    Info (332098): Cell: display|Add17~12  from: datab  to: combout
+    Info (332098): Cell: display|Add17~12  from: dataa  to: combout
     Info (332098): Cell: display|Add17~14  from: cin  to: combout
-    Info (332098): Cell: display|Add17~14  from: datab  to: combout
+    Info (332098): Cell: display|Add17~14  from: dataa  to: combout
     Info (332098): Cell: display|Add17~16  from: cin  to: combout
-    Info (332098): Cell: display|Add17~16  from: datab  to: combout
+    Info (332098): Cell: display|Add17~16  from: dataa  to: combout
     Info (332098): Cell: display|Add17~18  from: cin  to: combout
-    Info (332098): Cell: display|Add17~18  from: datab  to: combout
+    Info (332098): Cell: display|Add17~18  from: dataa  to: combout
     Info (332098): Cell: display|Add17~20  from: cin  to: combout
-    Info (332098): Cell: display|Add17~20  from: datab  to: combout
+    Info (332098): Cell: display|Add17~20  from: dataa  to: combout
     Info (332098): Cell: display|Add17~22  from: cin  to: combout
-    Info (332098): Cell: display|Add17~22  from: datab  to: combout
+    Info (332098): Cell: display|Add17~22  from: dataa  to: combout
     Info (332098): Cell: display|Add17~24  from: cin  to: combout
-    Info (332098): Cell: display|Add17~24  from: datab  to: combout
+    Info (332098): Cell: display|Add17~24  from: dataa  to: combout
     Info (332098): Cell: display|Add17~26  from: cin  to: combout
-    Info (332098): Cell: display|Add17~26  from: datab  to: combout
+    Info (332098): Cell: display|Add17~26  from: dataa  to: combout
     Info (332098): Cell: display|Add17~28  from: cin  to: combout
-    Info (332098): Cell: display|Add17~28  from: datab  to: combout
+    Info (332098): Cell: display|Add17~28  from: dataa  to: combout
     Info (332098): Cell: display|Add17~2  from: cin  to: combout
     Info (332098): Cell: display|Add17~2  from: dataa  to: combout
     Info (332098): Cell: display|Add17~2  from: datab  to: combout
     Info (332098): Cell: display|Add17~30  from: cin  to: combout
-    Info (332098): Cell: display|Add17~30  from: dataa  to: combout
+    Info (332098): Cell: display|Add17~30  from: datab  to: combout
     Info (332098): Cell: display|Add17~32  from: cin  to: combout
     Info (332098): Cell: display|Add17~32  from: datab  to: combout
     Info (332098): Cell: display|Add17~34  from: cin  to: combout
-    Info (332098): Cell: display|Add17~34  from: datab  to: combout
+    Info (332098): Cell: display|Add17~34  from: dataa  to: combout
     Info (332098): Cell: display|Add17~36  from: cin  to: combout
     Info (332098): Cell: display|Add17~36  from: dataa  to: combout
     Info (332098): Cell: display|Add17~38  from: cin  to: combout
     Info (332098): Cell: display|Add17~38  from: datab  to: combout
     Info (332098): Cell: display|Add17~40  from: cin  to: combout
-    Info (332098): Cell: display|Add17~40  from: datab  to: combout
+    Info (332098): Cell: display|Add17~40  from: dataa  to: combout
     Info (332098): Cell: display|Add17~42  from: cin  to: combout
-    Info (332098): Cell: display|Add17~42  from: dataa  to: combout
+    Info (332098): Cell: display|Add17~42  from: datab  to: combout
     Info (332098): Cell: display|Add17~44  from: cin  to: combout
-    Info (332098): Cell: display|Add17~44  from: dataa  to: combout
+    Info (332098): Cell: display|Add17~44  from: datab  to: combout
     Info (332098): Cell: display|Add17~46  from: cin  to: combout
     Info (332098): Cell: display|Add17~46  from: dataa  to: combout
     Info (332098): Cell: display|Add17~48  from: cin  to: combout
-    Info (332098): Cell: display|Add17~48  from: datab  to: combout
+    Info (332098): Cell: display|Add17~48  from: dataa  to: combout
     Info (332098): Cell: display|Add17~4  from: cin  to: combout
     Info (332098): Cell: display|Add17~4  from: dataa  to: combout
     Info (332098): Cell: display|Add17~4  from: datab  to: combout
     Info (332098): Cell: display|Add17~50  from: cin  to: combout
-    Info (332098): Cell: display|Add17~50  from: dataa  to: combout
+    Info (332098): Cell: display|Add17~50  from: datab  to: combout
     Info (332098): Cell: display|Add17~52  from: cin  to: combout
     Info (332098): Cell: display|Add17~52  from: datab  to: combout
     Info (332098): Cell: display|Add17~54  from: cin  to: combout
@@ -2460,31 +2460,31 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add17~6  from: cin  to: combout
     Info (332098): Cell: display|Add17~6  from: datab  to: combout
     Info (332098): Cell: display|Add17~8  from: cin  to: combout
-    Info (332098): Cell: display|Add17~8  from: datab  to: combout
+    Info (332098): Cell: display|Add17~8  from: dataa  to: combout
     Info (332098): Cell: display|Add18~0  from: dataa  to: combout
     Info (332098): Cell: display|Add18~0  from: datab  to: combout
     Info (332098): Cell: display|Add18~10  from: cin  to: combout
     Info (332098): Cell: display|Add18~10  from: dataa  to: combout
     Info (332098): Cell: display|Add18~12  from: cin  to: combout
-    Info (332098): Cell: display|Add18~12  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~12  from: datab  to: combout
     Info (332098): Cell: display|Add18~14  from: cin  to: combout
-    Info (332098): Cell: display|Add18~14  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~14  from: datab  to: combout
     Info (332098): Cell: display|Add18~16  from: cin  to: combout
-    Info (332098): Cell: display|Add18~16  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~16  from: datab  to: combout
     Info (332098): Cell: display|Add18~18  from: cin  to: combout
-    Info (332098): Cell: display|Add18~18  from: datab  to: combout
+    Info (332098): Cell: display|Add18~18  from: dataa  to: combout
     Info (332098): Cell: display|Add18~20  from: cin  to: combout
-    Info (332098): Cell: display|Add18~20  from: datab  to: combout
+    Info (332098): Cell: display|Add18~20  from: dataa  to: combout
     Info (332098): Cell: display|Add18~22  from: cin  to: combout
-    Info (332098): Cell: display|Add18~22  from: datab  to: combout
+    Info (332098): Cell: display|Add18~22  from: dataa  to: combout
     Info (332098): Cell: display|Add18~24  from: cin  to: combout
     Info (332098): Cell: display|Add18~24  from: datab  to: combout
     Info (332098): Cell: display|Add18~26  from: cin  to: combout
-    Info (332098): Cell: display|Add18~26  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~26  from: datab  to: combout
     Info (332098): Cell: display|Add18~28  from: cin  to: combout
-    Info (332098): Cell: display|Add18~28  from: datab  to: combout
+    Info (332098): Cell: display|Add18~28  from: dataa  to: combout
     Info (332098): Cell: display|Add18~2  from: cin  to: combout
-    Info (332098): Cell: display|Add18~2  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~2  from: datab  to: combout
     Info (332098): Cell: display|Add18~30  from: cin  to: combout
     Info (332098): Cell: display|Add18~30  from: dataa  to: combout
     Info (332098): Cell: display|Add18~32  from: cin  to: combout
@@ -2496,31 +2496,31 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add18~38  from: cin  to: combout
     Info (332098): Cell: display|Add18~38  from: datab  to: combout
     Info (332098): Cell: display|Add18~40  from: cin  to: combout
-    Info (332098): Cell: display|Add18~40  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~40  from: datab  to: combout
     Info (332098): Cell: display|Add18~42  from: cin  to: combout
-    Info (332098): Cell: display|Add18~42  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~42  from: datab  to: combout
     Info (332098): Cell: display|Add18~44  from: cin  to: combout
-    Info (332098): Cell: display|Add18~44  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~44  from: datab  to: combout
     Info (332098): Cell: display|Add18~46  from: cin  to: combout
     Info (332098): Cell: display|Add18~46  from: dataa  to: combout
     Info (332098): Cell: display|Add18~48  from: cin  to: combout
     Info (332098): Cell: display|Add18~48  from: dataa  to: combout
     Info (332098): Cell: display|Add18~4  from: cin  to: combout
-    Info (332098): Cell: display|Add18~4  from: datab  to: combout
+    Info (332098): Cell: display|Add18~4  from: dataa  to: combout
     Info (332098): Cell: display|Add18~50  from: cin  to: combout
-    Info (332098): Cell: display|Add18~50  from: datab  to: combout
+    Info (332098): Cell: display|Add18~50  from: dataa  to: combout
     Info (332098): Cell: display|Add18~52  from: cin  to: combout
-    Info (332098): Cell: display|Add18~52  from: datab  to: combout
+    Info (332098): Cell: display|Add18~52  from: dataa  to: combout
     Info (332098): Cell: display|Add18~54  from: cin  to: combout
-    Info (332098): Cell: display|Add18~54  from: datab  to: combout
+    Info (332098): Cell: display|Add18~54  from: dataa  to: combout
     Info (332098): Cell: display|Add18~56  from: cin  to: combout
-    Info (332098): Cell: display|Add18~56  from: datab  to: combout
+    Info (332098): Cell: display|Add18~56  from: dataa  to: combout
     Info (332098): Cell: display|Add18~58  from: cin  to: combout
     Info (332098): Cell: display|Add18~58  from: dataa  to: combout
     Info (332098): Cell: display|Add18~60  from: cin  to: combout
     Info (332098): Cell: display|Add18~60  from: datad  to: combout
     Info (332098): Cell: display|Add18~6  from: cin  to: combout
-    Info (332098): Cell: display|Add18~6  from: datab  to: combout
+    Info (332098): Cell: display|Add18~6  from: dataa  to: combout
     Info (332098): Cell: display|Add18~8  from: cin  to: combout
     Info (332098): Cell: display|Add18~8  from: dataa  to: combout
     Info (332098): Cell: display|Add19~10  from: cin  to: combout
@@ -2585,15 +2585,15 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add19~6  from: dataa  to: combout
     Info (332098): Cell: display|Add19~8  from: cin  to: combout
     Info (332098): Cell: display|Add19~8  from: dataa  to: combout
-    Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[142]~65  from: datab  to: combout
+    Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[142]~65  from: dataa  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[143]~64  from: dataa  to: combout
-    Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[147]~66  from: datab  to: combout
+    Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[147]~66  from: datac  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[152]~67  from: datab  to: combout
-    Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[1]~0  from: datab  to: combout
+    Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[2]~2  from: cin  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[2]~2  from: dataa  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: dataa  to: combout
+    Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: datab  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_28_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_28_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_28_result_int[2]~2  from: cin  to: combout
@@ -2618,34 +2618,33 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: cin  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: dataa  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[107]~746  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[115]~747  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[122]~729  from: datab  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[123]~748  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[130]~730  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[138]~731  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[146]~732  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[154]~733  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[162]~734  from: datad  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[170]~735  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[186]~737  from: datab  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[187]~749  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[203]~750  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[211]~751  from: datab  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[219]~752  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[226]~742  from: datad  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[227]~753  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[234]~743  from: datab  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[242]~744  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[59]~720  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[60]~719  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[61]~718  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[62]~717  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[66]~722  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[67]~721  from: datad  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[74]~723  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[90]~725  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[91]~745  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[114]~727  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[115]~746  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[122]~728  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[139]~747  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[146]~731  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[147]~748  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[154]~732  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[162]~733  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[178]~735  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[179]~749  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[186]~736  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[194]~737  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[202]~738  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[218]~740  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[219]~750  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[234]~742  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[235]~751  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[59]~719  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[60]~718  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[61]~717  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[62]~716  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[66]~721  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[67]~720  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[74]~722  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[91]~744  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[98]~725  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[99]~745  from: datab  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_10_result_int[2]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_10_result_int[2]~0  from: datab  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_10_result_int[3]~2  from: cin  to: combout
@@ -2948,7 +2947,7 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_6_result_int[5]~6  from: cin  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_6_result_int[5]~6  from: datab  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_6_result_int[6]~8  from: cin  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_6_result_int[6]~8  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_6_result_int[6]~8  from: datab  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_7_result_int[2]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_7_result_int[2]~0  from: datab  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_7_result_int[3]~2  from: cin  to: combout
@@ -2991,15 +2990,15 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_9_result_int[6]~8  from: cin  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_9_result_int[6]~8  from: dataa  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_9_result_int[6]~8  from: datab  to: combout
-    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[142]~65  from: datab  to: combout
-    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[143]~64  from: datab  to: combout
+    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[142]~65  from: dataa  to: combout
+    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[143]~64  from: dataa  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[147]~66  from: datad  to: combout
-    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[152]~67  from: datac  to: combout
+    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[152]~67  from: datad  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[2]~2  from: dataa  to: combout
+    Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[2]~2  from: datab  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: datab  to: combout
+    Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: dataa  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_28_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_28_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_28_result_int[2]~2  from: cin  to: combout
@@ -3024,32 +3023,33 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: cin  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: dataa  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[107]~748  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[114]~730  from: datad  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[115]~749  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[122]~731  from: datad  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[130]~732  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[138]~733  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[146]~734  from: dataa  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[154]~735  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[162]~736  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[178]~738  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[179]~750  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[186]~739  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[194]~740  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[202]~741  from: dataa  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[210]~742  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[218]~743  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[226]~744  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[59]~722  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[60]~721  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[61]~720  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[62]~719  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[66]~724  from: datad  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[67]~723  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[74]~725  from: dataa  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[82]~726  from: dataa  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[99]~747  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[106]~731  from: datad  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[114]~732  from: datab  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[122]~733  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[130]~734  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[138]~735  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[146]~736  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[154]~737  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[170]~739  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[171]~750  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[178]~740  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[195]~751  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[202]~743  from: datab  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[203]~752  from: datab  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[218]~745  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[219]~753  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[226]~746  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[234]~747  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[59]~724  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[60]~723  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[61]~722  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[62]~721  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[66]~726  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[67]~725  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[74]~727  from: datad  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[82]~728  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[98]~730  from: datad  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[99]~749  from: datad  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_10_result_int[2]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_10_result_int[2]~0  from: datab  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_10_result_int[3]~2  from: cin  to: combout
@@ -3344,7 +3344,7 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_30_result_int[6]~8  from: cin  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_30_result_int[6]~8  from: dataa  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_30_result_int[6]~8  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_6_result_int[2]~0  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_6_result_int[2]~0  from: datab  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_6_result_int[3]~2  from: cin  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_6_result_int[3]~2  from: dataa  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_6_result_int[4]~4  from: cin  to: combout
@@ -3409,53 +3409,53 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Mod8|auto_generated|divider|divider|add_sub_9_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: display|Mod8|auto_generated|divider|divider|add_sub_9_result_int[2]~2  from: cin  to: combout
     Info (332098): Cell: display|Mod8|auto_generated|divider|divider|add_sub_9_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: display|WideNor9~0  from: datac  to: combout
-    Info (332098): Cell: display|hex0[0]~3  from: dataa  to: combout
-    Info (332098): Cell: display|hex0[0]~3  from: datac  to: combout
-    Info (332098): Cell: display|hex0[0]~4  from: datac  to: combout
-    Info (332098): Cell: display|hex0[0]~4  from: datad  to: combout
-    Info (332098): Cell: display|hex1[0]~17  from: dataa  to: combout
-    Info (332098): Cell: display|hex1[0]~17  from: datab  to: combout
-    Info (332098): Cell: display|hex1[0]~18  from: dataa  to: combout
-    Info (332098): Cell: display|hex1[0]~18  from: datad  to: combout
-    Info (332098): Cell: display|hex2[4]~3  from: datac  to: combout
-    Info (332098): Cell: display|hex3[0]~7  from: dataa  to: combout
-    Info (332098): Cell: display|hex4[0]~7  from: datad  to: combout
+    Info (332098): Cell: display|WideNor9~0  from: datab  to: combout
+    Info (332098): Cell: display|hex0[0]~5  from: dataa  to: combout
+    Info (332098): Cell: display|hex0[0]~5  from: datad  to: combout
+    Info (332098): Cell: display|hex0[0]~6  from: dataa  to: combout
+    Info (332098): Cell: display|hex0[0]~6  from: datad  to: combout
+    Info (332098): Cell: display|hex1[0]~15  from: dataa  to: combout
+    Info (332098): Cell: display|hex1[0]~15  from: datad  to: combout
+    Info (332098): Cell: display|hex1[0]~16  from: dataa  to: combout
+    Info (332098): Cell: display|hex1[0]~16  from: datac  to: combout
+    Info (332098): Cell: display|hex2[4]~3  from: datab  to: combout
+    Info (332098): Cell: display|hex3[0]~7  from: datac  to: combout
+    Info (332098): Cell: display|hex4[0]~9  from: datad  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -278.068
+Info (332146): Worst-case setup slack is -271.190
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):  -278.068           -7624.167 clk 
-    Info (332119):  -234.597           -3324.149 Temperature:tempcontrol|currentTemp[1] 
-    Info (332119):  -234.292           -5602.970 target_temp[1] 
-    Info (332119):  -232.479           -4187.034 pwr 
-    Info (332119):    -7.896             -72.149 new_clk 
-Info (332146): Worst-case hold slack is -90.404
+    Info (332119):  -271.190           -6139.004 clk 
+    Info (332119):  -233.307           -5883.902 target_temp[1] 
+    Info (332119):  -232.744           -3422.861 Temperature:tempcontrol|currentTemp[1] 
+    Info (332119):  -232.131           -4231.234 pwr 
+    Info (332119):    -7.949             -81.771 new_clk 
+Info (332146): Worst-case hold slack is -91.495
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -90.404            -719.628 Temperature:tempcontrol|currentTemp[1] 
-    Info (332119):   -85.896           -1361.740 target_temp[1] 
-    Info (332119):    -5.979             -68.210 pwr 
-    Info (332119):    -1.867              -3.684 clk 
-    Info (332119):    -0.635              -0.635 new_clk 
-Info (332146): Worst-case recovery slack is 2.899
+    Info (332119):   -91.495            -714.302 Temperature:tempcontrol|currentTemp[1] 
+    Info (332119):   -89.641           -1414.744 target_temp[1] 
+    Info (332119):    -4.896             -43.668 pwr 
+    Info (332119):    -1.221              -1.633 new_clk 
+    Info (332119):    -0.942              -1.595 clk 
+Info (332146): Worst-case recovery slack is 2.963
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     2.899               0.000 target_temp[1] 
-    Info (332119):     4.720               0.000 Temperature:tempcontrol|currentTemp[1] 
-Info (332146): Worst-case removal slack is -90.918
+    Info (332119):     2.963               0.000 target_temp[1] 
+    Info (332119):     5.834               0.000 Temperature:tempcontrol|currentTemp[1] 
+Info (332146): Worst-case removal slack is -92.350
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -90.918            -636.230 Temperature:tempcontrol|currentTemp[1] 
-    Info (332119):   -86.248           -1199.400 target_temp[1] 
-Info (332146): Worst-case minimum pulse width slack is -84.757
+    Info (332119):   -92.350            -645.874 Temperature:tempcontrol|currentTemp[1] 
+    Info (332119):   -89.810           -1238.767 target_temp[1] 
+Info (332146): Worst-case minimum pulse width slack is -84.999
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -84.757         -436355.868 Temperature:tempcontrol|currentTemp[1] 
-    Info (332119):   -80.679         -408382.589 target_temp[1] 
-    Info (332119):    -3.000            -273.779 clk 
-    Info (332119):    -3.000             -17.394 pwr 
+    Info (332119):   -84.999         -429165.481 Temperature:tempcontrol|currentTemp[1] 
+    Info (332119):   -82.694         -421680.607 target_temp[1] 
+    Info (332119):    -3.000            -276.585 clk 
+    Info (332119):    -3.000             -16.632 pwr 
     Info (332119):    -1.403             -15.433 new_clk 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
@@ -3463,7 +3463,7 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add12~0  from: datab  to: combout
     Info (332098): Cell: display|Add12~10  from: cin  to: combout
     Info (332098): Cell: display|Add12~2  from: cin  to: combout
-    Info (332098): Cell: display|Add12~2  from: datab  to: combout
+    Info (332098): Cell: display|Add12~2  from: dataa  to: combout
     Info (332098): Cell: display|Add12~4  from: cin  to: combout
     Info (332098): Cell: display|Add12~4  from: datab  to: combout
     Info (332098): Cell: display|Add12~6  from: cin  to: combout
@@ -3489,7 +3489,7 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add13~26  from: cin  to: combout
     Info (332098): Cell: display|Add13~26  from: dataa  to: combout
     Info (332098): Cell: display|Add13~28  from: cin  to: combout
-    Info (332098): Cell: display|Add13~28  from: datab  to: combout
+    Info (332098): Cell: display|Add13~28  from: dataa  to: combout
     Info (332098): Cell: display|Add13~2  from: cin  to: combout
     Info (332098): Cell: display|Add13~2  from: dataa  to: combout
     Info (332098): Cell: display|Add13~2  from: datab  to: combout
@@ -3500,15 +3500,15 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add13~34  from: cin  to: combout
     Info (332098): Cell: display|Add13~34  from: dataa  to: combout
     Info (332098): Cell: display|Add13~36  from: cin  to: combout
-    Info (332098): Cell: display|Add13~36  from: datab  to: combout
+    Info (332098): Cell: display|Add13~36  from: dataa  to: combout
     Info (332098): Cell: display|Add13~38  from: cin  to: combout
     Info (332098): Cell: display|Add13~38  from: datab  to: combout
     Info (332098): Cell: display|Add13~40  from: cin  to: combout
-    Info (332098): Cell: display|Add13~40  from: datab  to: combout
+    Info (332098): Cell: display|Add13~40  from: dataa  to: combout
     Info (332098): Cell: display|Add13~42  from: cin  to: combout
-    Info (332098): Cell: display|Add13~42  from: dataa  to: combout
+    Info (332098): Cell: display|Add13~42  from: datab  to: combout
     Info (332098): Cell: display|Add13~44  from: cin  to: combout
-    Info (332098): Cell: display|Add13~44  from: dataa  to: combout
+    Info (332098): Cell: display|Add13~44  from: datab  to: combout
     Info (332098): Cell: display|Add13~46  from: cin  to: combout
     Info (332098): Cell: display|Add13~46  from: dataa  to: combout
     Info (332098): Cell: display|Add13~48  from: cin  to: combout
@@ -3517,67 +3517,67 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add13~4  from: dataa  to: combout
     Info (332098): Cell: display|Add13~4  from: datab  to: combout
     Info (332098): Cell: display|Add13~50  from: cin  to: combout
-    Info (332098): Cell: display|Add13~50  from: dataa  to: combout
+    Info (332098): Cell: display|Add13~50  from: datab  to: combout
     Info (332098): Cell: display|Add13~52  from: cin  to: combout
-    Info (332098): Cell: display|Add13~52  from: dataa  to: combout
+    Info (332098): Cell: display|Add13~52  from: datab  to: combout
     Info (332098): Cell: display|Add13~54  from: cin  to: combout
-    Info (332098): Cell: display|Add13~54  from: datab  to: combout
+    Info (332098): Cell: display|Add13~54  from: dataa  to: combout
     Info (332098): Cell: display|Add13~56  from: cin  to: combout
     Info (332098): Cell: display|Add13~56  from: datad  to: combout
     Info (332098): Cell: display|Add13~6  from: cin  to: combout
     Info (332098): Cell: display|Add13~6  from: datab  to: combout
     Info (332098): Cell: display|Add13~8  from: cin  to: combout
-    Info (332098): Cell: display|Add13~8  from: datab  to: combout
+    Info (332098): Cell: display|Add13~8  from: dataa  to: combout
     Info (332098): Cell: display|Add14~0  from: dataa  to: combout
     Info (332098): Cell: display|Add14~0  from: datab  to: combout
     Info (332098): Cell: display|Add14~10  from: cin  to: combout
-    Info (332098): Cell: display|Add14~10  from: datab  to: combout
+    Info (332098): Cell: display|Add14~10  from: dataa  to: combout
     Info (332098): Cell: display|Add14~12  from: cin  to: combout
-    Info (332098): Cell: display|Add14~12  from: datab  to: combout
+    Info (332098): Cell: display|Add14~12  from: dataa  to: combout
     Info (332098): Cell: display|Add14~14  from: cin  to: combout
-    Info (332098): Cell: display|Add14~14  from: datab  to: combout
+    Info (332098): Cell: display|Add14~14  from: dataa  to: combout
     Info (332098): Cell: display|Add14~16  from: cin  to: combout
-    Info (332098): Cell: display|Add14~16  from: datab  to: combout
+    Info (332098): Cell: display|Add14~16  from: dataa  to: combout
     Info (332098): Cell: display|Add14~18  from: cin  to: combout
     Info (332098): Cell: display|Add14~18  from: datab  to: combout
     Info (332098): Cell: display|Add14~20  from: cin  to: combout
-    Info (332098): Cell: display|Add14~20  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~20  from: datab  to: combout
     Info (332098): Cell: display|Add14~22  from: cin  to: combout
     Info (332098): Cell: display|Add14~22  from: datab  to: combout
     Info (332098): Cell: display|Add14~24  from: cin  to: combout
-    Info (332098): Cell: display|Add14~24  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~24  from: datab  to: combout
     Info (332098): Cell: display|Add14~26  from: cin  to: combout
-    Info (332098): Cell: display|Add14~26  from: datab  to: combout
+    Info (332098): Cell: display|Add14~26  from: dataa  to: combout
     Info (332098): Cell: display|Add14~28  from: cin  to: combout
     Info (332098): Cell: display|Add14~28  from: datab  to: combout
     Info (332098): Cell: display|Add14~2  from: cin  to: combout
     Info (332098): Cell: display|Add14~2  from: datab  to: combout
     Info (332098): Cell: display|Add14~30  from: cin  to: combout
-    Info (332098): Cell: display|Add14~30  from: datab  to: combout
+    Info (332098): Cell: display|Add14~30  from: dataa  to: combout
     Info (332098): Cell: display|Add14~32  from: cin  to: combout
-    Info (332098): Cell: display|Add14~32  from: datab  to: combout
+    Info (332098): Cell: display|Add14~32  from: dataa  to: combout
     Info (332098): Cell: display|Add14~34  from: cin  to: combout
     Info (332098): Cell: display|Add14~34  from: dataa  to: combout
     Info (332098): Cell: display|Add14~36  from: cin  to: combout
-    Info (332098): Cell: display|Add14~36  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~36  from: datab  to: combout
     Info (332098): Cell: display|Add14~38  from: cin  to: combout
-    Info (332098): Cell: display|Add14~38  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~38  from: datab  to: combout
     Info (332098): Cell: display|Add14~40  from: cin  to: combout
-    Info (332098): Cell: display|Add14~40  from: datab  to: combout
+    Info (332098): Cell: display|Add14~40  from: dataa  to: combout
     Info (332098): Cell: display|Add14~42  from: cin  to: combout
-    Info (332098): Cell: display|Add14~42  from: datab  to: combout
+    Info (332098): Cell: display|Add14~42  from: dataa  to: combout
     Info (332098): Cell: display|Add14~44  from: cin  to: combout
-    Info (332098): Cell: display|Add14~44  from: datab  to: combout
+    Info (332098): Cell: display|Add14~44  from: dataa  to: combout
     Info (332098): Cell: display|Add14~46  from: cin  to: combout
-    Info (332098): Cell: display|Add14~46  from: datab  to: combout
+    Info (332098): Cell: display|Add14~46  from: dataa  to: combout
     Info (332098): Cell: display|Add14~48  from: cin  to: combout
-    Info (332098): Cell: display|Add14~48  from: datab  to: combout
+    Info (332098): Cell: display|Add14~48  from: dataa  to: combout
     Info (332098): Cell: display|Add14~4  from: cin  to: combout
-    Info (332098): Cell: display|Add14~4  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~4  from: datab  to: combout
     Info (332098): Cell: display|Add14~50  from: cin  to: combout
     Info (332098): Cell: display|Add14~50  from: datab  to: combout
     Info (332098): Cell: display|Add14~52  from: cin  to: combout
-    Info (332098): Cell: display|Add14~52  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~52  from: datab  to: combout
     Info (332098): Cell: display|Add14~54  from: cin  to: combout
     Info (332098): Cell: display|Add14~54  from: datab  to: combout
     Info (332098): Cell: display|Add14~56  from: cin  to: combout
@@ -3587,19 +3587,19 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add14~60  from: cin  to: combout
     Info (332098): Cell: display|Add14~60  from: datad  to: combout
     Info (332098): Cell: display|Add14~6  from: cin  to: combout
-    Info (332098): Cell: display|Add14~6  from: dataa  to: combout
+    Info (332098): Cell: display|Add14~6  from: datab  to: combout
     Info (332098): Cell: display|Add14~8  from: cin  to: combout
-    Info (332098): Cell: display|Add14~8  from: datab  to: combout
+    Info (332098): Cell: display|Add14~8  from: dataa  to: combout
     Info (332098): Cell: display|Add15~10  from: cin  to: combout
-    Info (332098): Cell: display|Add15~10  from: datab  to: combout
+    Info (332098): Cell: display|Add15~10  from: dataa  to: combout
     Info (332098): Cell: display|Add15~12  from: cin  to: combout
-    Info (332098): Cell: display|Add15~12  from: datab  to: combout
+    Info (332098): Cell: display|Add15~12  from: dataa  to: combout
     Info (332098): Cell: display|Add15~14  from: cin  to: combout
-    Info (332098): Cell: display|Add15~14  from: datab  to: combout
+    Info (332098): Cell: display|Add15~14  from: dataa  to: combout
     Info (332098): Cell: display|Add15~16  from: cin  to: combout
     Info (332098): Cell: display|Add15~16  from: datab  to: combout
     Info (332098): Cell: display|Add15~18  from: cin  to: combout
-    Info (332098): Cell: display|Add15~18  from: dataa  to: combout
+    Info (332098): Cell: display|Add15~18  from: datab  to: combout
     Info (332098): Cell: display|Add15~20  from: cin  to: combout
     Info (332098): Cell: display|Add15~20  from: datab  to: combout
     Info (332098): Cell: display|Add15~22  from: cin  to: combout
@@ -3609,35 +3609,35 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add15~26  from: cin  to: combout
     Info (332098): Cell: display|Add15~26  from: datab  to: combout
     Info (332098): Cell: display|Add15~28  from: cin  to: combout
-    Info (332098): Cell: display|Add15~28  from: dataa  to: combout
+    Info (332098): Cell: display|Add15~28  from: datab  to: combout
     Info (332098): Cell: display|Add15~2  from: cin  to: combout
     Info (332098): Cell: display|Add15~2  from: dataa  to: combout
     Info (332098): Cell: display|Add15~2  from: datab  to: combout
     Info (332098): Cell: display|Add15~30  from: cin  to: combout
-    Info (332098): Cell: display|Add15~30  from: datab  to: combout
+    Info (332098): Cell: display|Add15~30  from: dataa  to: combout
     Info (332098): Cell: display|Add15~32  from: cin  to: combout
     Info (332098): Cell: display|Add15~32  from: dataa  to: combout
     Info (332098): Cell: display|Add15~34  from: cin  to: combout
-    Info (332098): Cell: display|Add15~34  from: dataa  to: combout
+    Info (332098): Cell: display|Add15~34  from: datab  to: combout
     Info (332098): Cell: display|Add15~36  from: cin  to: combout
-    Info (332098): Cell: display|Add15~36  from: dataa  to: combout
+    Info (332098): Cell: display|Add15~36  from: datab  to: combout
     Info (332098): Cell: display|Add15~38  from: cin  to: combout
-    Info (332098): Cell: display|Add15~38  from: datab  to: combout
+    Info (332098): Cell: display|Add15~38  from: dataa  to: combout
     Info (332098): Cell: display|Add15~40  from: cin  to: combout
-    Info (332098): Cell: display|Add15~40  from: datab  to: combout
+    Info (332098): Cell: display|Add15~40  from: dataa  to: combout
     Info (332098): Cell: display|Add15~42  from: cin  to: combout
-    Info (332098): Cell: display|Add15~42  from: datab  to: combout
+    Info (332098): Cell: display|Add15~42  from: dataa  to: combout
     Info (332098): Cell: display|Add15~44  from: cin  to: combout
-    Info (332098): Cell: display|Add15~44  from: datab  to: combout
+    Info (332098): Cell: display|Add15~44  from: dataa  to: combout
     Info (332098): Cell: display|Add15~46  from: cin  to: combout
-    Info (332098): Cell: display|Add15~46  from: datab  to: combout
+    Info (332098): Cell: display|Add15~46  from: dataa  to: combout
     Info (332098): Cell: display|Add15~48  from: cin  to: combout
     Info (332098): Cell: display|Add15~48  from: datab  to: combout
     Info (332098): Cell: display|Add15~4  from: cin  to: combout
     Info (332098): Cell: display|Add15~4  from: dataa  to: combout
     Info (332098): Cell: display|Add15~4  from: datab  to: combout
     Info (332098): Cell: display|Add15~50  from: cin  to: combout
-    Info (332098): Cell: display|Add15~50  from: dataa  to: combout
+    Info (332098): Cell: display|Add15~50  from: datab  to: combout
     Info (332098): Cell: display|Add15~52  from: cin  to: combout
     Info (332098): Cell: display|Add15~52  from: datab  to: combout
     Info (332098): Cell: display|Add15~54  from: cin  to: combout
@@ -3649,14 +3649,14 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add15~60  from: cin  to: combout
     Info (332098): Cell: display|Add15~60  from: datad  to: combout
     Info (332098): Cell: display|Add15~6  from: cin  to: combout
-    Info (332098): Cell: display|Add15~6  from: datab  to: combout
+    Info (332098): Cell: display|Add15~6  from: dataa  to: combout
     Info (332098): Cell: display|Add15~8  from: cin  to: combout
-    Info (332098): Cell: display|Add15~8  from: datab  to: combout
+    Info (332098): Cell: display|Add15~8  from: dataa  to: combout
     Info (332098): Cell: display|Add16~0  from: dataa  to: combout
     Info (332098): Cell: display|Add16~0  from: datab  to: combout
     Info (332098): Cell: display|Add16~10  from: cin  to: combout
     Info (332098): Cell: display|Add16~2  from: cin  to: combout
-    Info (332098): Cell: display|Add16~2  from: dataa  to: combout
+    Info (332098): Cell: display|Add16~2  from: datab  to: combout
     Info (332098): Cell: display|Add16~4  from: cin  to: combout
     Info (332098): Cell: display|Add16~4  from: datab  to: combout
     Info (332098): Cell: display|Add16~6  from: cin  to: combout
@@ -3664,53 +3664,53 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add17~0  from: dataa  to: combout
     Info (332098): Cell: display|Add17~0  from: datab  to: combout
     Info (332098): Cell: display|Add17~10  from: cin  to: combout
-    Info (332098): Cell: display|Add17~10  from: datab  to: combout
+    Info (332098): Cell: display|Add17~10  from: dataa  to: combout
     Info (332098): Cell: display|Add17~12  from: cin  to: combout
-    Info (332098): Cell: display|Add17~12  from: datab  to: combout
+    Info (332098): Cell: display|Add17~12  from: dataa  to: combout
     Info (332098): Cell: display|Add17~14  from: cin  to: combout
-    Info (332098): Cell: display|Add17~14  from: datab  to: combout
+    Info (332098): Cell: display|Add17~14  from: dataa  to: combout
     Info (332098): Cell: display|Add17~16  from: cin  to: combout
-    Info (332098): Cell: display|Add17~16  from: datab  to: combout
+    Info (332098): Cell: display|Add17~16  from: dataa  to: combout
     Info (332098): Cell: display|Add17~18  from: cin  to: combout
-    Info (332098): Cell: display|Add17~18  from: datab  to: combout
+    Info (332098): Cell: display|Add17~18  from: dataa  to: combout
     Info (332098): Cell: display|Add17~20  from: cin  to: combout
-    Info (332098): Cell: display|Add17~20  from: datab  to: combout
+    Info (332098): Cell: display|Add17~20  from: dataa  to: combout
     Info (332098): Cell: display|Add17~22  from: cin  to: combout
-    Info (332098): Cell: display|Add17~22  from: datab  to: combout
+    Info (332098): Cell: display|Add17~22  from: dataa  to: combout
     Info (332098): Cell: display|Add17~24  from: cin  to: combout
-    Info (332098): Cell: display|Add17~24  from: datab  to: combout
+    Info (332098): Cell: display|Add17~24  from: dataa  to: combout
     Info (332098): Cell: display|Add17~26  from: cin  to: combout
-    Info (332098): Cell: display|Add17~26  from: datab  to: combout
+    Info (332098): Cell: display|Add17~26  from: dataa  to: combout
     Info (332098): Cell: display|Add17~28  from: cin  to: combout
-    Info (332098): Cell: display|Add17~28  from: datab  to: combout
+    Info (332098): Cell: display|Add17~28  from: dataa  to: combout
     Info (332098): Cell: display|Add17~2  from: cin  to: combout
     Info (332098): Cell: display|Add17~2  from: dataa  to: combout
     Info (332098): Cell: display|Add17~2  from: datab  to: combout
     Info (332098): Cell: display|Add17~30  from: cin  to: combout
-    Info (332098): Cell: display|Add17~30  from: dataa  to: combout
+    Info (332098): Cell: display|Add17~30  from: datab  to: combout
     Info (332098): Cell: display|Add17~32  from: cin  to: combout
     Info (332098): Cell: display|Add17~32  from: datab  to: combout
     Info (332098): Cell: display|Add17~34  from: cin  to: combout
-    Info (332098): Cell: display|Add17~34  from: datab  to: combout
+    Info (332098): Cell: display|Add17~34  from: dataa  to: combout
     Info (332098): Cell: display|Add17~36  from: cin  to: combout
     Info (332098): Cell: display|Add17~36  from: dataa  to: combout
     Info (332098): Cell: display|Add17~38  from: cin  to: combout
     Info (332098): Cell: display|Add17~38  from: datab  to: combout
     Info (332098): Cell: display|Add17~40  from: cin  to: combout
-    Info (332098): Cell: display|Add17~40  from: datab  to: combout
+    Info (332098): Cell: display|Add17~40  from: dataa  to: combout
     Info (332098): Cell: display|Add17~42  from: cin  to: combout
-    Info (332098): Cell: display|Add17~42  from: dataa  to: combout
+    Info (332098): Cell: display|Add17~42  from: datab  to: combout
     Info (332098): Cell: display|Add17~44  from: cin  to: combout
-    Info (332098): Cell: display|Add17~44  from: dataa  to: combout
+    Info (332098): Cell: display|Add17~44  from: datab  to: combout
     Info (332098): Cell: display|Add17~46  from: cin  to: combout
     Info (332098): Cell: display|Add17~46  from: dataa  to: combout
     Info (332098): Cell: display|Add17~48  from: cin  to: combout
-    Info (332098): Cell: display|Add17~48  from: datab  to: combout
+    Info (332098): Cell: display|Add17~48  from: dataa  to: combout
     Info (332098): Cell: display|Add17~4  from: cin  to: combout
     Info (332098): Cell: display|Add17~4  from: dataa  to: combout
     Info (332098): Cell: display|Add17~4  from: datab  to: combout
     Info (332098): Cell: display|Add17~50  from: cin  to: combout
-    Info (332098): Cell: display|Add17~50  from: dataa  to: combout
+    Info (332098): Cell: display|Add17~50  from: datab  to: combout
     Info (332098): Cell: display|Add17~52  from: cin  to: combout
     Info (332098): Cell: display|Add17~52  from: datab  to: combout
     Info (332098): Cell: display|Add17~54  from: cin  to: combout
@@ -3720,31 +3720,31 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add17~6  from: cin  to: combout
     Info (332098): Cell: display|Add17~6  from: datab  to: combout
     Info (332098): Cell: display|Add17~8  from: cin  to: combout
-    Info (332098): Cell: display|Add17~8  from: datab  to: combout
+    Info (332098): Cell: display|Add17~8  from: dataa  to: combout
     Info (332098): Cell: display|Add18~0  from: dataa  to: combout
     Info (332098): Cell: display|Add18~0  from: datab  to: combout
     Info (332098): Cell: display|Add18~10  from: cin  to: combout
     Info (332098): Cell: display|Add18~10  from: dataa  to: combout
     Info (332098): Cell: display|Add18~12  from: cin  to: combout
-    Info (332098): Cell: display|Add18~12  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~12  from: datab  to: combout
     Info (332098): Cell: display|Add18~14  from: cin  to: combout
-    Info (332098): Cell: display|Add18~14  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~14  from: datab  to: combout
     Info (332098): Cell: display|Add18~16  from: cin  to: combout
-    Info (332098): Cell: display|Add18~16  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~16  from: datab  to: combout
     Info (332098): Cell: display|Add18~18  from: cin  to: combout
-    Info (332098): Cell: display|Add18~18  from: datab  to: combout
+    Info (332098): Cell: display|Add18~18  from: dataa  to: combout
     Info (332098): Cell: display|Add18~20  from: cin  to: combout
-    Info (332098): Cell: display|Add18~20  from: datab  to: combout
+    Info (332098): Cell: display|Add18~20  from: dataa  to: combout
     Info (332098): Cell: display|Add18~22  from: cin  to: combout
-    Info (332098): Cell: display|Add18~22  from: datab  to: combout
+    Info (332098): Cell: display|Add18~22  from: dataa  to: combout
     Info (332098): Cell: display|Add18~24  from: cin  to: combout
     Info (332098): Cell: display|Add18~24  from: datab  to: combout
     Info (332098): Cell: display|Add18~26  from: cin  to: combout
-    Info (332098): Cell: display|Add18~26  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~26  from: datab  to: combout
     Info (332098): Cell: display|Add18~28  from: cin  to: combout
-    Info (332098): Cell: display|Add18~28  from: datab  to: combout
+    Info (332098): Cell: display|Add18~28  from: dataa  to: combout
     Info (332098): Cell: display|Add18~2  from: cin  to: combout
-    Info (332098): Cell: display|Add18~2  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~2  from: datab  to: combout
     Info (332098): Cell: display|Add18~30  from: cin  to: combout
     Info (332098): Cell: display|Add18~30  from: dataa  to: combout
     Info (332098): Cell: display|Add18~32  from: cin  to: combout
@@ -3756,31 +3756,31 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add18~38  from: cin  to: combout
     Info (332098): Cell: display|Add18~38  from: datab  to: combout
     Info (332098): Cell: display|Add18~40  from: cin  to: combout
-    Info (332098): Cell: display|Add18~40  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~40  from: datab  to: combout
     Info (332098): Cell: display|Add18~42  from: cin  to: combout
-    Info (332098): Cell: display|Add18~42  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~42  from: datab  to: combout
     Info (332098): Cell: display|Add18~44  from: cin  to: combout
-    Info (332098): Cell: display|Add18~44  from: dataa  to: combout
+    Info (332098): Cell: display|Add18~44  from: datab  to: combout
     Info (332098): Cell: display|Add18~46  from: cin  to: combout
     Info (332098): Cell: display|Add18~46  from: dataa  to: combout
     Info (332098): Cell: display|Add18~48  from: cin  to: combout
     Info (332098): Cell: display|Add18~48  from: dataa  to: combout
     Info (332098): Cell: display|Add18~4  from: cin  to: combout
-    Info (332098): Cell: display|Add18~4  from: datab  to: combout
+    Info (332098): Cell: display|Add18~4  from: dataa  to: combout
     Info (332098): Cell: display|Add18~50  from: cin  to: combout
-    Info (332098): Cell: display|Add18~50  from: datab  to: combout
+    Info (332098): Cell: display|Add18~50  from: dataa  to: combout
     Info (332098): Cell: display|Add18~52  from: cin  to: combout
-    Info (332098): Cell: display|Add18~52  from: datab  to: combout
+    Info (332098): Cell: display|Add18~52  from: dataa  to: combout
     Info (332098): Cell: display|Add18~54  from: cin  to: combout
-    Info (332098): Cell: display|Add18~54  from: datab  to: combout
+    Info (332098): Cell: display|Add18~54  from: dataa  to: combout
     Info (332098): Cell: display|Add18~56  from: cin  to: combout
-    Info (332098): Cell: display|Add18~56  from: datab  to: combout
+    Info (332098): Cell: display|Add18~56  from: dataa  to: combout
     Info (332098): Cell: display|Add18~58  from: cin  to: combout
     Info (332098): Cell: display|Add18~58  from: dataa  to: combout
     Info (332098): Cell: display|Add18~60  from: cin  to: combout
     Info (332098): Cell: display|Add18~60  from: datad  to: combout
     Info (332098): Cell: display|Add18~6  from: cin  to: combout
-    Info (332098): Cell: display|Add18~6  from: datab  to: combout
+    Info (332098): Cell: display|Add18~6  from: dataa  to: combout
     Info (332098): Cell: display|Add18~8  from: cin  to: combout
     Info (332098): Cell: display|Add18~8  from: dataa  to: combout
     Info (332098): Cell: display|Add19~10  from: cin  to: combout
@@ -3845,15 +3845,15 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Add19~6  from: dataa  to: combout
     Info (332098): Cell: display|Add19~8  from: cin  to: combout
     Info (332098): Cell: display|Add19~8  from: dataa  to: combout
-    Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[142]~65  from: datab  to: combout
+    Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[142]~65  from: dataa  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[143]~64  from: dataa  to: combout
-    Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[147]~66  from: datab  to: combout
+    Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[147]~66  from: datac  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|StageOut[152]~67  from: datab  to: combout
-    Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[1]~0  from: datab  to: combout
+    Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[2]~2  from: cin  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[2]~2  from: dataa  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: dataa  to: combout
+    Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: datab  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_28_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_28_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_28_result_int[2]~2  from: cin  to: combout
@@ -3878,34 +3878,33 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: cin  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: dataa  to: combout
     Info (332098): Cell: display|Div6|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[107]~746  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[115]~747  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[122]~729  from: datab  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[123]~748  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[130]~730  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[138]~731  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[146]~732  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[154]~733  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[162]~734  from: datad  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[170]~735  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[186]~737  from: datab  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[187]~749  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[203]~750  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[211]~751  from: datab  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[219]~752  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[226]~742  from: datad  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[227]~753  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[234]~743  from: datab  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[242]~744  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[59]~720  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[60]~719  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[61]~718  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[62]~717  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[66]~722  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[67]~721  from: datad  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[74]~723  from: datac  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[90]~725  from: dataa  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[91]~745  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[114]~727  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[115]~746  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[122]~728  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[139]~747  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[146]~731  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[147]~748  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[154]~732  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[162]~733  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[178]~735  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[179]~749  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[186]~736  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[194]~737  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[202]~738  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[218]~740  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[219]~750  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[234]~742  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[235]~751  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[59]~719  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[60]~718  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[61]~717  from: datad  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[62]~716  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[66]~721  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[67]~720  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[74]~722  from: datab  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[91]~744  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[98]~725  from: datac  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|StageOut[99]~745  from: datab  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_10_result_int[2]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_10_result_int[2]~0  from: datab  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_10_result_int[3]~2  from: cin  to: combout
@@ -4208,7 +4207,7 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_6_result_int[5]~6  from: cin  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_6_result_int[5]~6  from: datab  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_6_result_int[6]~8  from: cin  to: combout
-    Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_6_result_int[6]~8  from: dataa  to: combout
+    Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_6_result_int[6]~8  from: datab  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_7_result_int[2]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_7_result_int[2]~0  from: datab  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_7_result_int[3]~2  from: cin  to: combout
@@ -4251,15 +4250,15 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_9_result_int[6]~8  from: cin  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_9_result_int[6]~8  from: dataa  to: combout
     Info (332098): Cell: display|Div7|auto_generated|divider|divider|add_sub_9_result_int[6]~8  from: datab  to: combout
-    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[142]~65  from: datab  to: combout
-    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[143]~64  from: datab  to: combout
+    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[142]~65  from: dataa  to: combout
+    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[143]~64  from: dataa  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[147]~66  from: datad  to: combout
-    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[152]~67  from: datac  to: combout
+    Info (332098): Cell: display|Div8|auto_generated|divider|divider|StageOut[152]~67  from: datad  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[2]~2  from: cin  to: combout
-    Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[2]~2  from: dataa  to: combout
+    Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[2]~2  from: datab  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: datab  to: combout
+    Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_27_result_int[3]~4  from: dataa  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_28_result_int[1]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_28_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_28_result_int[2]~2  from: cin  to: combout
@@ -4284,32 +4283,33 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: cin  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: dataa  to: combout
     Info (332098): Cell: display|Div8|auto_generated|divider|divider|add_sub_30_result_int[3]~4  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[107]~748  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[114]~730  from: datad  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[115]~749  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[122]~731  from: datad  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[130]~732  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[138]~733  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[146]~734  from: dataa  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[154]~735  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[162]~736  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[178]~738  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[179]~750  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[186]~739  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[194]~740  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[202]~741  from: dataa  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[210]~742  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[218]~743  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[226]~744  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[59]~722  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[60]~721  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[61]~720  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[62]~719  from: datac  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[66]~724  from: datad  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[67]~723  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[74]~725  from: dataa  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[82]~726  from: dataa  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[99]~747  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[106]~731  from: datad  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[114]~732  from: datab  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[122]~733  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[130]~734  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[138]~735  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[146]~736  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[154]~737  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[170]~739  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[171]~750  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[178]~740  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[195]~751  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[202]~743  from: datab  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[203]~752  from: datab  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[218]~745  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[219]~753  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[226]~746  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[234]~747  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[59]~724  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[60]~723  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[61]~722  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[62]~721  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[66]~726  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[67]~725  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[74]~727  from: datad  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[82]~728  from: datac  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[98]~730  from: datad  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|StageOut[99]~749  from: datad  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_10_result_int[2]~0  from: dataa  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_10_result_int[2]~0  from: datab  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_10_result_int[3]~2  from: cin  to: combout
@@ -4604,7 +4604,7 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_30_result_int[6]~8  from: cin  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_30_result_int[6]~8  from: dataa  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_30_result_int[6]~8  from: datab  to: combout
-    Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_6_result_int[2]~0  from: dataa  to: combout
+    Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_6_result_int[2]~0  from: datab  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_6_result_int[3]~2  from: cin  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_6_result_int[3]~2  from: dataa  to: combout
     Info (332098): Cell: display|Div9|auto_generated|divider|divider|add_sub_6_result_int[4]~4  from: cin  to: combout
@@ -4669,60 +4669,60 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: display|Mod8|auto_generated|divider|divider|add_sub_9_result_int[1]~0  from: datab  to: combout
     Info (332098): Cell: display|Mod8|auto_generated|divider|divider|add_sub_9_result_int[2]~2  from: cin  to: combout
     Info (332098): Cell: display|Mod8|auto_generated|divider|divider|add_sub_9_result_int[3]~4  from: cin  to: combout
-    Info (332098): Cell: display|WideNor9~0  from: datac  to: combout
-    Info (332098): Cell: display|hex0[0]~3  from: dataa  to: combout
-    Info (332098): Cell: display|hex0[0]~3  from: datac  to: combout
-    Info (332098): Cell: display|hex0[0]~4  from: datac  to: combout
-    Info (332098): Cell: display|hex0[0]~4  from: datad  to: combout
-    Info (332098): Cell: display|hex1[0]~17  from: dataa  to: combout
-    Info (332098): Cell: display|hex1[0]~17  from: datab  to: combout
-    Info (332098): Cell: display|hex1[0]~18  from: dataa  to: combout
-    Info (332098): Cell: display|hex1[0]~18  from: datad  to: combout
-    Info (332098): Cell: display|hex2[4]~3  from: datac  to: combout
-    Info (332098): Cell: display|hex3[0]~7  from: dataa  to: combout
-    Info (332098): Cell: display|hex4[0]~7  from: datad  to: combout
+    Info (332098): Cell: display|WideNor9~0  from: datab  to: combout
+    Info (332098): Cell: display|hex0[0]~5  from: dataa  to: combout
+    Info (332098): Cell: display|hex0[0]~5  from: datad  to: combout
+    Info (332098): Cell: display|hex0[0]~6  from: dataa  to: combout
+    Info (332098): Cell: display|hex0[0]~6  from: datad  to: combout
+    Info (332098): Cell: display|hex1[0]~15  from: dataa  to: combout
+    Info (332098): Cell: display|hex1[0]~15  from: datad  to: combout
+    Info (332098): Cell: display|hex1[0]~16  from: dataa  to: combout
+    Info (332098): Cell: display|hex1[0]~16  from: datac  to: combout
+    Info (332098): Cell: display|hex2[4]~3  from: datab  to: combout
+    Info (332098): Cell: display|hex3[0]~7  from: datac  to: combout
+    Info (332098): Cell: display|hex4[0]~9  from: datad  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -124.814
+Info (332146): Worst-case setup slack is -121.501
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):  -124.814           -3383.819 clk 
-    Info (332119):  -105.731           -1480.174 Temperature:tempcontrol|currentTemp[1] 
-    Info (332119):  -105.551           -2497.086 target_temp[1] 
-    Info (332119):  -104.184           -1865.756 pwr 
-    Info (332119):    -3.030             -29.282 new_clk 
-Info (332146): Worst-case hold slack is -40.605
+    Info (332119):  -121.501           -2695.636 clk 
+    Info (332119):  -105.340           -2651.837 target_temp[1] 
+    Info (332119):  -104.989           -1537.519 Temperature:tempcontrol|currentTemp[1] 
+    Info (332119):  -104.292           -1890.225 pwr 
+    Info (332119):    -3.307             -33.462 new_clk 
+Info (332146): Worst-case hold slack is -41.299
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -40.605            -323.668 Temperature:tempcontrol|currentTemp[1] 
-    Info (332119):   -38.556            -613.170 target_temp[1] 
-    Info (332119):    -3.668             -41.676 pwr 
-    Info (332119):    -1.136              -2.988 clk 
-    Info (332119):    -0.541              -0.541 new_clk 
-Info (332146): Worst-case recovery slack is 1.425
+    Info (332119):   -41.299            -323.292 Temperature:tempcontrol|currentTemp[1] 
+    Info (332119):   -40.465            -639.647 target_temp[1] 
+    Info (332119):    -3.090             -30.196 pwr 
+    Info (332119):    -0.768              -1.344 new_clk 
+    Info (332119):    -0.562              -1.463 clk 
+Info (332146): Worst-case recovery slack is 1.361
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.425               0.000 target_temp[1] 
-    Info (332119):     2.148               0.000 Temperature:tempcontrol|currentTemp[1] 
-Info (332146): Worst-case removal slack is -40.633
+    Info (332119):     1.361               0.000 target_temp[1] 
+    Info (332119):     2.824               0.000 Temperature:tempcontrol|currentTemp[1] 
+Info (332146): Worst-case removal slack is -41.673
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -40.633            -284.247 Temperature:tempcontrol|currentTemp[1] 
-    Info (332119):   -38.584            -537.025 target_temp[1] 
-Info (332146): Worst-case minimum pulse width slack is -37.543
+    Info (332119):   -41.673            -291.399 Temperature:tempcontrol|currentTemp[1] 
+    Info (332119):   -40.353            -555.585 target_temp[1] 
+Info (332146): Worst-case minimum pulse width slack is -37.946
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -37.543         -189100.449 Temperature:tempcontrol|currentTemp[1] 
-    Info (332119):   -35.605         -177195.455 target_temp[1] 
-    Info (332119):    -3.000            -204.177 clk 
-    Info (332119):    -3.000             -25.121 pwr 
+    Info (332119):   -37.946         -187521.931 Temperature:tempcontrol|currentTemp[1] 
+    Info (332119):   -36.691         -183424.103 target_temp[1] 
+    Info (332119):    -3.000            -207.222 clk 
+    Info (332119):    -3.000             -26.751 pwr 
     Info (332119):    -1.000             -11.000 new_clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4952 megabytes
-    Info: Processing ended: Fri Aug 11 11:21:28 2023
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 4949 megabytes
+    Info: Processing ended: Fri Aug 11 11:55:34 2023
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:11
 
 

@@ -5,7 +5,7 @@ module OvenTimer (input [12:0] currentTime, cookTime, input preheated, timeinput
 	
 	always @ (posedge clk) begin
 		if (preheated&&timeinputdone) begin
-			led_state = (target_time - currentTime)/cookTime * 100;
+			led_state = ((target_time - currentTime) * 100)/cookTime;
 			if (target_time == 0) begin
 				target_time = (currentTime + cookTime) % 3600;
 			end
@@ -17,7 +17,13 @@ module OvenTimer (input [12:0] currentTime, cookTime, input preheated, timeinput
 			done = 0;
 			target_time=0;
 		end
-		led_state_digit = (led_state - (led_state % 10)) / 10;
+		
+		if((currentTime < target_time) || ~timeinputdone)begin
+			led_state_digit = (led_state - (led_state % 10)) / 10;
+			
+		end else begin
+			led_state_digit = 1;
+		end
 		case(led_state_digit)
 			9:begin
 				led <= 9'b100000000;
