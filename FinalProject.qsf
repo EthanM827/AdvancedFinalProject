@@ -112,13 +112,4 @@ set_location_assignment PIN_D12 -to sw2
 set_location_assignment PIN_C11 -to sw1
 set_location_assignment PIN_C10 -to sw0
 set_location_assignment PIN_A8 -to done
-set_location_assignment PIN_A9 -to led[0]
-set_location_assignment PIN_A10 -to led[1]
-set_location_assignment PIN_B10 -to led[2]
-set_location_assignment PIN_D13 -to led[3]
-set_location_assignment PIN_C13 -to led[4]
-set_location_assignment PIN_E14 -to led[5]
-set_location_assignment PIN_D14 -to led[6]
-set_location_assignment PIN_A11 -to led[7]
-set_location_assignment PIN_B11 -to led[8]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

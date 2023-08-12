@@ -1,4 +1,1 @@
 v1
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,OvenTimer:timer|lpm_mult:Mult0|mult_5qs:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,OvenTimer:timer|lpm_mult:Mult0|mult_5qs:auto_generated|mac_out4,
-PORT_SWAPPING,PORT_SWAPPING_FINISHED,OvenTimer:timer|lpm_mult:Mult0|mult_5qs:auto_generated|mac_mult3,
