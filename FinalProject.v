@@ -1,4 +1,4 @@
-module FinalProject (input clk, pwr, key0, key1, sw5, sw4, sw3, sw2, sw1, sw0, output wire [0:6] hex0, hex1, hex2, hex3, hex4, hex5, output wire done);
+module FinalProject (input clk, pwr, key0, key1, sw5, sw4, sw3, sw2, sw1, sw0, output wire [0:6] hex0, hex1, hex2, hex3, hex4, hex5, output wire preheated, output wire done);
 	parameter default_temp = 300;
 	parameter max_temp = 500;
 	parameter min_temp = 65;
@@ -30,7 +30,7 @@ module FinalProject (input clk, pwr, key0, key1, sw5, sw4, sw3, sw2, sw1, sw0, o
 	
 	wire [12:0] current_time;
 	wire [9:0] current_temp;
-	wire heat,preheated;
+	wire heat;
 	integer target_temp = 65;
 	integer target_time = 0;
 	reg tempInputDone, timeInputDone;

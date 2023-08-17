@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Fri Aug 11 11:59:20 2023
+Analysis & Synthesis Status : Successful - Tue Aug 15 12:31:45 2023
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : FinalProject
 Top-level Entity Name : FinalProject
@@ -7,7 +7,7 @@ Total logic elements : 7,181
     Total combinational functions : 7,179
     Dedicated logic registers : 165
 Total registers : 165
-Total pins : 53
+Total pins : 54
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

@@ -3,68 +3,68 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'target_temp[1]'
-Slack : -246.457
-TNS   : -6060.693
+Slack : -245.438
+TNS   : -6026.837
 
 Type  : Slow 1200mV 85C Model Setup 'Temperature:tempcontrol|currentTemp[1]'
-Slack : -245.701
-TNS   : -3543.264
+Slack : -243.849
+TNS   : -3521.198
 
 Type  : Slow 1200mV 85C Model Setup 'pwr'
-Slack : -244.270
-TNS   : -4461.338
+Slack : -243.642
+TNS   : -4416.228
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -16.361
-TNS   : -1541.617
+Slack : -15.671
+TNS   : -1466.500
 
 Type  : Slow 1200mV 85C Model Setup 'new_clk'
-Slack : -7.576
-TNS   : -74.841
-
-Type  : Slow 1200mV 85C Model Hold 'Temperature:tempcontrol|currentTemp[1]'
-Slack : -101.898
-TNS   : -849.047
+Slack : -8.651
+TNS   : -85.396
 
 Type  : Slow 1200mV 85C Model Hold 'target_temp[1]'
-Slack : -98.776
-TNS   : -1595.283
+Slack : -98.993
+TNS   : -1601.500
+
+Type  : Slow 1200mV 85C Model Hold 'Temperature:tempcontrol|currentTemp[1]'
+Slack : -97.829
+TNS   : -805.073
 
 Type  : Slow 1200mV 85C Model Hold 'pwr'
-Slack : -6.684
-TNS   : -99.832
-
-Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : -3.277
-TNS   : -3.277
+Slack : -7.448
+TNS   : -104.925
 
 Type  : Slow 1200mV 85C Model Hold 'new_clk'
-Slack : -0.389
-TNS   : -0.389
+Slack : -0.808
+TNS   : -1.159
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.283
+TNS   : -0.529
 
 Type  : Slow 1200mV 85C Model Recovery 'target_temp[1]'
-Slack : 3.331
+Slack : 2.064
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'Temperature:tempcontrol|currentTemp[1]'
-Slack : 5.607
+Slack : 4.735
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'Temperature:tempcontrol|currentTemp[1]'
-Slack : -101.829
-TNS   : -710.481
-
 Type  : Slow 1200mV 85C Model Removal 'target_temp[1]'
-Slack : -98.651
-TNS   : -1371.623
+Slack : -98.947
+TNS   : -1368.108
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Temperature:tempcontrol|currentTemp[1]'
-Slack : -94.091
-TNS   : -461474.583
+Type  : Slow 1200mV 85C Model Removal 'Temperature:tempcontrol|currentTemp[1]'
+Slack : -97.763
+TNS   : -683.794
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'target_temp[1]'
-Slack : -92.143
-TNS   : -456118.885
+Slack : -92.939
+TNS   : -450322.669
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Temperature:tempcontrol|currentTemp[1]'
+Slack : -91.292
+TNS   : -434429.184
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
@@ -72,75 +72,75 @@ TNS   : -219.062
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pwr'
 Slack : -3.000
-TNS   : -32.875
+TNS   : -38.540
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'new_clk'
 Slack : -1.403
 TNS   : -15.433
 
 Type  : Slow 1200mV 0C Model Setup 'target_temp[1]'
-Slack : -224.868
-TNS   : -5533.678
+Slack : -223.550
+TNS   : -5498.395
 
 Type  : Slow 1200mV 0C Model Setup 'Temperature:tempcontrol|currentTemp[1]'
-Slack : -224.194
-TNS   : -3232.313
+Slack : -222.107
+TNS   : -3208.828
 
 Type  : Slow 1200mV 0C Model Setup 'pwr'
-Slack : -222.927
-TNS   : -4078.457
+Slack : -221.923
+TNS   : -4031.141
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -14.863
-TNS   : -1397.438
+Slack : -14.347
+TNS   : -1335.262
 
 Type  : Slow 1200mV 0C Model Setup 'new_clk'
-Slack : -6.927
-TNS   : -68.359
-
-Type  : Slow 1200mV 0C Model Hold 'Temperature:tempcontrol|currentTemp[1]'
-Slack : -92.741
-TNS   : -772.793
+Slack : -7.828
+TNS   : -77.402
 
 Type  : Slow 1200mV 0C Model Hold 'target_temp[1]'
-Slack : -89.795
-TNS   : -1449.469
+Slack : -90.000
+TNS   : -1454.587
+
+Type  : Slow 1200mV 0C Model Hold 'Temperature:tempcontrol|currentTemp[1]'
+Slack : -89.016
+TNS   : -732.162
 
 Type  : Slow 1200mV 0C Model Hold 'pwr'
-Slack : -6.020
-TNS   : -89.385
-
-Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : -3.016
-TNS   : -3.016
+Slack : -6.769
+TNS   : -93.772
 
 Type  : Slow 1200mV 0C Model Hold 'new_clk'
-Slack : -0.359
-TNS   : -0.359
+Slack : -0.823
+TNS   : -1.136
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.181
+TNS   : -0.592
 
 Type  : Slow 1200mV 0C Model Recovery 'target_temp[1]'
-Slack : 2.901
+Slack : 1.726
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'Temperature:tempcontrol|currentTemp[1]'
-Slack : 5.014
+Slack : 4.384
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'Temperature:tempcontrol|currentTemp[1]'
-Slack : -92.733
-TNS   : -647.031
-
 Type  : Slow 1200mV 0C Model Removal 'target_temp[1]'
-Slack : -89.720
-TNS   : -1247.278
+Slack : -90.000
+TNS   : -1244.331
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Temperature:tempcontrol|currentTemp[1]'
-Slack : -85.467
-TNS   : -419829.600
+Type  : Slow 1200mV 0C Model Removal 'Temperature:tempcontrol|currentTemp[1]'
+Slack : -88.996
+TNS   : -622.410
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'target_temp[1]'
-Slack : -83.748
-TNS   : -414114.024
+Slack : -84.409
+TNS   : -408873.391
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Temperature:tempcontrol|currentTemp[1]'
+Slack : -83.012
+TNS   : -394487.440
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
@@ -148,83 +148,83 @@ TNS   : -219.062
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pwr'
 Slack : -3.000
-TNS   : -26.188
+TNS   : -29.794
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'new_clk'
 Slack : -1.403
 TNS   : -15.433
 
 Type  : Fast 1200mV 0C Model Setup 'target_temp[1]'
-Slack : -99.943
-TNS   : -2450.692
+Slack : -100.539
+TNS   : -2444.474
 
 Type  : Fast 1200mV 0C Model Setup 'Temperature:tempcontrol|currentTemp[1]'
-Slack : -99.634
-TNS   : -1426.514
+Slack : -99.720
+TNS   : -1426.024
 
 Type  : Fast 1200mV 0C Model Setup 'pwr'
-Slack : -98.513
-TNS   : -1800.542
+Slack : -99.276
+TNS   : -1790.619
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -6.238
-TNS   : -557.944
+Slack : -5.982
+TNS   : -519.443
 
 Type  : Fast 1200mV 0C Model Setup 'new_clk'
-Slack : -2.468
-TNS   : -26.277
-
-Type  : Fast 1200mV 0C Model Hold 'Temperature:tempcontrol|currentTemp[1]'
-Slack : -41.500
-TNS   : -349.576
+Slack : -3.395
+TNS   : -32.521
 
 Type  : Fast 1200mV 0C Model Hold 'target_temp[1]'
-Slack : -40.306
-TNS   : -655.332
+Slack : -40.713
+TNS   : -661.418
+
+Type  : Fast 1200mV 0C Model Hold 'Temperature:tempcontrol|currentTemp[1]'
+Slack : -39.783
+TNS   : -330.084
 
 Type  : Fast 1200mV 0C Model Hold 'pwr'
-Slack : -3.657
-TNS   : -55.060
-
-Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : -1.657
-TNS   : -1.870
+Slack : -3.911
+TNS   : -57.923
 
 Type  : Fast 1200mV 0C Model Hold 'new_clk'
-Slack : -0.462
-TNS   : -0.462
+Slack : -0.486
+TNS   : -0.894
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.426
+TNS   : -0.887
 
 Type  : Fast 1200mV 0C Model Recovery 'target_temp[1]'
-Slack : 1.556
+Slack : 0.812
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'Temperature:tempcontrol|currentTemp[1]'
-Slack : 2.324
+Slack : 2.021
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Removal 'Temperature:tempcontrol|currentTemp[1]'
-Slack : -41.527
-TNS   : -289.653
-
 Type  : Fast 1200mV 0C Model Removal 'target_temp[1]'
-Slack : -40.333
-TNS   : -559.675
+Slack : -40.485
+TNS   : -559.229
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Temperature:tempcontrol|currentTemp[1]'
-Slack : -38.053
-TNS   : -183444.532
+Type  : Fast 1200mV 0C Model Removal 'Temperature:tempcontrol|currentTemp[1]'
+Slack : -39.650
+TNS   : -277.363
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'target_temp[1]'
-Slack : -37.250
-TNS   : -180429.160
+Slack : -37.679
+TNS   : -178340.965
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Temperature:tempcontrol|currentTemp[1]'
+Slack : -36.505
+TNS   : -169724.294
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -163.111
+TNS   : -163.900
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pwr'
 Slack : -3.000
-TNS   : -27.722
+TNS   : -30.931
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'new_clk'
 Slack : -1.000

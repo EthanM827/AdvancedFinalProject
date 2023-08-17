@@ -18,6 +18,8 @@ module Temperature (input [9:0] targetTemp, input heat, input tempInputDone, inp
 			end else begin
 				preheated = 0;
 			end
+		end else begin
+			preheated = 0;
 		end
 	end
 endmodule

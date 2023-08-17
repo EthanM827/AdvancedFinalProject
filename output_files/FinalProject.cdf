@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3200 Advanced Digital Circuit Design/Finalproject/AdvancedFinalProject/output_files/") File("FinalProject.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("C:/Users/Ethan/Documents/WIT/23_Summer/AdvancedDigitalCircuitDesign/FinalProject/output_files/") File("FinalProject.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
